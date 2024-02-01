@@ -1,6 +1,5 @@
 {
-
-    "name" : "monorepo/test",
+    "name": "monorepo/test",
     "require": {
         "aheadworks/module-sarp2": "^2.17",
         "aheadworks/module-sarp2-free-payment": "^1.0",
