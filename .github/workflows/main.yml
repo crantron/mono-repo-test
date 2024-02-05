@@ -15,7 +15,7 @@ jobs:
       strategy:
         fail-fast: false
         matrix:
-            include:
+            package:
                     - local_path: 'mono-repo-package'
                       split_repository: 'mono-repo-package'
 
@@ -26,11 +26,11 @@ jobs:
                 uses: "symplify/monorepo-split-github-action@2.1"
                 with:
                     # ↓ split "packages/easy-coding-standard" directory
-                    package_directory: 'packages/${{ matrix.include.local_path }}'
+                    package_directory: 'packages/${{ matrix.package.local_path }}'
 
                     # ↓ into https://github.com/symplify/easy-coding-standard repository
                     repository_organization: 'crantron'
-                    repository_name: '${{ matrix.include.split_repository }}'
+                    repository_name: '${{ matrix.package.split_repository }}'
 
                     # ↓ the user signed under the split commit
                     user_name: "crantron"
