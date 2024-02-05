@@ -131,7 +131,7 @@
         "magento-force": "override"
     },
     "replace": {
-        "your-monorepo/first-package": "0.1.10"
+        "your-monorepo/first-package": "0.1.11"
     },
     "minimum-stability": "a",
     "prefer-stable": true
