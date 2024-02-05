@@ -4,6 +4,8 @@ on:
     push:
         branches:
             - main
+env:
+    PAT: ${{ secrets.PAT }}
 jobs: 
     packages_split:
       runs-on: ubuntu-latest
@@ -19,17 +21,10 @@ jobs:
             -   uses: actions/checkout@v3
             -
                 uses: "danharrin/monorepo-split-github-action@v2.3.0"
-                env:
-                    PAT: ${{ secrets.PAT }}
                 with:
-                    # ↓ split "packages/easy-coding-standard" directory
                     package_directory: 'packages/${{ matrix.package.local_path }}'
-
-                    # ↓ into https://github.com/symplify/easy-coding-standard repository
                     repository_organization: 'crantron'
                     repository_name: '${{ matrix.package.split_repository }}'
-
-                    # ↓ the user signed under the split commit
                     user_name: "crantron"
                     user_email: "crantron@gmail.com"
         
