@@ -6,7 +6,7 @@ on:
             - main
 
 env:
-    PAT: ${{ secrets.PAT }}
+    GITHUB_TOKEN: ${{ secrets.PAT }}
 
 jobs: 
     packages_split:
