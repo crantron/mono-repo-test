@@ -131,25 +131,7 @@
         "magento-force": "override"
     },
     "replace": {
-        "crantron/module-advanced-config": "0.1.4",
-        "crantron/module-beer-product-type": "0.1.4",
-        "crantron/module-blog-cache": "0.1.4",
-        "crantron/module-blog-cron": "0.1.4",
-        "crantron/module-blog-email": "0.1.4",
-        "crantron/module-blog-queue": "0.1.4",
-        "crantron/module-blog-router": "0.1.4",
-        "crantron/module-blogextra": "0.1.4",
-        "crantron/module-connectivity": "0.1.4",
-        "crantron/module-extension-attribute": "0.1.4",
-        "crantron/module-logger": "0.1.4",
-        "crantron/module-one-page-checkout": "0.1.4",
-        "crantron/module-rand-queue": "0.1.4",
-        "crantron/module-routes": "0.1.4",
-        "gravity/module-libredesk-code": "0.1.4",
-        "magento/project-community-edition": "0.1.4",
-        "swiftotter/module-friend-recommendations": "0.1.4",
-        "your-monorepo/first-package": "0.1.4",
-        "your-monorepo/second-package": "0.1.4"
+        "your-monorepo/first-package": "0.1.9"
     },
     "minimum-stability": "a",
     "prefer-stable": true
