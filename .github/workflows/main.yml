@@ -6,7 +6,7 @@ on:
             - main
 
 env:
-    GH_PAT: ${{ secrets.GH_PAT }}
+    PAT: ${{ secrets.PAT }}
 
 jobs: 
     packages_split:
