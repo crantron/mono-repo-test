@@ -127,6 +127,14 @@
         {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/crantron/commerce-emea-bundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/crantron/commerce-rs-bundle.git"
         }
     ],
     "extra": {
