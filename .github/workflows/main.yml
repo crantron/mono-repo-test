@@ -13,20 +13,21 @@ jobs:
       strategy:
         fail-fast: false
         matrix:
-            package:
-                    - local_path: 'mono-repo-package'
+            apps:
+                    - local_path: 'global/src/appmono-repo-package'
                       split_repository: 'mono-repo-package'
-                    - local_path: 'commerce-emea'
+                    - local_path: 'apps/src/commerce-emea'
                       split_repository: 'commerce-emea'
-                    - local_path: 'commerce-rs'
+                    - local_path: 'apps/src/commerce-rs'
                       split_repository: 'commerce-rs'
+                      
 
       steps:
             -   uses: actions/checkout@v3
             -
                 uses: "danharrin/monorepo-split-github-action@v2.3.0"
                 with:
-                    package_directory: 'packages/${{ matrix.package.local_path }}'
+                    package_directory: '${{ matrix.package.local_path }}'
                     repository_organization: 'crantron'
                     repository_name: '${{ matrix.package.split_repository }}'
                     user_name: "crantron"
