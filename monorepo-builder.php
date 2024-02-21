@@ -14,7 +14,12 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 
 
 return static function (MBConfig $mbConfig): void {
-    $mbConfig->packageDirectories([__DIR__ . '/packages']);
+
+    $mbConfig->packageDirectories([
+        __DIR__ . '/apps/src',
+        __DIR__ . '/global/src', 
+    ]);
+
     $mbConfig->workers([
         UpdateReplaceReleaseWorker::class,
         SetCurrentMutualDependenciesReleaseWorker::class,
