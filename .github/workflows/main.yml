@@ -16,6 +16,10 @@ jobs:
             package:
                     - local_path: 'mono-repo-package'
                       split_repository: 'mono-repo-package'
+                    - local_path: 'commerce-emea'
+                      split_repository: 'commerce-emea'
+                    - local_path: 'commerce-rs'
+                      split_repository: 'commerce-rs'
 
       steps:
             -   uses: actions/checkout@v3
