@@ -67,6 +67,9 @@
             ]
         },
         "psr-4": {
+            "Emea\\TestModuleTwo\\": "region/src/commerce-emea-bundle/Emea_TestModuleTwo/",
+            "Emea\\TestModule\\": "region/src/commerce-emea-bundle/Emea_TestModule/",
+            "Global\\MonoRepoPackage\\": "global/src/mono-repo-package/src",
             "Global\\SomePackage\\": "global/src/mono-repo-package/src",
             "Magento\\": [
                 "apps/src/commerce-emea/app/code/Magento/",
@@ -80,6 +83,8 @@
                 "apps/src/commerce-emea/setup/src/Magento/Setup/",
                 "apps/src/commerce-rs/setup/src/Magento/Setup/"
             ],
+            "Rs\\TestModuleTwo\\": "region/src/commerce-rs-bundle/Rs_TestModuleTwo/",
+            "Rs\\TestModule\\": "region/src/commerce-rs-bundle/Rs_TestModule/",
             "Symplify\\MonorepoBuilder\\": [
                 "packages",
                 "src"
@@ -148,7 +153,11 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "global/some-package": "self.version",
+        "commerce-emea-bundle/module-test-module": "self.version",
+        "commerce-emea-bundle/module-test-module-two": "self.version",
+        "commerce-rs-bundle/module-test-module": "self.version",
+        "commerce-rs-bundle/module-test-module-two": "self.version",
+        "global/module-mono-repo-package": "self.version",
         "magento/project-enterprise-edition": "self.version"
     },
     "minimum-stability": "a",
