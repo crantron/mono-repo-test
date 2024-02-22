@@ -1,8 +1,7 @@
 {
     "name": "global/module-mono-repo-package",
     "require": {
-        "php": ">=7.4.0",
-        "symfony/http-kernel": "^5.0"
+        "php": ">=8.3.*"
     },
     "version": "1.0.1",
     "autoload": {
