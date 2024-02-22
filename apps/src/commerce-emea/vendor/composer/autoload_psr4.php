@@ -12,7 +12,6 @@ return array(
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Webimpress\\SafeWriter\\' => array($vendorDir . '/webimpress/safe-writer/src'),
     'Vault\\' => array($vendorDir . '/csharpru/vault-php/src'),
-    'Vaimo\\ComposerRepositoryBundle\\' => array($vendorDir . '/vaimo/composer-repository-bundle/src'),
     'Temando\\ShippingRemover\\' => array($vendorDir . '/temando/module-shipping-remover'),
     'Symfony\\Polyfill\\Php81\\' => array($vendorDir . '/symfony/polyfill-php81'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),

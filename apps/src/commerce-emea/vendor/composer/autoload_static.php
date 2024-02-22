@@ -644,7 +644,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'V' => 
         array (
             'Vault\\' => 6,
-            'Vaimo\\ComposerRepositoryBundle\\' => 31,
         ),
         'T' => 
         array (
@@ -1343,10 +1342,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'Vault\\' => 
         array (
             0 => __DIR__ . '/..' . '/csharpru/vault-php/src',
-        ),
-        'Vaimo\\ComposerRepositoryBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/vaimo/composer-repository-bundle/src',
         ),
         'Temando\\ShippingRemover\\' => 
         array (
