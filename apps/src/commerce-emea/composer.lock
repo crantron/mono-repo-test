@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38d719c6371d86205940642f9eac9e5e",
+    "content-hash": "a41abd641bdebd686c77ab855db2d7fa",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -27208,6 +27208,71 @@
                 "source": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port"
             },
             "time": "2018-01-15T15:26:51+00:00"
+        },
+        {
+            "name": "vaimo/composer-repository-bundle",
+            "version": "1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vaimo/composer-repository-bundle.git",
+                "reference": "58ed8ba8483523d76231f8041e454cf19ce46862"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vaimo/composer-repository-bundle/zipball/58ed8ba8483523d76231f8041e454cf19ce46862",
+                "reference": "58ed8ba8483523d76231f8041e454cf19ce46862",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "vaimo/composer-changelogs": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Vaimo\\ComposerRepositoryBundle\\Plugin",
+                "changelog": {
+                    "source": "changelog.json",
+                    "output": {
+                        "md": "CHANGELOG.md"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vaimo\\ComposerRepositoryBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Allan Paiste",
+                    "email": "allan.paiste@vaimo.com"
+                }
+            ],
+            "description": "Allow packages to be installed from a repository or tarball bundle that have multiple packages in the sub-folders",
+            "keywords": [
+                "consolidated local repository",
+                "custom repository",
+                "install from github",
+                "install from remote tarball",
+                "install from zip",
+                "package bundle",
+                "project repository",
+                "sub-folder packages"
+            ],
+            "support": {
+                "docs": "https://github.com/vaimo/composer-repository-bundle",
+                "issues": "https://github.com/vaimo/composer-repository-bundle/issues",
+                "source": "https://github.com/vaimo/composer-repository-bundle"
+            },
+            "time": "2022-05-04T14:26:54+00:00"
         },
         {
             "name": "web-token/jwt-framework",

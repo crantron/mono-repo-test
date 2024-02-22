@@ -5732,8 +5732,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
                 2 => '1.0|2.0|3.0',
             ),
         ),
@@ -6399,6 +6399,15 @@
             'replaced' => array(
                 0 => '3.1.0',
             ),
+        ),
+        'vaimo/composer-repository-bundle' => array(
+            'pretty_version' => '1.7.2',
+            'version' => '1.7.2.0',
+            'reference' => '58ed8ba8483523d76231f8041e454cf19ce46862',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../vaimo/composer-repository-bundle',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'videlalvaro/php-amqplib' => array(
             'dev_requirement' => false,
