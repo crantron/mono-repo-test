@@ -20,9 +20,9 @@
         "php": ">=7.4.0",
         "symfony/console": "^6.2",
         "symfony/dependency-injection": "6.1.*",
-        "symfony/finder": "^6.2",
+        "symfony/finder": "^5.4",
         "symfony/http-kernel": "^5.0",
-        "symfony/process": "^6.2",
+        "symfony/process": "<=v5.4.23",
         "symplify/package-builder": "^11.1",
         "symplify/symplify-kernel": "^11.1"
     },
@@ -96,6 +96,7 @@
                 "apps/src/commerce-rs/setup/src/Magento/Setup/"
             ],
             "Rs\\CommerceEmeaBundle\\": "region/src/commerce-emea-bundle/src/",
+            "Rs\\CommerceRsBundle\\": "region/src/commerce-rs-bundle/src/",
             "Rs\\TestModuleTwo\\": "region/src/commerce-rs-bundle/Rs_TestModuleTwo/",
             "Rs\\TestModule\\": "region/src/commerce-rs-bundle/Rs_TestModule/",
             "Symplify\\MonorepoBuilder\\": [
@@ -178,13 +179,14 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "commerce-emea-bundle/module-test-module": "self.version",
-        "commerce-emea-bundle/module-test-module-two": "self.version",
-        "commerce-rs-bundle/module-test-module": "self.version",
-        "commerce-rs-bundle/module-test-module-two": "self.version",
-        "global/module-mono-repo-package": "self.version",
-        "magento/project-enterprise-edition": "self.version",
-        "rs/commerce-emea-bundle": "self.version"
+        "commerce-emea-bundle/module-test-module": "0.1.17",
+        "commerce-emea-bundle/module-test-module-two": "0.1.17",
+        "commerce-rs-bundle/module-test-module": "0.1.17",
+        "commerce-rs-bundle/module-test-module-two": "0.1.17",
+        "global/module-mono-repo-package": "0.1.17",
+        "magento/project-enterprise-edition": "0.1.17",
+        "rs/commerce-emea-bundle": "0.1.17",
+        "rs/commerce-rs-bundle": "0.1.17"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true

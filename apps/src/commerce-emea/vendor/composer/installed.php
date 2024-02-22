@@ -496,6 +496,17 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'global/module-mono-repo-package' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'c7de111143cea343066a438f727b0132a3a97ab9',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../global/module-mono-repo-package',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
         'google/recaptcha' => array(
             'pretty_version' => '1.3.0',
             'version' => '1.3.0.0',
@@ -5796,6 +5807,17 @@
             'replaced' => array(
                 0 => '4.7.5',
             ),
+        ),
+        'rs/commerce-emea-bundle' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'e152d430053a69654965ee574681b93165d3d51b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rs/commerce-emea-bundle',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
         ),
         'sabberworm/php-css-parser' => array(
             'pretty_version' => 'v8.5.1',

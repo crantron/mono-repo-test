@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "760f411a6ca046f21fe4fdba778ecc2f",
+    "content-hash": "af75375b7a7ad85164d47803b0032fa7",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -2036,6 +2036,36 @@
                 "source": "https://github.com/firebase/php-jwt/tree/v6.10.0"
             },
             "time": "2023-12-01T16:26:39+00:00"
+        },
+        {
+            "name": "global/module-mono-repo-package",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crantron/mono-repo-package.git",
+                "reference": "c7de111143cea343066a438f727b0132a3a97ab9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crantron/mono-repo-package/zipball/c7de111143cea343066a438f727b0132a3a97ab9",
+                "reference": "c7de111143cea343066a438f727b0132a3a97ab9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Global\\MonoRepoPackage\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/crantron/mono-repo-package/tree/main",
+                "issues": "https://github.com/crantron/mono-repo-package/issues"
+            },
+            "time": "2024-02-22T15:28:06+00:00"
         },
         {
             "name": "google/recaptcha",
@@ -24291,6 +24321,43 @@
             "time": "2023-11-16T16:16:50+00:00"
         },
         {
+            "name": "rs/commerce-emea-bundle",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crantron/commerce-emea-bundle.git",
+                "reference": "e152d430053a69654965ee574681b93165d3d51b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crantron/commerce-emea-bundle/zipball/e152d430053a69654965ee574681b93165d3d51b",
+                "reference": "e152d430053a69654965ee574681b93165d3d51b",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rs\\CommerceEmeaBundle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Anderson",
+                    "email": "chrisanderson@rightpoint.com"
+                }
+            ],
+            "description": "Repository of region specific composer packages",
+            "support": {
+                "source": "https://github.com/crantron/commerce-emea-bundle/tree/main",
+                "issues": "https://github.com/crantron/commerce-emea-bundle/issues"
+            },
+            "time": "2024-02-22T15:11:26+00:00"
+        },
+        {
             "name": "sabberworm/php-css-parser",
             "version": "v8.5.1",
             "source": {
@@ -31810,7 +31877,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "global/module-mono-repo-package": 20,
+        "rs/commerce-emea-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

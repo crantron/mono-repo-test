@@ -13,12 +13,5 @@
             "name": "Chris Anderson",
             "email": "chrisanderson@rightpoint.com"
         }
-    ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "module"
-        }
-    ],
-    "require": {}
+    ]
 }
