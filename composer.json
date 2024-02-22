@@ -179,14 +179,14 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "commerce-emea-bundle/module-test-module": "4.0.0",
-        "commerce-emea-bundle/module-test-module-two": "4.0.0",
-        "commerce-rs-bundle/module-test-module": "4.0.0",
-        "commerce-rs-bundle/module-test-module-two": "4.0.0",
-        "global/module-mono-repo-package": "4.0.0",
-        "magento/project-enterprise-edition": "4.0.0",
-        "rs/commerce-emea-bundle": "4.0.0",
-        "rs/commerce-rs-bundle": "4.0.0"
+        "commerce-emea-bundle/module-test-module": "5.0.0",
+        "commerce-emea-bundle/module-test-module-two": "5.0.0",
+        "commerce-rs-bundle/module-test-module": "5.0.0",
+        "commerce-rs-bundle/module-test-module-two": "5.0.0",
+        "global/module-mono-repo-package": "5.0.0",
+        "magento/project-enterprise-edition": "5.0.0",
+        "rs/commerce-emea-bundle": "5.0.0",
+        "rs/commerce-rs-bundle": "5.0.0"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true
