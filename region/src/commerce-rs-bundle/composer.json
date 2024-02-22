@@ -1,0 +1,18 @@
+{
+    "name": "rs/commerce-rs-bundle",
+    "description": "Repository of region specific composer packages",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rs\\CommerceRsBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Anderson",
+            "email": "chrisanderson@rightpoint.com"
+        }
+    ],
+    "require": {}
+}

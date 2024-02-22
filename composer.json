@@ -2,6 +2,12 @@
     "name": "symplify/monorepo-builder",
     "description": "Not only Composer tools to build a Monorepo.",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Anderson",
+            "email": "chrisanderson@rightpoint.com"
+        }
+    ],
     "bin": [
         "bin/monorepo-builder"
     ],
@@ -67,8 +73,14 @@
             ]
         },
         "psr-4": {
-            "Emea\\TestModuleTwo\\": "region/src/commerce-emea-bundle/Emea_TestModuleTwo/",
-            "Emea\\TestModule\\": "region/src/commerce-emea-bundle/Emea_TestModule/",
+            "Emea\\TestModuleTwo\\": [
+                "region/src/commerce-emea-bundle/Emea_TestModuleTwo/",
+                "region/src/commerce-emea-bundle/module/Emea_TestModuleTwo/"
+            ],
+            "Emea\\TestModule\\": [
+                "region/src/commerce-emea-bundle/Emea_TestModule/",
+                "region/src/commerce-emea-bundle/module/Emea_TestModule/"
+            ],
             "Global\\MonoRepoPackage\\": "global/src/mono-repo-package/src",
             "Global\\SomePackage\\": "global/src/mono-repo-package/src",
             "Magento\\": [
@@ -83,6 +95,7 @@
                 "apps/src/commerce-emea/setup/src/Magento/Setup/",
                 "apps/src/commerce-rs/setup/src/Magento/Setup/"
             ],
+            "Rs\\CommerceEmeaBundle\\": "region/src/commerce-emea-bundle/src/",
             "Rs\\TestModuleTwo\\": "region/src/commerce-rs-bundle/Rs_TestModuleTwo/",
             "Rs\\TestModule\\": "region/src/commerce-rs-bundle/Rs_TestModule/",
             "Symplify\\MonorepoBuilder\\": [
@@ -135,6 +148,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/crantron/commerce-rs-bundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/crantron/mono-repo-package.git"
         }
     ],
     "extra": {
@@ -166,8 +183,9 @@
         "commerce-rs-bundle/module-test-module": "self.version",
         "commerce-rs-bundle/module-test-module-two": "self.version",
         "global/module-mono-repo-package": "self.version",
-        "magento/project-enterprise-edition": "self.version"
+        "magento/project-enterprise-edition": "self.version",
+        "rs/commerce-emea-bundle": "self.version"
     },
-    "minimum-stability": "a",
+    "minimum-stability": "alpha",
     "prefer-stable": true
 }
