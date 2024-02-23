@@ -4,6 +4,8 @@ on:
     push:
         branches:
             - main
+        tags:
+            - "*"
 env:
     PAT: ${{ secrets.PAT }}
 jobs: 
@@ -14,8 +16,8 @@ jobs:
         fail-fast: false
         matrix:
             package:
-                    - local_path: 'global/src/mono-repo-package'
-                      split_repository: 'mono-repo-package'
+                    - local_path: 'global/src/multi-repo'
+                      split_repository: 'rs-multi-global'
                     - local_path: 'apps/src/commerce-emea'
                       split_repository: 'commerce-emea'
                     - local_path: 'apps/src/commerce-rs'
@@ -28,9 +30,22 @@ jobs:
 
       steps:
             -   uses: actions/checkout@v3
+            #no tag
             -
+                if: "!startsWith(github.ref, 'refs/tags/')"
                 uses: "danharrin/monorepo-split-github-action@v2.3.0"
                 with:
+                    package_directory: '${{ matrix.package.local_path }}'
+                    repository_organization: 'crantron'
+                    repository_name: '${{ matrix.package.split_repository }}'
+                    user_name: "crantron"
+                    user_email: "crantron@gmail.com"
+            #with tag
+            -
+                if: "startsWith(github.ref, 'refs/tags/')"
+                uses: "danharrin/monorepo-split-github-action@v2.3.0"
+                with:
+                    tag: ${GITHUB_REF#refs/tags/}
                     package_directory: '${{ matrix.package.local_path }}'
                     repository_organization: 'crantron'
                     repository_name: '${{ matrix.package.split_repository }}'
