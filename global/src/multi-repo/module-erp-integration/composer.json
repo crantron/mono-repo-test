@@ -1,12 +1,12 @@
 {
-    "name": "commerce-rs-bundle/module-test-module",
+    "name": "rs/module-erp-integration",
     "require": {
-        "php": ">=7.4.0",
-        "symfony/http-kernel": "^5.0"
+        "php": ">=7.4.0"
     },
+    "version" : "1.0.0",
     "autoload": {
         "psr-4": {
-            "Rs\\TestModule\\": ""
+            "Rs\\ErpIntegration\\": ""
         }
     }
 }

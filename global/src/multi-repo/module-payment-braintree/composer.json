@@ -1,12 +1,12 @@
 {
-    "name": "rs/module-aws-integration",
+    "name": "rs/module-payment-braintree",
     "require": {
         "php": ">=7.4.0"
     },
     "version" : "1.0.0",
     "autoload": {
         "psr-4": {
-            "Rs\\AwsIntegration\\": ""
+            "Rs\\PaymentBraintree\\": ""
         }
     }
 }
