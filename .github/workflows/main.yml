@@ -16,8 +16,8 @@ jobs:
         fail-fast: false
         matrix:
             package:
-                    - local_path: 'global/src/mono-repo-package'
-                      split_repository: 'mono-repo-package'
+                    - local_path: 'global/src/multi-repo'
+                      split_repository: 'rs-multi-global'
                     - local_path: 'apps/src/commerce-emea'
                       split_repository: 'commerce-emea'
                     - local_path: 'apps/src/commerce-rs'
