@@ -18,11 +18,11 @@
     },
     "version": "2.4.6-p4",
     "require": {
-        "global/module-mono-repo-package": "^5.1",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "~2.0",
         "magento/product-enterprise-edition": "2.4.6-p4",
-        "rs/commerce-emea-bundle": "^5.1"
+        "rs/module-aws-integration": "^6.0",
+        "rs/module-erp-integration": "^6.0"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -78,20 +78,25 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "repositories": [
-        {
+    "repositories": {
+        "packagist.org": false,
+        "private-packagist": {
+            "type": "composer",
+            "url": "https://repo.packagist.com/crantron/"
+        },
+        "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
         },
-        {
+        "1": {
             "type": "vcs",
             "url": "https://github.com/crantron/mono-repo-package.git"
         },
-        {
+        "2": {
             "type": "vcs",
             "url": "https://github.com/crantron/commerce-emea-bundle.git"
         }
-    ],
+    },
     "extra": {
         "magento-force": "override"
     }

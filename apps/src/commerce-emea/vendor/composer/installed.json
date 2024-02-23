@@ -3229,39 +3229,6 @@
             "install-path": "../friendsofphp/php-cs-fixer"
         },
         {
-            "name": "global/module-mono-repo-package",
-            "version": "dev-main",
-            "version_normalized": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/crantron/mono-repo-package.git",
-                "reference": "c7de111143cea343066a438f727b0132a3a97ab9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/crantron/mono-repo-package/zipball/c7de111143cea343066a438f727b0132a3a97ab9",
-                "reference": "c7de111143cea343066a438f727b0132a3a97ab9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4.0"
-            },
-            "time": "2024-02-22T15:28:06+00:00",
-            "default-branch": true,
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Global\\MonoRepoPackage\\": "src"
-                }
-            },
-            "support": {
-                "source": "https://github.com/crantron/mono-repo-package/tree/main",
-                "issues": "https://github.com/crantron/mono-repo-package/issues"
-            },
-            "install-path": "../global/module-mono-repo-package"
-        },
-        {
             "name": "google/recaptcha",
             "version": "1.3.0",
             "version_normalized": "1.3.0.0",
@@ -28762,44 +28729,52 @@
             "install-path": "../rector/rector"
         },
         {
-            "name": "rs/commerce-emea-bundle",
+            "name": "rs/module-aws-integration",
             "version": "dev-main",
             "version_normalized": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/crantron/commerce-emea-bundle.git",
-                "reference": "e152d430053a69654965ee574681b93165d3d51b"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/crantron/commerce-emea-bundle/zipball/e152d430053a69654965ee574681b93165d3d51b",
-                "reference": "e152d430053a69654965ee574681b93165d3d51b",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-aws-integration",
+                "reference": "4cb56402c22a2ae509d626c6b77bbd89289d1f45"
             },
-            "time": "2024-02-22T15:11:26+00:00",
-            "default-branch": true,
+            "require": {
+                "php": ">=7.4.0"
+            },
             "type": "library",
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "Rs\\CommerceEmeaBundle\\": "src/"
+                    "Rs\\AwsIntegration\\": ""
                 }
             },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Anderson",
-                    "email": "chrisanderson@rightpoint.com"
-                }
-            ],
-            "description": "Repository of region specific composer packages",
-            "support": {
-                "source": "https://github.com/crantron/commerce-emea-bundle/tree/main",
-                "issues": "https://github.com/crantron/commerce-emea-bundle/issues"
+            "transport-options": {
+                "relative": false
             },
-            "install-path": "../rs/commerce-emea-bundle"
+            "install-path": "../rs/module-aws-integration"
+        },
+        {
+            "name": "rs/module-erp-integration",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-erp-integration",
+                "reference": "df48a424c2afd816d9c196436f10bf7c89e22c8a"
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Rs\\ErpIntegration\\": ""
+                }
+            },
+            "transport-options": {
+                "relative": false
+            },
+            "install-path": "../rs/module-erp-integration"
         },
         {
             "name": "sabberworm/php-css-parser",

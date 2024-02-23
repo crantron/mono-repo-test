@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "paths": [
+        "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-aws-integration",
+        "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-erp-integration",
+        "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-payment-braintree"
+    ]
+}

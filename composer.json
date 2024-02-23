@@ -95,8 +95,11 @@
                 "apps/src/commerce-emea/setup/src/Magento/Setup/",
                 "apps/src/commerce-rs/setup/src/Magento/Setup/"
             ],
+            "Rs\\AwsIntegration\\": "global/src/multi-repo/module-aws-integration/",
             "Rs\\CommerceEmeaBundle\\": "region/src/commerce-emea-bundle/src/",
             "Rs\\CommerceRsBundle\\": "region/src/commerce-rs-bundle/src/",
+            "Rs\\ErpIntegration\\": "global/src/multi-repo/module-erp-integration/",
+            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/",
             "Rs\\TestModuleTwo\\": "region/src/commerce-rs-bundle/Rs_TestModuleTwo/",
             "Rs\\TestModule\\": "region/src/commerce-rs-bundle/Rs_TestModule/",
             "Symplify\\MonorepoBuilder\\": [
@@ -138,9 +141,18 @@
         }
     },
     "repositories": [
+        false,
         {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "composer",
+            "url": "https://repo.packagist.com/crantron/"
+        },
+        {
+            "type": "path",
+            "url": "module"
         },
         {
             "type": "vcs",
@@ -179,14 +191,16 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "commerce-emea-bundle/module-test-module": "5.0.0",
-        "commerce-emea-bundle/module-test-module-two": "5.0.0",
-        "commerce-rs-bundle/module-test-module": "5.0.0",
-        "commerce-rs-bundle/module-test-module-two": "5.0.0",
-        "global/module-mono-repo-package": "5.0.0",
-        "magento/project-enterprise-edition": "5.0.0",
-        "rs/commerce-emea-bundle": "5.0.0",
-        "rs/commerce-rs-bundle": "5.0.0"
+        "commerce-emea-bundle/module-test-module": "6.0.0",
+        "commerce-emea-bundle/module-test-module-two": "6.0.0",
+        "commerce-rs-bundle/module-test-module": "6.0.0",
+        "commerce-rs-bundle/module-test-module-two": "6.0.0",
+        "magento/project-enterprise-edition": "6.0.0",
+        "rs/commerce-emea-bundle": "6.0.0",
+        "rs/commerce-rs-bundle": "6.0.0",
+        "rs/module-aws-integration": "6.0.0",
+        "rs/module-erp-integration": "6.0.0",
+        "rs/module-payment-braintree": "6.0.0"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true

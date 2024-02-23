@@ -496,17 +496,6 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
-        'global/module-mono-repo-package' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => 'c7de111143cea343066a438f727b0132a3a97ab9',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../global/module-mono-repo-package',
-            'aliases' => array(
-                0 => '9999999-dev',
-            ),
-            'dev_requirement' => false,
-        ),
         'google/recaptcha' => array(
             'pretty_version' => '1.3.0',
             'version' => '1.3.0.0',
@@ -5808,15 +5797,22 @@
                 0 => '4.7.5',
             ),
         ),
-        'rs/commerce-emea-bundle' => array(
+        'rs/module-aws-integration' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e152d430053a69654965ee574681b93165d3d51b',
+            'reference' => '4cb56402c22a2ae509d626c6b77bbd89289d1f45',
             'type' => 'library',
-            'install_path' => __DIR__ . '/../rs/commerce-emea-bundle',
-            'aliases' => array(
-                0 => '9999999-dev',
-            ),
+            'install_path' => __DIR__ . '/../rs/module-aws-integration',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'rs/module-erp-integration' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'df48a424c2afd816d9c196436f10bf7c89e22c8a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rs/module-erp-integration',
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'sabberworm/php-css-parser' => array(

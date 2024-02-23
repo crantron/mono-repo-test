@@ -690,7 +690,8 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         ),
         'R' => 
         array (
-            'Rs\\CommerceEmeaBundle\\' => 22,
+            'Rs\\ErpIntegration\\' => 18,
+            'Rs\\AwsIntegration\\' => 18,
             'React\\Promise\\' => 14,
             'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
@@ -1268,7 +1269,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
             'Gt\\Dom\\' => 7,
             'Gt\\CssXPath\\' => 12,
             'GraphQL\\' => 8,
-            'Global\\MonoRepoPackage\\' => 23,
         ),
         'F' => 
         array (
@@ -1493,9 +1493,13 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
-        'Rs\\CommerceEmeaBundle\\' => 
+        'Rs\\ErpIntegration\\' => 
         array (
-            0 => __DIR__ . '/..' . '/rs/commerce-emea-bundle/src',
+            0 => __DIR__ . '/..' . '/rs/module-erp-integration',
+        ),
+        'Rs\\AwsIntegration\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rs/module-aws-integration',
         ),
         'React\\Promise\\' => 
         array (
@@ -3751,10 +3755,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'GraphQL\\' => 
         array (
             0 => __DIR__ . '/..' . '/webonyx/graphql-php/src',
-        ),
-        'Global\\MonoRepoPackage\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/global/module-mono-repo-package/src',
         ),
         'Firebase\\JWT\\' => 
         array (
