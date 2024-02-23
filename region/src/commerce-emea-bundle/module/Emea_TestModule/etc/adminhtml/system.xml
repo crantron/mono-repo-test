@@ -37,7 +37,7 @@
                     <comment>If enabled, a valid address would be required to proceed (effective on front-store)</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>
-                        <field id="enable">1</field>
+                        <field id="enable">0</field>
                     </depends>
                 </field>
             </group>
