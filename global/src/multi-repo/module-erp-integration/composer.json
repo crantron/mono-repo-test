@@ -3,7 +3,6 @@
     "require": {
         "php": ">=7.4.0"
     },
-    "version": "dev-main",
     "autoload": {
         "psr-4": {
             "Rs\\ErpIntegration\\": ""
