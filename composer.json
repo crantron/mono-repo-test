@@ -191,16 +191,16 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "commerce-emea-bundle/module-test-module": "8.1.0",
-        "commerce-emea-bundle/module-test-module-two": "8.1.0",
-        "commerce-rs-bundle/module-test-module": "8.1.0",
-        "commerce-rs-bundle/module-test-module-two": "8.1.0",
-        "magento/project-enterprise-edition": "8.1.0",
-        "rs/commerce-emea-bundle": "8.1.0",
-        "rs/commerce-rs-bundle": "8.1.0",
-        "rs/module-aws-integration": "8.1.0",
-        "rs/module-erp-integration": "8.1.0",
-        "rs/module-payment-braintree": "8.1.0"
+        "commerce-emea-bundle/module-test-module": "8.2.0",
+        "commerce-emea-bundle/module-test-module-two": "8.2.0",
+        "commerce-rs-bundle/module-test-module": "8.2.0",
+        "commerce-rs-bundle/module-test-module-two": "8.2.0",
+        "magento/project-enterprise-edition": "8.2.0",
+        "rs/commerce-emea-bundle": "8.2.0",
+        "rs/commerce-rs-bundle": "8.2.0",
+        "rs/module-aws-integration": "8.2.0",
+        "rs/module-erp-integration": "8.2.0",
+        "rs/module-payment-braintree": "8.2.0"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true
