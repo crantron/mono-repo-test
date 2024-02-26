@@ -3,6 +3,7 @@
     "description": "Repository of region specific composer packages",
     "type": "library",
     "license": "MIT",
+    "version": "8.4.0",
     "autoload": {
         "psr-4": {
             "Rs\\CommerceEmeaBundle\\": "src/"
@@ -12,12 +13,6 @@
         {
             "name": "Chris Anderson",
             "email": "chrisanderson@rightpoint.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "module"
         }
     ]
 }
