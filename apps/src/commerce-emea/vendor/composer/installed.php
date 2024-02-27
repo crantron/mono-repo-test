@@ -437,12 +437,14 @@
             'dev_requirement' => false,
         ),
         'emea/module-aws-integration-config' => array(
-            'pretty_version' => '1.0.0',
-            'version' => '1.0.0.0',
-            'reference' => '791b6e280182762803cde635ed747bc3923865dc',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '4659863e6e3f79fa8d1c25fd371ed37af59166b9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../emea/module-aws-integration-config',
-            'aliases' => array(),
+            'aliases' => array(
+                0 => '8.19.x-dev',
+            ),
             'dev_requirement' => false,
         ),
         'endroid/qr-code' => array(
@@ -5817,6 +5819,17 @@
             'replaced' => array(
                 0 => '4.7.5',
             ),
+        ),
+        'rs/module-aws-integration' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '7cfd4d25901d1a27a5310ae7b1883093325e46c0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rs/module-aws-integration',
+            'aliases' => array(
+                0 => '8.19.x-dev',
+            ),
+            'dev_requirement' => false,
         ),
         'sabberworm/php-css-parser' => array(
             'pretty_version' => 'v8.5.1',

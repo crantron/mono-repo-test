@@ -620,5 +620,6 @@ return array(
     '940abd8fb01ee76a36b44f35dcf9783b' => $vendorDir . '/weew/helpers-array/src/array.php',
     '0b1d6d1d6f46898c4c163d1f8fe0fa92' => $vendorDir . '/emea/module-aws-integration-config/registration.php',
     'eda65932675b68b5aee4503e0762d64d' => $vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
+    '73d3d5f128a9ee2e89fd12fd3f911164' => $vendorDir . '/rs/module-aws-integration/registration.php',
     '4887019506f275125b720bf9bcfdc406' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );

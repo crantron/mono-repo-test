@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec8baeb1b55b8423b527a72da6e7c351",
+    "content-hash": "6ebaa45ac48573cf2862f595982cea43",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -1892,16 +1892,21 @@
         },
         {
             "name": "emea/module-aws-integration-config",
-            "version": "1.0.0",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/regional/Emea_AwsIntegrationConfig",
-                "reference": "791b6e280182762803cde635ed747bc3923865dc"
+                "reference": "4659863e6e3f79fa8d1c25fd371ed37af59166b9"
             },
             "require": {
                 "php": ">=7.4.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "8.19-dev"
+                }
+            },
             "autoload": {
                 "files": [
                     "registration.php"
@@ -24979,6 +24984,35 @@
             "time": "2023-11-16T16:16:50+00:00"
         },
         {
+            "name": "rs/module-aws-integration",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-aws-integration",
+                "reference": "7cfd4d25901d1a27a5310ae7b1883093325e46c0"
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "8.19-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rs\\AwsIntegration\\": ""
+                }
+            },
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
             "name": "sabberworm/php-css-parser",
             "version": "v8.5.1",
             "source": {
@@ -33251,7 +33285,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "emea/module-aws-integration-config": 20,
+        "rs/module-aws-integration": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
