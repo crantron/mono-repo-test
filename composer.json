@@ -12,6 +12,8 @@
         "bin/monorepo-builder"
     ],
     "require": {
+        "commerce-rs-bundle/module-test-module": "^8.8",
+        "commerce-rs-bundle/module-test-module-two": "^8.8",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "~2.0",
         "magento/product-enterprise-edition": "2.4.6-p4",
@@ -62,6 +64,8 @@
         ],
         "files": [
             "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/registration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/registration.php",
             "apps/src/commerce-rs/app/etc/NonComposerComponentRegistration.php",
             "global/src/multi-repo/module-aws-integration/registration.php",
             "global/src/multi-repo/module-erp-integration/registration.php",
@@ -78,6 +82,8 @@
             ]
         },
         "psr-4": {
+            "Emea\\AwsIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/",
+            "Emea\\ErpIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/",
             "Emea\\TestModuleTwo\\": [
                 "region/src/commerce-emea-bundle/Emea_TestModuleTwo/",
                 "region/src/commerce-emea-bundle/module-test-module-two/",
@@ -159,19 +165,11 @@
         },
         {
             "type": "path",
-            "url": "module"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/crantron/commerce-emea-bundle.git"
+            "url": "packages/regional/*"
         },
         {
             "type": "vcs",
             "url": "https://github.com/crantron/commerce-rs-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/crantron/mono-repo-package.git"
         }
     ],
     "extra": {
@@ -198,10 +196,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "magento/project-enterprise-edition": "8.25.0",
-        "rs/module-aws-integration": "8.25.0",
-        "rs/module-erp-integration": "8.25.0",
-        "rs/module-payment-braintree": "8.25.0"
+        "emea/module-aws-integration-config": "8.26.0",
+        "emea/module-erp-integration-config": "8.26.0",
+        "magento/project-enterprise-edition": "8.26.0",
+        "rs/module-aws-integration": "8.26.0",
+        "rs/module-erp-integration": "8.26.0",
+        "rs/module-payment-braintree": "8.26.0"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true
