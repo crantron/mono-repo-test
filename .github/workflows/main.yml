@@ -22,10 +22,6 @@ jobs:
                       split_repository: 'commerce-emea'
                     - local_path: 'apps/src/commerce-rs'
                       split_repository: 'commerce-rs'
-                    - local_path: 'region/src/commerce-emea-bundle'
-                      split_repository: 'commerce-emea-bundle'
-                    - local_path: 'region/src/commerce-rs-bundle'
-                      split_repository: 'commerce-rs-bundle'
                       
 
       steps:
