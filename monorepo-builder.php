@@ -19,6 +19,7 @@ return static function (MBConfig $mbConfig): void {
         __DIR__ . '/apps/src',
         __DIR__ . '/global/src',
     ]);
+    $mbConfig->defaultBranch('main');;
 
     $mbConfig->workers([
         UpdateReplaceReleaseWorker::class,
