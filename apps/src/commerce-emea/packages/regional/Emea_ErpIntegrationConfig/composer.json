@@ -1,0 +1,14 @@
+{
+    "name": "emea/module-erp-integration-config",
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Emea\\ErpIntegrationConfig\\": ""
+        }
+    }
+}

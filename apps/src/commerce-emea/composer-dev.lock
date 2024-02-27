@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d33cc19052746feb30d974917f5185b",
+    "content-hash": "3f8476b46efda10e3652606e9e728ea3",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -1889,6 +1889,30 @@
                 "search"
             ],
             "time": "2023-04-21T15:31:12+00:00"
+        },
+        {
+            "name": "emea/module-aws-integration-config",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "packages/regional/Emea_AwsIntegrationConfig",
+                "reference": "791b6e280182762803cde635ed747bc3923865dc"
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Emea\\AwsIntegrationConfig\\": ""
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "endroid/qr-code",
@@ -24955,38 +24979,6 @@
             "time": "2023-11-16T16:16:50+00:00"
         },
         {
-            "name": "rs/commerce-emea-bundle",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/crantron/commerce-emea-bundle.git",
-                "reference": "c54261fde11e29343c55ab5e4636d32fdfec47d8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/crantron/commerce-emea-bundle/zipball/c54261fde11e29343c55ab5e4636d32fdfec47d8",
-                "reference": "c54261fde11e29343c55ab5e4636d32fdfec47d8",
-                "shasum": ""
-            },
-            "default-branch": true,
-            "type": "library",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Anderson",
-                    "email": "chrisanderson@rightpoint.com"
-                }
-            ],
-            "description": "Repository of EMEA specific composer packages",
-            "support": {
-                "source": "https://github.com/crantron/commerce-emea-bundle/tree/8.7.0",
-                "issues": "https://github.com/crantron/commerce-emea-bundle/issues"
-            },
-            "time": "2024-02-27T15:36:12+00:00"
-        },
-        {
             "name": "rs/module-aws-integration",
             "version": "dev-main",
             "dist": {
@@ -33284,7 +33276,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "rs/commerce-emea-bundle": 20,
         "rs/module-aws-integration": 20
     },
     "prefer-stable": true,

@@ -619,8 +619,8 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         '427dcd5f226e75fb98fcab7f2816d01a' => __DIR__ . '/..' . '/magento/theme-adminhtml-spectrum/registration.php',
         '38143a9afc50997d55e4815db8489d1c' => __DIR__ . '/..' . '/rector/rector/bootstrap.php',
         '940abd8fb01ee76a36b44f35dcf9783b' => __DIR__ . '/..' . '/weew/helpers-array/src/array.php',
+        '0b1d6d1d6f46898c4c163d1f8fe0fa92' => __DIR__ . '/..' . '/emea/module-aws-integration-config/registration.php',
         'eda65932675b68b5aee4503e0762d64d' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
-        '73d3d5f128a9ee2e89fd12fd3f911164' => __DIR__ . '/..' . '/rs/module-aws-integration/registration.php',
         '4887019506f275125b720bf9bcfdc406' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -693,7 +693,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         ),
         'R' => 
         array (
-            'Rs\\AwsIntegration\\' => 18,
             'React\\Promise\\' => 14,
             'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
@@ -1270,6 +1269,7 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'E' => 
         array (
             'Endroid\\QrCode\\' => 15,
+            'Emea\\AwsIntegrationConfig\\' => 26,
             'Elasticsearch\\' => 14,
         ),
         'D' => 
@@ -1492,10 +1492,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'Sabberworm\\CSS\\' => 
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
-        ),
-        'Rs\\AwsIntegration\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/rs/module-aws-integration',
         ),
         'React\\Promise\\' => 
         array (
@@ -3696,6 +3692,10 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'Endroid\\QrCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/endroid/qr-code/src',
+        ),
+        'Emea\\AwsIntegrationConfig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/emea/module-aws-integration-config',
         ),
         'Elasticsearch\\' => 
         array (

@@ -436,6 +436,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'emea/module-aws-integration-config' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => '791b6e280182762803cde635ed747bc3923865dc',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../emea/module-aws-integration-config',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'endroid/qr-code' => array(
             'pretty_version' => '4.8.5',
             'version' => '4.8.5.0',
@@ -5808,26 +5817,6 @@
             'replaced' => array(
                 0 => '4.7.5',
             ),
-        ),
-        'rs/commerce-emea-bundle' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => 'c54261fde11e29343c55ab5e4636d32fdfec47d8',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../rs/commerce-emea-bundle',
-            'aliases' => array(
-                0 => '9999999-dev',
-            ),
-            'dev_requirement' => false,
-        ),
-        'rs/module-aws-integration' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => 'bb67710b3891c1bcd313e034fd10d74bf0f02b8c',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../rs/module-aws-integration',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'sabberworm/php-css-parser' => array(
             'pretty_version' => 'v8.5.1',
