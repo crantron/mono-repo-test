@@ -1,6 +1,8 @@
 {
     "version": 2,
     "paths": [
-        "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/*"
+        "./global/src/multi-repo/*",
+        "./region/src/commerce-emea-bundle/*",
+        "./region/src/commerce-rs-bundle/*"
     ]
 }

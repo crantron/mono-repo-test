@@ -9,8 +9,8 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'c9d07b32a2e02bc0fc582d4f0c1b56cc' => __DIR__ . '/..' . '/laminas/laminas-servicemanager/src/autoload.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
@@ -620,6 +620,7 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         '38143a9afc50997d55e4815db8489d1c' => __DIR__ . '/..' . '/rector/rector/bootstrap.php',
         '940abd8fb01ee76a36b44f35dcf9783b' => __DIR__ . '/..' . '/weew/helpers-array/src/array.php',
         'eda65932675b68b5aee4503e0762d64d' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
+        '73d3d5f128a9ee2e89fd12fd3f911164' => __DIR__ . '/..' . '/rs/module-aws-integration/registration.php',
         '4887019506f275125b720bf9bcfdc406' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -661,6 +662,7 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
             'Symfony\\Polyfill\\Intl\\Grapheme\\' => 31,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Contracts\\HttpClient\\' => 29,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarExporter\\' => 30,
@@ -673,6 +675,7 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
             'Symfony\\Component\\Intl\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\HttpClient\\' => 29,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
@@ -690,6 +693,7 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         ),
         'R' => 
         array (
+            'Rs\\AwsIntegration\\' => 18,
             'React\\Promise\\' => 14,
             'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
@@ -1241,18 +1245,8 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'J' => 
         array (
             'JsonSchema\\' => 11,
-            'Jose\\Component\\Signature\\Algorithm\\' => 35,
-            'Jose\\Component\\Signature\\' => 25,
-            'Jose\\Component\\NestedToken\\' => 27,
-            'Jose\\Component\\KeyManagement\\' => 29,
-            'Jose\\Component\\Encryption\\Algorithm\\KeyEncryption\\' => 50,
-            'Jose\\Component\\Encryption\\Algorithm\\ContentEncryption\\' => 54,
-            'Jose\\Component\\Encryption\\Algorithm\\' => 36,
-            'Jose\\Component\\Encryption\\' => 26,
-            'Jose\\Component\\Core\\Util\\Ecc\\' => 29,
-            'Jose\\Component\\Core\\' => 20,
-            'Jose\\Component\\Console\\' => 23,
-            'Jose\\Component\\Checker\\' => 23,
+            'Jose\\Experimental\\' => 18,
+            'Jose\\Component\\' => 15,
             'Jose\\Bundle\\JoseFramework\\' => 26,
             'Jose\\' => 5,
             'JmesPath\\' => 9,
@@ -1387,6 +1381,10 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         array (
             0 => __DIR__ . '/..' . '/symfony/service-contracts',
         ),
+        'Symfony\\Contracts\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client-contracts',
+        ),
         'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
@@ -1434,6 +1432,10 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Symfony\\Component\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client',
         ),
         'Symfony\\Component\\Finder\\' => 
         array (
@@ -1490,6 +1492,10 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'Sabberworm\\CSS\\' => 
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
+        ),
+        'Rs\\AwsIntegration\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rs/module-aws-integration',
         ),
         'React\\Promise\\' => 
         array (
@@ -3627,84 +3633,17 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
         ),
-        'Jose\\Component\\Signature\\Algorithm\\' => 
+        'Jose\\Experimental\\' => 
         array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/ECDSA',
-            1 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/ECDSA',
-            2 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/EdDSA',
-            3 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/EdDSA',
-            4 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/Experimental',
-            5 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/Experimental',
-            6 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/HMAC',
-            7 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/HMAC',
-            8 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/None',
-            9 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/None',
-            10 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/RSA',
-            11 => __DIR__ . '/..' . '/web-token/jwt-framework/src/SignatureAlgorithm/RSA',
+            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Experimental',
         ),
-        'Jose\\Component\\Signature\\' => 
+        'Jose\\Component\\' => 
         array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Component/Signature',
-        ),
-        'Jose\\Component\\NestedToken\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Component/NestedToken',
-        ),
-        'Jose\\Component\\KeyManagement\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Component/KeyManagement',
-        ),
-        'Jose\\Component\\Encryption\\Algorithm\\KeyEncryption\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/AESGCMKW',
-            1 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/AESGCMKW',
-            2 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/AESKW',
-            3 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/AESKW',
-            4 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/Direct',
-            5 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/Direct',
-            6 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/ECDHES',
-            7 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/ECDHES',
-            8 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/PBES2',
-            9 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/PBES2',
-            10 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/RSA',
-            11 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/KeyEncryption/RSA',
-        ),
-        'Jose\\Component\\Encryption\\Algorithm\\ContentEncryption\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/ContentEncryption/AESCBC',
-            1 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/ContentEncryption/AESCBC',
-            2 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/ContentEncryption/AESGCM',
-            3 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/ContentEncryption/AESGCM',
-        ),
-        'Jose\\Component\\Encryption\\Algorithm\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/Experimental',
-            1 => __DIR__ . '/..' . '/web-token/jwt-framework/src/EncryptionAlgorithm/Experimental',
-        ),
-        'Jose\\Component\\Encryption\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Component/Encryption',
-        ),
-        'Jose\\Component\\Core\\Util\\Ecc\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Ecc',
-            1 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Ecc',
-        ),
-        'Jose\\Component\\Core\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Component/Core',
-        ),
-        'Jose\\Component\\Console\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Component/Console',
-        ),
-        'Jose\\Component\\Checker\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Component/Checker',
+            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Library',
         ),
         'Jose\\Bundle\\JoseFramework\\' => 
         array (
-            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Bundle/JoseFramework',
+            0 => __DIR__ . '/..' . '/web-token/jwt-framework/src/Bundle',
         ),
         'Jose\\' => 
         array (

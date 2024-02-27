@@ -83,9 +83,9 @@
             'dev_requirement' => false,
         ),
         'aws/aws-sdk-php' => array(
-            'pretty_version' => '3.300.1',
-            'version' => '3.300.1.0',
-            'reference' => 'fb67a49453c2b1a51268156b70adeba6c619e743',
+            'pretty_version' => '3.300.5',
+            'version' => '3.300.5.0',
+            'reference' => '9e0cfc4ce77df934b5f0ced6ffac29fd88237266',
             'type' => 'library',
             'install_path' => __DIR__ . '/../aws/aws-sdk-php',
             'aliases' => array(),
@@ -161,9 +161,9 @@
             'dev_requirement' => false,
         ),
         'codeception/codeception' => array(
-            'pretty_version' => '5.1.0',
-            'version' => '5.1.0.0',
-            'reference' => 'cb80cae36a97113b09065bb1d0225d0fc7746540',
+            'pretty_version' => '5.1.1',
+            'version' => '5.1.1.0',
+            'reference' => 'fcfa1d0ec2eb7439e5290fd3ea685b5d1f90075a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../codeception/codeception',
             'aliases' => array(),
@@ -278,9 +278,9 @@
             ),
         ),
         'composer/ca-bundle' => array(
-            'pretty_version' => '1.4.0',
-            'version' => '1.4.0.0',
-            'reference' => 'b66d11b7479109ab547f9405b97205640b17d385',
+            'pretty_version' => '1.4.1',
+            'version' => '1.4.1.0',
+            'reference' => '3ce240142f6d59b808dd65c1f52f7a1c252e6cfd',
             'type' => 'library',
             'install_path' => __DIR__ . '/./ca-bundle',
             'aliases' => array(),
@@ -488,9 +488,9 @@
             'dev_requirement' => false,
         ),
         'friendsofphp/php-cs-fixer' => array(
-            'pretty_version' => 'v3.49.0',
-            'version' => '3.49.0.0',
-            'reference' => '8742f7aa6f72a399688b65e4f58992c2d4681fc2',
+            'pretty_version' => 'v3.50.0',
+            'version' => '3.50.0.0',
+            'reference' => 'dbea11dcb6d9a1f6c8d51c0e580ab4a8876f524c',
             'type' => 'application',
             'install_path' => __DIR__ . '/../friendsofphp/php-cs-fixer',
             'aliases' => array(),
@@ -836,9 +836,9 @@
             'dev_requirement' => false,
         ),
         'laminas/laminas-validator' => array(
-            'pretty_version' => '2.47.0',
-            'version' => '2.47.0.0',
-            'reference' => '5c3fc8c4f1263cda5c5f14aed874fdadd5b90bbd',
+            'pretty_version' => '2.49.0',
+            'version' => '2.49.0.0',
+            'reference' => 'd58c2e7d3cd420554400dd8cca694fafa3b8e45f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-validator',
             'aliases' => array(),
@@ -916,7 +916,7 @@
         'magento/composer' => array(
             'pretty_version' => '1.9.0',
             'version' => '1.9.0.0',
-            'reference' => NULL,
+            'reference' => '71274ccec4abc54c42c5fc8f59d91401defbc99c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../magento/composer',
             'aliases' => array(),
@@ -925,7 +925,7 @@
         'magento/composer-dependency-version-audit-plugin' => array(
             'pretty_version' => '0.1.5',
             'version' => '0.1.5.0',
-            'reference' => NULL,
+            'reference' => '3350798d52c96bb89a17c955d3e0fce00fcaead1',
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../magento/composer-dependency-version-audit-plugin',
             'aliases' => array(),
@@ -5494,6 +5494,18 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'php-http/async-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
+        'php-http/client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
         'php-webdriver/webdriver' => array(
             'pretty_version' => '1.13.1',
             'version' => '1.13.1.0',
@@ -5546,18 +5558,18 @@
             'dev_requirement' => true,
         ),
         'phpseclib/mcrypt_compat' => array(
-            'pretty_version' => '2.0.4',
-            'version' => '2.0.4.0',
-            'reference' => '6505669343743daf290b7d7b6b7105f85fd9988f',
+            'pretty_version' => '2.0.6',
+            'version' => '2.0.6.0',
+            'reference' => 'e5924504997b4f90772034cefd89dc2f4ec189dc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpseclib/mcrypt_compat',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'phpseclib/phpseclib' => array(
-            'pretty_version' => '3.0.35',
-            'version' => '3.0.35.0',
-            'reference' => '4b1827beabce71953ca479485c0ae9c51287f2fe',
+            'pretty_version' => '3.0.36',
+            'version' => '3.0.36.0',
+            'reference' => 'c2fb5136162d4be18fdd4da9980696f3aee96d7b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpseclib/phpseclib',
             'aliases' => array(),
@@ -5798,11 +5810,22 @@
             ),
         ),
         'rs/commerce-emea-bundle' => array(
-            'pretty_version' => '8.5.0',
-            'version' => '8.5.0.0',
-            'reference' => '6dff37bcb7aa094641367b7a0ded6cd04925f9d1',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'c54261fde11e29343c55ab5e4636d32fdfec47d8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../rs/commerce-emea-bundle',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'rs/module-aws-integration' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'bb67710b3891c1bcd313e034fd10d74bf0f02b8c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rs/module-aws-integration',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -6032,18 +6055,18 @@
             'dev_requirement' => true,
         ),
         'symfony/config' => array(
-            'pretty_version' => 'v6.4.3',
-            'version' => '6.4.3.0',
-            'reference' => '206482ff3ed450495b1d5b7bad1bc3a852def96f',
+            'pretty_version' => 'v6.4.4',
+            'version' => '6.4.4.0',
+            'reference' => '6ea4affc27f2086c9d16b92ab5429ce1e3c38047',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/config',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/console' => array(
-            'pretty_version' => 'v5.4.35',
-            'version' => '5.4.35.0',
-            'reference' => 'dbdf6adcb88d5f83790e1efb57ef4074309d3931',
+            'pretty_version' => 'v5.4.36',
+            'version' => '5.4.36.0',
+            'reference' => '39f75d9d73d0c11952fdcecf4877b4d0f62a8f6e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/console',
             'aliases' => array(),
@@ -6059,9 +6082,9 @@
             'dev_requirement' => false,
         ),
         'symfony/dependency-injection' => array(
-            'pretty_version' => 'v6.4.3',
-            'version' => '6.4.3.0',
-            'reference' => '6871811c5a5c5e180244ddb689746446db02c05b',
+            'pretty_version' => 'v6.4.4',
+            'version' => '6.4.4.0',
+            'reference' => '6236e5e843cb763e9d0f74245678b994afea5363',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/dependency-injection',
             'aliases' => array(),
@@ -6135,6 +6158,30 @@
             'install_path' => __DIR__ . '/../symfony/finder',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'symfony/http-client' => array(
+            'pretty_version' => 'v6.2.13',
+            'version' => '6.2.13.0',
+            'reference' => '297374a399ce6852d5905d92a1351df00bb9dd10',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/http-client',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/http-client-contracts' => array(
+            'pretty_version' => 'v3.4.0',
+            'version' => '3.4.0.0',
+            'reference' => '1ee70e699b41909c209a0c930f11034b93578654',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/http-client-contracts',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/http-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '3.0',
+            ),
         ),
         'symfony/http-foundation' => array(
             'pretty_version' => 'v5.4.35',
@@ -6296,27 +6343,27 @@
             'dev_requirement' => true,
         ),
         'symfony/string' => array(
-            'pretty_version' => 'v5.4.35',
-            'version' => '5.4.35.0',
-            'reference' => 'c209c4d0559acce1c9a2067612cfb5d35756edc2',
+            'pretty_version' => 'v5.4.36',
+            'version' => '5.4.36.0',
+            'reference' => '4e232c83622bd8cd32b794216aa29d0d266d353b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/string',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/var-dumper' => array(
-            'pretty_version' => 'v6.4.3',
-            'version' => '6.4.3.0',
-            'reference' => '0435a08f69125535336177c29d56af3abc1f69da',
+            'pretty_version' => 'v6.4.4',
+            'version' => '6.4.4.0',
+            'reference' => 'b439823f04c98b84d4366c79507e9da6230944b1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/var-exporter' => array(
-            'pretty_version' => 'v7.0.3',
-            'version' => '7.0.3.0',
-            'reference' => '1fb79308cb5fc2b44bff6e8af10a5af6812e05b8',
+            'pretty_version' => 'v7.0.4',
+            'version' => '7.0.4.0',
+            'reference' => 'dfb0acb6803eb714f05d97dd4c5abe6d5fa9fe41',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-exporter',
             'aliases' => array(),
@@ -6418,97 +6465,103 @@
         'web-token/encryption-pack' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-bundle' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-checker' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-console' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-core' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-aescbc' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-aesgcm' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-aesgcmkw' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-aeskw' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-dir' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-ecdh-es' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-experimental' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-pbes2' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-encryption-algorithm-rsa' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
+            ),
+        ),
+        'web-token/jwt-experimental' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-framework' => array(
-            'pretty_version' => '3.2.10',
-            'version' => '3.2.10.0',
-            'reference' => '3f8f893270bc2a7fe3562dda6f421b2761e4238e',
+            'pretty_version' => '3.3.0',
+            'version' => '3.3.0.0',
+            'reference' => 'f4c0e0ed43affba85e8eba901de15c85f68da1e9',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../web-token/jwt-framework',
             'aliases' => array(),
@@ -6517,67 +6570,79 @@
         'web-token/jwt-key-mgmt' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
+            ),
+        ),
+        'web-token/jwt-library' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-nested-token' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-signature' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-signature-algorithm-ecdsa' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-signature-algorithm-eddsa' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-signature-algorithm-experimental' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-signature-algorithm-hmac' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-signature-algorithm-none' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-signature-algorithm-rsa' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
+            ),
+        ),
+        'web-token/jwt-signature-pack' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '3.3.0',
             ),
         ),
         'web-token/jwt-util-ecc' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'web-token/signature-pack' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.10',
+                0 => '3.3.0',
             ),
         ),
         'webimpress/safe-writer' => array(
