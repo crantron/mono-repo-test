@@ -198,10 +198,10 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "magento/project-enterprise-edition": "8.20.0",
-        "rs/module-aws-integration": "8.20.0",
-        "rs/module-erp-integration": "8.20.0",
-        "rs/module-payment-braintree": "8.20.0"
+        "magento/project-enterprise-edition": "8.21.0",
+        "rs/module-aws-integration": "8.21.0",
+        "rs/module-erp-integration": "8.21.0",
+        "rs/module-payment-braintree": "8.21.0"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true
