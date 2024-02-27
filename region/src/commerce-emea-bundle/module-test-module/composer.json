@@ -4,8 +4,10 @@
         "php": ">=7.4.0",
         "symfony/http-kernel": "^5.0"
     },
-    "version": "1.0.0",
     "autoload": {
+        "files": [
+            "registration.php"
+        ],
         "psr-4": {
             "Emea\\TestModule\\": ""
         }

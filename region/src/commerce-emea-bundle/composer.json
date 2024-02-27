@@ -1,13 +1,8 @@
 {
     "name": "rs/commerce-emea-bundle",
-    "description": "Repository of region specific composer packages",
+    "description": "Repository of EMEA specific composer packages",
     "type": "library",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Rs\\CommerceEmeaBundle\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Chris Anderson",
