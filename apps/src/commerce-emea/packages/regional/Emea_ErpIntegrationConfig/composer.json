@@ -3,6 +3,11 @@
     "require": {
         "php": ">=7.4.0"
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "8.16-dev"
+        }
+    },
     "autoload": {
         "files": [
             "registration.php"
