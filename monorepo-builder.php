@@ -17,7 +17,7 @@ return static function (MBConfig $mbConfig): void {
 
     $mbConfig->packageDirectories([
         __DIR__ . '/apps/src',
-        __DIR__ . '/global/src'
+        __DIR__ . '/global/src',
     ]);
 
     $mbConfig->workers([
@@ -26,5 +26,8 @@ return static function (MBConfig $mbConfig): void {
         AddTagToChangelogReleaseWorker::class,
         TagVersionReleaseWorker::class,
         PushTagReleaseWorker::class,
+        SetNextMutualDependenciesReleaseWorker::class,
+        UpdateBranchAliasReleaseWorker::class,
+        PushNextDevReleaseWorker::class,
     ]);
 };
