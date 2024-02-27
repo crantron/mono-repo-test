@@ -28729,52 +28729,38 @@
             "install-path": "../rector/rector"
         },
         {
-            "name": "rs/module-aws-integration",
-            "version": "dev-main",
-            "version_normalized": "dev-main",
+            "name": "rs/commerce-emea-bundle",
+            "version": "8.5.0",
+            "version_normalized": "8.5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crantron/commerce-emea-bundle.git",
+                "reference": "6dff37bcb7aa094641367b7a0ded6cd04925f9d1"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-aws-integration",
-                "reference": "4cb56402c22a2ae509d626c6b77bbd89289d1f45"
+                "type": "zip",
+                "url": "https://api.github.com/repos/crantron/commerce-emea-bundle/zipball/6dff37bcb7aa094641367b7a0ded6cd04925f9d1",
+                "reference": "6dff37bcb7aa094641367b7a0ded6cd04925f9d1",
+                "shasum": ""
             },
-            "require": {
-                "php": ">=7.4.0"
-            },
+            "time": "2024-02-27T14:36:52+00:00",
             "type": "library",
             "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Rs\\AwsIntegration\\": ""
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Anderson",
+                    "email": "chrisanderson@rightpoint.com"
                 }
+            ],
+            "description": "Repository of EMEA specific composer packages",
+            "support": {
+                "source": "https://github.com/crantron/commerce-emea-bundle/tree/8.5.0",
+                "issues": "https://github.com/crantron/commerce-emea-bundle/issues"
             },
-            "transport-options": {
-                "relative": false
-            },
-            "install-path": "../rs/module-aws-integration"
-        },
-        {
-            "name": "rs/module-erp-integration",
-            "version": "dev-main",
-            "version_normalized": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-erp-integration",
-                "reference": "df48a424c2afd816d9c196436f10bf7c89e22c8a"
-            },
-            "require": {
-                "php": ">=7.4.0"
-            },
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Rs\\ErpIntegration\\": ""
-                }
-            },
-            "transport-options": {
-                "relative": false
-            },
-            "install-path": "../rs/module-erp-integration"
+            "install-path": "../rs/commerce-emea-bundle"
         },
         {
             "name": "sabberworm/php-css-parser",

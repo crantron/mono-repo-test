@@ -62,7 +62,12 @@
         ],
         "files": [
             "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
-            "apps/src/commerce-rs/app/etc/NonComposerComponentRegistration.php"
+            "apps/src/commerce-rs/app/etc/NonComposerComponentRegistration.php",
+            "global/src/multi-repo/module-aws-integration/registration.php",
+            "global/src/multi-repo/module-erp-integration/registration.php",
+            "global/src/multi-repo/module-payment-braintree/registration.php",
+            "region/src/commerce-emea-bundle/module-test-module-two/registration.php",
+            "region/src/commerce-emea-bundle/module-test-module/registration.php"
         ],
         "psr-0": {
             "": [
@@ -75,10 +80,12 @@
         "psr-4": {
             "Emea\\TestModuleTwo\\": [
                 "region/src/commerce-emea-bundle/Emea_TestModuleTwo/",
+                "region/src/commerce-emea-bundle/module-test-module-two/",
                 "region/src/commerce-emea-bundle/module/Emea_TestModuleTwo/"
             ],
             "Emea\\TestModule\\": [
                 "region/src/commerce-emea-bundle/Emea_TestModule/",
+                "region/src/commerce-emea-bundle/module-test-module/",
                 "region/src/commerce-emea-bundle/module/Emea_TestModule/"
             ],
             "Global\\MonoRepoPackage\\": "global/src/mono-repo-package/src",
@@ -191,16 +198,16 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "commerce-emea-bundle/module-test-module": "8.5.0",
-        "commerce-emea-bundle/module-test-module-two": "8.5.0",
-        "commerce-rs-bundle/module-test-module": "8.5.0",
-        "commerce-rs-bundle/module-test-module-two": "8.5.0",
-        "magento/project-enterprise-edition": "8.5.0",
-        "rs/commerce-emea-bundle": "8.5.0",
-        "rs/commerce-rs-bundle": "8.5.0",
-        "rs/module-aws-integration": "8.5.0",
-        "rs/module-erp-integration": "8.5.0",
-        "rs/module-payment-braintree": "8.5.0"
+        "commerce-emea-bundle/module-test-module": "8.6.0",
+        "commerce-emea-bundle/module-test-module-two": "8.6.0",
+        "commerce-rs-bundle/module-test-module": "8.6.0",
+        "commerce-rs-bundle/module-test-module-two": "8.6.0",
+        "magento/project-enterprise-edition": "8.6.0",
+        "rs/commerce-emea-bundle": "8.6.0",
+        "rs/commerce-rs-bundle": "8.6.0",
+        "rs/module-aws-integration": "8.6.0",
+        "rs/module-erp-integration": "8.6.0",
+        "rs/module-payment-braintree": "8.6.0"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true

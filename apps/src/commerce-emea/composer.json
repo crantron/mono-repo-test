@@ -21,8 +21,7 @@
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "~2.0",
         "magento/product-enterprise-edition": "2.4.6-p4",
-        "rs/module-aws-integration": "^8.6",
-        "rs/module-erp-integration": "^8.6"
+        "rs/commerce-emea-bundle": "^8.6"
     },
     "autoload": {
         "exclude-from-classmap": [

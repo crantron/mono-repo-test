@@ -1,8 +1,7 @@
 {
     "name": "commerce-emea-bundle/module-test-module",
     "require": {
-        "php": ">=7.4.0",
-        "symfony/http-kernel": "^5.0"
+        "php": ">=7.4.0"
     },
     "autoload": {
         "files": [

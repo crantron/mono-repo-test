@@ -690,8 +690,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         ),
         'R' => 
         array (
-            'Rs\\ErpIntegration\\' => 18,
-            'Rs\\AwsIntegration\\' => 18,
             'React\\Promise\\' => 14,
             'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
@@ -1492,14 +1490,6 @@ class ComposerStaticInit38d719c6371d86205940642f9eac9e5e
         'Sabberworm\\CSS\\' => 
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
-        ),
-        'Rs\\ErpIntegration\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/rs/module-erp-integration',
-        ),
-        'Rs\\AwsIntegration\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/rs/module-aws-integration',
         ),
         'React\\Promise\\' => 
         array (
