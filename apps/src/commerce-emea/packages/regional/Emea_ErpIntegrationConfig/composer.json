@@ -5,7 +5,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "8.21-dev"
+            "dev-main": "8.22.<patch>"
         }
     },
     "autoload": {
