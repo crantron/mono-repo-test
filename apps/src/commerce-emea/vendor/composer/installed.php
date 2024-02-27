@@ -83,9 +83,9 @@
             'dev_requirement' => false,
         ),
         'aws/aws-sdk-php' => array(
-            'pretty_version' => '3.300.5',
-            'version' => '3.300.5.0',
-            'reference' => '9e0cfc4ce77df934b5f0ced6ffac29fd88237266',
+            'pretty_version' => '3.300.6',
+            'version' => '3.300.6.0',
+            'reference' => '957ccef631684d612d01ced2fa3b0506f2ec78c3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../aws/aws-sdk-php',
             'aliases' => array(),
@@ -439,11 +439,11 @@
         'emea/module-aws-integration-config' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4659863e6e3f79fa8d1c25fd371ed37af59166b9',
+            'reference' => 'a05a1b25cfa8e44dabf6b58ce7593c0f3895e22a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../emea/module-aws-integration-config',
             'aliases' => array(
-                0 => '8.19.x-dev',
+                0 => '8.24.x-dev',
             ),
             'dev_requirement' => false,
         ),
@@ -5823,11 +5823,11 @@
         'rs/module-aws-integration' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7cfd4d25901d1a27a5310ae7b1883093325e46c0',
+            'reference' => 'fb3a98efb8c51b68eefd728fa9bb4b5e3f5db4fd',
             'type' => 'library',
             'install_path' => __DIR__ . '/../rs/module-aws-integration',
             'aliases' => array(
-                0 => '8.19.x-dev',
+                0 => '8.24.x-dev',
             ),
             'dev_requirement' => false,
         ),

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ebaa45ac48573cf2862f595982cea43",
+    "content-hash": "66c4edc3158aa3507b5c6f1d519b6a67",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -198,16 +198,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.300.5",
+            "version": "3.300.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9e0cfc4ce77df934b5f0ced6ffac29fd88237266"
+                "reference": "957ccef631684d612d01ced2fa3b0506f2ec78c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9e0cfc4ce77df934b5f0ced6ffac29fd88237266",
-                "reference": "9e0cfc4ce77df934b5f0ced6ffac29fd88237266",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/957ccef631684d612d01ced2fa3b0506f2ec78c3",
+                "reference": "957ccef631684d612d01ced2fa3b0506f2ec78c3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -293,9 +293,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.300.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.300.6"
             },
-            "time": "2024-02-26T19:10:06+00:00"
+            "time": "2024-02-27T19:05:27+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1896,7 +1896,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/regional/Emea_AwsIntegrationConfig",
-                "reference": "4659863e6e3f79fa8d1c25fd371ed37af59166b9"
+                "reference": "a05a1b25cfa8e44dabf6b58ce7593c0f3895e22a"
             },
             "require": {
                 "php": ">=7.4.0"
@@ -1904,7 +1904,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "8.19-dev"
+                    "dev-main": "8.24-dev"
                 }
             },
             "autoload": {
@@ -24989,7 +24989,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-aws-integration",
-                "reference": "7cfd4d25901d1a27a5310ae7b1883093325e46c0"
+                "reference": "fb3a98efb8c51b68eefd728fa9bb4b5e3f5db4fd"
             },
             "require": {
                 "php": ">=7.4.0"
@@ -24997,7 +24997,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "8.19-dev"
+                    "dev-main": "8.24-dev"
                 }
             },
             "autoload": {
