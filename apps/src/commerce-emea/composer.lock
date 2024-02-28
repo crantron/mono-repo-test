@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66c4edc3158aa3507b5c6f1d519b6a67",
+    "content-hash": "b4d022800bc301baca99d53720d47210",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -1896,15 +1896,15 @@
             "dist": {
                 "type": "path",
                 "url": "packages/regional/Emea_AwsIntegrationConfig",
-                "reference": "a05a1b25cfa8e44dabf6b58ce7593c0f3895e22a"
+                "reference": "8ebc282d28f0cd6b68dddbee43a0631c8e2da311"
             },
             "require": {
-                "php": ">=7.4.0"
+                "php": ">=8.1.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "8.24-dev"
+                    "dev-main": "8.36.x-dev"
                 }
             },
             "autoload": {
@@ -24989,15 +24989,15 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/chrisanderson/rightpoint/monorepo/global/src/multi-repo/module-aws-integration",
-                "reference": "fb3a98efb8c51b68eefd728fa9bb4b5e3f5db4fd"
+                "reference": "727b4cfe58e5b693b0e1b4de7b9913b1ce4a3184"
             },
             "require": {
-                "php": ">=7.4.0"
+                "php": ">=8.1.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "8.24-dev"
+                    "dev-main": "8.36.x-dev"
                 }
             },
             "autoload": {
@@ -33284,11 +33284,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {
-        "emea/module-aws-integration-config": 20,
-        "rs/module-aws-integration": 20
-    },
+    "minimum-stability": "dev",
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
