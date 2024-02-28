@@ -26,6 +26,6 @@ final class ChangeStabilityToStable implements ReleaseWorkerInterface
 
     public function getDescription(Version $version): string
     {
-        return \sprintf('this is custom stuff: version - %s', $version);
+        return \sprintf('this is custom stuff: version - %s', 1);
     }
 }
