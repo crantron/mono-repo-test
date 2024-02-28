@@ -94,9 +94,6 @@
         }
     },
     "extra": {
-        "magento-force": "override",
-        "branch-alias": {
-            "dev-main": "8.37.x-dev"
-        }
+        "magento-force": "override"
     }
 }
