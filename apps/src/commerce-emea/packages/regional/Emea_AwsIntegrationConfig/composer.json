@@ -1,7 +1,7 @@
 {
     "name": "emea/module-aws-integration-config",
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=8.1.0"
     },
     "extra": {
         "branch-alias": {

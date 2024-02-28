@@ -1,7 +1,7 @@
 {
     "name": "rs/module-aws-integration",
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=8.1.0"
     },
     "extra": {
         "branch-alias": {
