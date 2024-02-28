@@ -195,12 +195,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.46.0",
-        "emea/module-erp-integration-config": "8.46.0",
-        "magento/project-enterprise-edition": "8.46.0",
-        "rs/module-aws-integration": "8.46.0",
-        "rs/module-erp-integration": "8.46.0",
-        "rs/module-payment-braintree": "8.46.0"
+        "emea/module-aws-integration-config": "8.47.0",
+        "emea/module-erp-integration-config": "8.47.0",
+        "magento/project-enterprise-edition": "8.47.0",
+        "rs/module-aws-integration": "8.47.0",
+        "rs/module-erp-integration": "8.47.0",
+        "rs/module-payment-braintree": "8.47.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
