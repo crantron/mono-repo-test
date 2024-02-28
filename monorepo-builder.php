@@ -25,6 +25,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     ]);
     $parameters->set(Option::DEFAULT_BRANCH_NAME, 'main');
     $parameters->set(Option::PACKAGE_ALIAS_FORMAT, '<major>.<minor>.x-dev');
+    echo "touched";
     $services->set(UpdateReplaceReleaseWorker::class);
     $services->set(ChangeStabilityToStable::class);
     $services->set(SetCurrentMutualDependenciesReleaseWorker::class);
