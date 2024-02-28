@@ -1,12 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
-use Symplify\MonorepoBuilder\ValueObject\Option;
-use Symplify\MonorepoBuilder\Release\ReleaseWorker\ChangeStabilityToStable;
+require_once __DIR__ . '/vendor/autoload.php';
+use Symplify\MonorepoBuilder\Config\MBConfig;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\AddTagToChangelogReleaseWorker;
+use ReleaseWorkers\ChangeStabilityToStable;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushNextDevReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushTagReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetCurrentMutualDependenciesReleaseWorker;
@@ -14,24 +12,33 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetNextMutualDependenciesRele
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
+use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $parameters = $containerConfigurator->parameters();
+return static function (MBConfig $mbConfig): void {
 
-    $parameters->set(Option::PACKAGE_DIRECTORIES,[
+    $mbConfig->packageDirectories([
         __DIR__ . '/apps/src',
         __DIR__ . '/global/src',
     ]);
-    $parameters->set(Option::DEFAULT_BRANCH_NAME, 'main');
-    $parameters->set(Option::PACKAGE_ALIAS_FORMAT, '<major>.<minor>.x-dev');
-    $services->set(UpdateReplaceReleaseWorker::class);
-    $services->set(ChangeStabilityToStable::class);
-    $services->set(SetCurrentMutualDependenciesReleaseWorker::class);
-    $services->set(AddTagToChangelogReleaseWorker::class);
-    $services->set(TagVersionReleaseWorker::class);
-    $services->set(PushTagReleaseWorker::class);
-    $services->set(SetNextMutualDependenciesReleaseWorker::class);
-    $services->set(UpdateBranchAliasReleaseWorker::class);
-    $services->set(PushNextDevReleaseWorker::class);
+    $mbConfig->defaultBranch('main');;
+    $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
+    $mbConfig->dataToRemove([
+        ComposerJsonSection::REQUIRE => [
+            // the line is removed by key, so version is irrelevant, thus *
+            'magento/product-enterprise-edition' => '*',
+        ],
+        ComposerJsonSection::REPOSITORIES => [
+           'path',
+        ],
+    ]);
+    $mbConfig->workers([
+        UpdateReplaceReleaseWorker::class,
+        SetCurrentMutualDependenciesReleaseWorker::class,
+        AddTagToChangelogReleaseWorker::class,
+        TagVersionReleaseWorker::class,
+        PushTagReleaseWorker::class,
+        SetNextMutualDependenciesReleaseWorker::class,
+        UpdateBranchAliasReleaseWorker::class,
+        PushNextDevReleaseWorker::class
+    ]);
 };

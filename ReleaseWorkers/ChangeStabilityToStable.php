@@ -2,7 +2,6 @@
 declare(strict_types=1);
 namespace ReleaseWorkers;
 
-use Magento\Tests\NamingConvention\true\string;
 use PharIo\Version\Version;
 use Symplify\MonorepoBuilder\DevMasterAliasUpdater;
 use Symplify\MonorepoBuilder\FileSystem\ComposerJsonProvider;

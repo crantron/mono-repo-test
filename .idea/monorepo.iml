@@ -38,14 +38,11 @@
       <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/module-test-module-two" isTestSource="false" packagePrefix="Emea\TestModuleTwo\" />
       <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/module/Emea_TestModule" isTestSource="false" packagePrefix="Emea\TestModule\" />
       <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/module/Emea_TestModuleTwo" isTestSource="false" packagePrefix="Emea\TestModuleTwo\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/src" isTestSource="false" packagePrefix="Rs\CommerceEmeaBundle\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-rs-bundle/Rs_TestModule" isTestSource="false" packagePrefix="Rs\TestModule\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-rs-bundle/Rs_TestModuleTwo" isTestSource="false" packagePrefix="Rs\TestModuleTwo\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-rs-bundle/src" isTestSource="false" packagePrefix="Rs\CommerceRsBundle\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Symplify\MonorepoBuilder\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Symplify\MonorepoBuilder\Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symplify/monorepo-builder" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
