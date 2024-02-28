@@ -19,7 +19,7 @@
         "magento/product-enterprise-edition": "2.4.6-p4",
         "nette/utils": "^3.2",
         "phar-io/version": "^3.2",
-        "php": ">=8.0",
+        "php": ">=8.1.0",
         "symfony/console": "^6.2",
         "symfony/dependency-injection": "6.1.*",
         "symfony/finder": "^5.4",
@@ -94,8 +94,6 @@
                 "region/src/commerce-emea-bundle/module-test-module/",
                 "region/src/commerce-emea-bundle/module/Emea_TestModule/"
             ],
-            "Global\\MonoRepoPackage\\": "global/src/mono-repo-package/src",
-            "Global\\SomePackage\\": "global/src/mono-repo-package/src",
             "Magento\\": [
                 "apps/src/commerce-emea/app/code/Magento/",
                 "apps/src/commerce-rs/app/code/Magento/"
@@ -108,6 +106,7 @@
                 "apps/src/commerce-emea/setup/src/Magento/Setup/",
                 "apps/src/commerce-rs/setup/src/Magento/Setup/"
             ],
+            "ReleaseWorkers\\": "ReleaseWorkers",
             "Rs\\AwsIntegration\\": "global/src/multi-repo/module-aws-integration/",
             "Rs\\CommerceEmeaBundle\\": "region/src/commerce-emea-bundle/src/",
             "Rs\\CommerceRsBundle\\": "region/src/commerce-rs-bundle/src/",
@@ -196,13 +195,13 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.45.0",
-        "emea/module-erp-integration-config": "8.45.0",
-        "magento/project-enterprise-edition": "8.45.0",
-        "rs/module-aws-integration": "8.45.0",
-        "rs/module-erp-integration": "8.45.0",
-        "rs/module-payment-braintree": "8.45.0"
+        "emea/module-aws-integration-config": "8.46.0",
+        "emea/module-erp-integration-config": "8.46.0",
+        "magento/project-enterprise-edition": "8.46.0",
+        "rs/module-aws-integration": "8.46.0",
+        "rs/module-erp-integration": "8.46.0",
+        "rs/module-payment-braintree": "8.46.0"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ReleaseWorkers" isTestSource="false" packagePrefix="ReleaseWorkers\" />
       <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-emea/app/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-emea/app/code/Magento" isTestSource="false" packagePrefix="Magento\" />
       <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-emea/dev/build/publication/sanity/Magento/Tools/Sanity" isTestSource="true" packagePrefix="Magento\Tools\Sanity\" />
@@ -26,7 +27,6 @@
       <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-rs/generated/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-rs/lib/internal/Magento/Framework" isTestSource="false" packagePrefix="Magento\Framework\" />
       <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-rs/setup/src/Magento/Setup" isTestSource="false" packagePrefix="Magento\Setup\" />
-      <sourceFolder url="file://$MODULE_DIR$/global/src/mono-repo-package/src" isTestSource="false" packagePrefix="Global\MonoRepoPackage\" />
       <sourceFolder url="file://$MODULE_DIR$/global/src/multi-repo/module-aws-integration" isTestSource="false" packagePrefix="Rs\AwsIntegration\" />
       <sourceFolder url="file://$MODULE_DIR$/global/src/multi-repo/module-erp-integration" isTestSource="false" packagePrefix="Rs\ErpIntegration\" />
       <sourceFolder url="file://$MODULE_DIR$/global/src/multi-repo/module-payment-braintree" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
@@ -46,7 +46,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Symplify\MonorepoBuilder\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Symplify\MonorepoBuilder\Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symplify/monorepo-builder" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
