@@ -22,6 +22,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/apps/src',
         __DIR__ . '/global/src',
     ]);
+    $parameters->set(Option::DEFAULT_BRANCH_NAME, 'main');
     $parameters->set(Option::PACKAGE_ALIAS_FORMAT, '<major>.<minor>');
     $services->set(UpdateReplaceReleaseWorker::class);
     $services->set(SetCurrentMutualDependenciesReleaseWorker::class);
