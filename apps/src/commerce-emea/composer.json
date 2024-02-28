@@ -18,11 +18,11 @@
     },
     "version": "2.4.6-p4",
     "require": {
-        "emea/module-aws-integration-config": "^8.27",
+        "emea/module-aws-integration-config": "^8.28",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "~2.0",
         "magento/product-enterprise-edition": "2.4.6-p4",
-        "rs/module-aws-integration": "^8.27"
+        "rs/module-aws-integration": "^8.28"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -96,7 +96,7 @@
     "extra": {
         "magento-force": "override",
         "branch-alias": {
-            "dev-main": "8.27-dev"
+            "dev-main": "8.28-dev"
         }
     }
 }
