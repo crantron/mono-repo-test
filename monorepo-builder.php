@@ -27,9 +27,10 @@ return static function (MBConfig $mbConfig): void {
             // the line is removed by key, so version is irrelevant, thus *
             'magento/product-enterprise-edition' => '*',
         ],
-        ComposerJsonSection::REPOSITORIES => [
-           'path',
-        ],
+
+        ComposerJsonSection::EXTRA => [
+            'patches' => '*'
+        ]
     ]);
     $mbConfig->workers([
         UpdateReplaceReleaseWorker::class,

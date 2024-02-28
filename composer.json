@@ -154,20 +154,11 @@
         {
             "type": "path",
             "url": "packages/regional/*"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/crantron/commerce-rs-bundle.git"
         }
     ],
     "extra": {
         "enable-patching": true,
-        "magento-force": "override",
-        "patches": {
-            "symfony/dependency-injection": [
-                "https://raw.githubusercontent.com/symplify/vendor-patch-files/main/patches/generic-php-config-loader.patch"
-            ]
-        }
+        "magento-force": "override"
     },
     "config": {
         "platform-check": false,
@@ -187,12 +178,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.49.0",
-        "emea/module-erp-integration-config": "8.49.0",
-        "magento/project-enterprise-edition": "8.49.0",
-        "rs/module-aws-integration": "8.49.0",
-        "rs/module-erp-integration": "8.49.0",
-        "rs/module-payment-braintree": "8.49.0"
+        "emea/module-aws-integration-config": "8.50.0",
+        "emea/module-erp-integration-config": "8.50.0",
+        "magento/project-enterprise-edition": "8.50.0",
+        "rs/module-aws-integration": "8.50.0",
+        "rs/module-erp-integration": "8.50.0",
+        "rs/module-payment-braintree": "8.50.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
