@@ -439,11 +439,11 @@
         'emea/module-aws-integration-config' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'a05a1b25cfa8e44dabf6b58ce7593c0f3895e22a',
+            'reference' => '8ebc282d28f0cd6b68dddbee43a0631c8e2da311',
             'type' => 'library',
             'install_path' => __DIR__ . '/../emea/module-aws-integration-config',
             'aliases' => array(
-                0 => '8.24.x-dev',
+                0 => '8.36.x-dev',
             ),
             'dev_requirement' => false,
         ),
@@ -5823,11 +5823,11 @@
         'rs/module-aws-integration' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'fb3a98efb8c51b68eefd728fa9bb4b5e3f5db4fd',
+            'reference' => '727b4cfe58e5b693b0e1b4de7b9913b1ce4a3184',
             'type' => 'library',
             'install_path' => __DIR__ . '/../rs/module-aws-integration',
             'aliases' => array(
-                0 => '8.24.x-dev',
+                0 => '8.36.x-dev',
             ),
             'dev_requirement' => false,
         ),
