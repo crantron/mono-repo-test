@@ -19,7 +19,7 @@
         "magento/product-enterprise-edition": "2.4.6-p4",
         "nette/utils": "^3.2",
         "phar-io/version": "^3.2",
-        "php": ">=7.4.0",
+        "php": ">=8.0",
         "symfony/console": "^6.2",
         "symfony/dependency-injection": "6.1.*",
         "symfony/finder": "^5.4",
@@ -196,12 +196,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.41.0",
-        "emea/module-erp-integration-config": "8.41.0",
-        "magento/project-enterprise-edition": "8.41.0",
-        "rs/module-aws-integration": "8.41.0",
-        "rs/module-erp-integration": "8.41.0",
-        "rs/module-payment-braintree": "8.41.0"
+        "emea/module-aws-integration-config": "8.42.0",
+        "emea/module-erp-integration-config": "8.42.0",
+        "magento/project-enterprise-edition": "8.42.0",
+        "rs/module-aws-integration": "8.42.0",
+        "rs/module-erp-integration": "8.42.0",
+        "rs/module-payment-braintree": "8.42.0"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true
