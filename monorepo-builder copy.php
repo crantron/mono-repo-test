@@ -21,7 +21,7 @@ return static function (MBConfig $mbConfig): void {
         __DIR__ . '/global/src',
     ]);
     $mbConfig->defaultBranch('main');;
-    $mbConfig->packageAliasFormat('<major>.<minor>');
+    $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
     $mbConfig->workers([
         UpdateReplaceReleaseWorker::class,
         SetCurrentMutualDependenciesReleaseWorker::class,
