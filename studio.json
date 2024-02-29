@@ -1,6 +1,7 @@
 {
     "version": 2,
     "paths": [
-        "./global/src/multi-repo/*"
+        "./global/src/multi-repo/*",
+        "./apps/src/commerce-emea/packages/regional/*"
     ]
 }

@@ -63,9 +63,7 @@
             "apps/src/commerce-rs/app/etc/NonComposerComponentRegistration.php",
             "global/src/multi-repo/module-aws-integration/registration.php",
             "global/src/multi-repo/module-erp-integration/registration.php",
-            "global/src/multi-repo/module-payment-braintree/registration.php",
-            "region/src/commerce-emea-bundle/module-test-module-two/registration.php",
-            "region/src/commerce-emea-bundle/module-test-module/registration.php"
+            "global/src/multi-repo/module-payment-braintree/registration.php"
         ],
         "psr-0": {
             "": [
@@ -78,16 +76,6 @@
         "psr-4": {
             "Emea\\AwsIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/",
             "Emea\\ErpIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/",
-            "Emea\\TestModuleTwo\\": [
-                "region/src/commerce-emea-bundle/Emea_TestModuleTwo/",
-                "region/src/commerce-emea-bundle/module-test-module-two/",
-                "region/src/commerce-emea-bundle/module/Emea_TestModuleTwo/"
-            ],
-            "Emea\\TestModule\\": [
-                "region/src/commerce-emea-bundle/Emea_TestModule/",
-                "region/src/commerce-emea-bundle/module-test-module/",
-                "region/src/commerce-emea-bundle/module/Emea_TestModule/"
-            ],
             "Magento\\": [
                 "apps/src/commerce-emea/app/code/Magento/",
                 "apps/src/commerce-rs/app/code/Magento/"
@@ -178,12 +166,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.50.0",
-        "emea/module-erp-integration-config": "8.50.0",
-        "magento/project-enterprise-edition": "8.50.0",
-        "rs/module-aws-integration": "8.50.0",
-        "rs/module-erp-integration": "8.50.0",
-        "rs/module-payment-braintree": "8.50.0"
+        "emea/module-aws-integration-config": "8.51.0",
+        "emea/module-erp-integration-config": "8.51.0",
+        "magento/project-enterprise-edition": "8.51.0",
+        "rs/module-aws-integration": "8.51.0",
+        "rs/module-erp-integration": "8.51.0",
+        "rs/module-payment-braintree": "8.51.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

@@ -32,12 +32,6 @@
       <sourceFolder url="file://$MODULE_DIR$/global/src/multi-repo/module-payment-braintree" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
       <sourceFolder url="file://$MODULE_DIR$/packages" isTestSource="false" packagePrefix="Symplify\MonorepoBuilder\" />
       <sourceFolder url="file://$MODULE_DIR$/packages-tests" isTestSource="true" packagePrefix="Symplify\MonorepoBuilder\Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/Emea_TestModule" isTestSource="false" packagePrefix="Emea\TestModule\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/Emea_TestModuleTwo" isTestSource="false" packagePrefix="Emea\TestModuleTwo\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/module-test-module" isTestSource="false" packagePrefix="Emea\TestModule\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/module-test-module-two" isTestSource="false" packagePrefix="Emea\TestModuleTwo\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/module/Emea_TestModule" isTestSource="false" packagePrefix="Emea\TestModule\" />
-      <sourceFolder url="file://$MODULE_DIR$/region/src/commerce-emea-bundle/module/Emea_TestModuleTwo" isTestSource="false" packagePrefix="Emea\TestModuleTwo\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Symplify\MonorepoBuilder\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Symplify\MonorepoBuilder\Tests\" />

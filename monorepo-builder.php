@@ -13,6 +13,7 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
+use Symplify\MonorepoBuilder\ValueObject\Option;
 
 return static function (MBConfig $mbConfig): void {
 
@@ -24,10 +25,11 @@ return static function (MBConfig $mbConfig): void {
     $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
     $mbConfig->dataToRemove([
         ComposerJsonSection::REQUIRE => [
-            // the line is removed by key, so version is irrelevant, thus *
-            'magento/product-enterprise-edition' => '*',
+            'magento/product-enterprise-edition' => '*'
         ],
-
+        ComposerJsonSection::REPOSITORIES => [
+           'composer'
+        ],
         ComposerJsonSection::EXTRA => [
             'patches' => '*'
         ]
