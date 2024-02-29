@@ -23,13 +23,8 @@ return static function (MBConfig $mbConfig): void {
     ]);
     $mbConfig->defaultBranch('main');;
     $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
+
     $mbConfig->dataToRemove([
-        ComposerJsonSection::REQUIRE => [
-            'magento/product-enterprise-edition' => '*'
-        ],
-        ComposerJsonSection::REPOSITORIES => [
-           'composer'
-        ],
         ComposerJsonSection::EXTRA => [
             'patches' => '*'
         ]
