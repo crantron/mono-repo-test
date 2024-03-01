@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Yandex\\Allure\\Adapter\\' => array($vendorDir . '/allure-framework/allure-php-commons/src/Legacy'),
-    'Workers\\MonoRepo\\' => array($baseDir . '/ReleaseWorkers/workers'),
     'Vault\\' => array($vendorDir . '/csharpru/vault-php/src'),
     'Symfony\\Polyfill\\Php83\\' => array($vendorDir . '/symfony/polyfill-php83'),
     'Symfony\\Polyfill\\Php81\\' => array($vendorDir . '/symfony/polyfill-php81'),
@@ -62,6 +61,7 @@ return array(
     'ParagonIE\\ConstantTime\\' => array($vendorDir . '/paragonie/constant_time_encoding/src'),
     'PDepend\\' => array($vendorDir . '/pdepend/pdepend/src/main/php/PDepend'),
     'OTPHP\\' => array($vendorDir . '/spomky-labs/otphp/src'),
+    'Monorepo\\Workers\\' => array($baseDir . '/workers/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Magento\\Tools\\Sanity\\' => array($baseDir . '/apps/src/commerce-emea/dev/build/publication/sanity/Magento/Tools/Sanity', $baseDir . '/apps/src/commerce-rs/dev/build/publication/sanity/Magento/Tools/Sanity'),
     'Magento\\Tools\\' => array($baseDir . '/apps/src/commerce-emea/dev/tools/Magento/Tools', $baseDir . '/apps/src/commerce-rs/dev/tools/Magento/Tools'),
@@ -70,6 +70,7 @@ return array(
     'Magento\\Sniffs\\' => array($baseDir . '/apps/src/commerce-emea/dev/tests/static/framework/Magento/Sniffs', $baseDir . '/apps/src/commerce-rs/dev/tests/static/framework/Magento/Sniffs'),
     'Magento\\PhpStan\\' => array($baseDir . '/apps/src/commerce-emea/dev/tests/static/framework/Magento/PhpStan', $baseDir . '/apps/src/commerce-rs/dev/tests/static/framework/Magento/PhpStan'),
     'Magento\\FunctionalTestingFramework\\' => array($vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework'),
+    'Magento\\Framework\\Component\\' => array($baseDir . '/apps/src/commerce-emea/vendor/magento/framework/Component', $baseDir . '/apps/src/commerce-rs/vendor/magento/framework/Component'),
     'Magento\\Framework\\' => array($baseDir . '/apps/src/commerce-emea/lib/internal/Magento/Framework', $baseDir . '/apps/src/commerce-rs/lib/internal/Magento/Framework'),
     'Magento\\' => array($baseDir . '/apps/src/commerce-emea/app/code/Magento', $baseDir . '/apps/src/commerce-rs/app/code/Magento'),
     'Magento2\\' => array($vendorDir . '/magento/magento-coding-standard/Magento2'),

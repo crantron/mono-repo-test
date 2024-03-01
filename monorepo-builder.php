@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 require_once __DIR__ . '/vendor/autoload.php';
+
+use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
 use Symplify\MonorepoBuilder\Config\MBConfig;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\AddTagToChangelogReleaseWorker;
-use Workers\MonoRepo\ChangeStabilityToStable;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushNextDevReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushTagReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetCurrentMutualDependenciesReleaseWorker;
@@ -12,8 +13,7 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetNextMutualDependenciesRele
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
-use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
-use Symplify\MonorepoBuilder\ValueObject\Option;
+use Monorepo\Workers\ChangeStabilityToStable;
 
 return static function (MBConfig $mbConfig): void {
 
@@ -24,6 +24,13 @@ return static function (MBConfig $mbConfig): void {
     $mbConfig->defaultBranch('main');;
     $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
 
+    $mbConfig->dataToAppend([
+        ComposerJsonSection::AUTOLOAD => [
+            'psr-4' => [
+                'Monorepo\Workers\\' => 'workers/src/'
+            ],
+        ]
+    ]);
     $mbConfig->dataToRemove([
         ComposerJsonSection::REQUIRE => [
             "magento/product-enterprise-edition" => '*',
@@ -51,6 +58,6 @@ return static function (MBConfig $mbConfig): void {
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
         PushNextDevReleaseWorker::class,
-        ChangeStabilityToStable::class
+        ChangeStabilityToStable::Class
     ]);
 };

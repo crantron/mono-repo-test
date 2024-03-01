@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Workers\MonoRepo;
+namespace Monorepo\Workers;
 
 use PharIo\Version\Version;
 use Symplify\MonorepoBuilder\DevMasterAliasUpdater;

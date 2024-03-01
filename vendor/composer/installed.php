@@ -3,7 +3,7 @@
         'name' => 'my/repo',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '340bdfa944cdf3831693d8de27dd561117d49529',
+        'reference' => 'e0e332e61350ab41eba3544fbd4a376fe8e1cba9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -47,9 +47,9 @@
             'dev_requirement' => true,
         ),
         'aws/aws-sdk-php' => array(
-            'pretty_version' => '3.300.8',
-            'version' => '3.300.8.0',
-            'reference' => '421be99f109a330acd4297abe2f41069eccbf447',
+            'pretty_version' => '3.300.9',
+            'version' => '3.300.9.0',
+            'reference' => '2704b9b10b42d53066eb383f47541124296db77c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../aws/aws-sdk-php',
             'aliases' => array(),
@@ -271,13 +271,13 @@
         'emea/module-aws-integration-config' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.54.0',
+                0 => '8.55.0',
             ),
         ),
         'emea/module-erp-integration-config' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.54.0',
+                0 => '8.55.0',
             ),
         ),
         'facebook/webdriver' => array(
@@ -379,13 +379,13 @@
         'magento/project-enterprise-edition-emea' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.54.0',
+                0 => '8.55.0',
             ),
         ),
         'magento/project-enterprise-edition-rs' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.54.0',
+                0 => '8.55.0',
             ),
         ),
         'monolog/monolog' => array(
@@ -418,7 +418,7 @@
         'my/repo' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '340bdfa944cdf3831693d8de27dd561117d49529',
+            'reference' => 'e0e332e61350ab41eba3544fbd4a376fe8e1cba9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -739,19 +739,19 @@
         'rs/module-aws-integration' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.54.0',
+                0 => '8.55.0',
             ),
         ),
         'rs/module-erp-integration' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.54.0',
+                0 => '8.55.0',
             ),
         ),
         'rs/module-payment-braintree' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.54.0',
+                0 => '8.55.0',
             ),
         ),
         'sebastian/cli-parser' => array(

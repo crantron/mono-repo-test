@@ -51,10 +51,6 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         array (
             'Yandex\\Allure\\Adapter\\' => 22,
         ),
-        'W' => 
-        array (
-            'Workers\\MonoRepo\\' => 17,
-        ),
         'V' => 
         array (
             'Vault\\' => 6,
@@ -129,6 +125,7 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         ),
         'M' => 
         array (
+            'Monorepo\\Workers\\' => 17,
             'Monolog\\' => 8,
             'Magento\\Tools\\Sanity\\' => 21,
             'Magento\\Tools\\' => 14,
@@ -137,6 +134,7 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
             'Magento\\Sniffs\\' => 15,
             'Magento\\PhpStan\\' => 16,
             'Magento\\FunctionalTestingFramework\\' => 35,
+            'Magento\\Framework\\Component\\' => 28,
             'Magento\\Framework\\' => 18,
             'Magento\\' => 8,
             'Magento2\\' => 9,
@@ -203,10 +201,6 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         'Yandex\\Allure\\Adapter\\' => 
         array (
             0 => __DIR__ . '/..' . '/allure-framework/allure-php-commons/src/Legacy',
-        ),
-        'Workers\\MonoRepo\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/ReleaseWorkers/workers',
         ),
         'Vault\\' => 
         array (
@@ -425,6 +419,10 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         array (
             0 => __DIR__ . '/..' . '/spomky-labs/otphp/src',
         ),
+        'Monorepo\\Workers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/workers/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -462,6 +460,11 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         'Magento\\FunctionalTestingFramework\\' => 
         array (
             0 => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework',
+        ),
+        'Magento\\Framework\\Component\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/apps/src/commerce-emea/vendor/magento/framework/Component',
+            1 => __DIR__ . '/../..' . '/apps/src/commerce-rs/vendor/magento/framework/Component',
         ),
         'Magento\\Framework\\' => 
         array (
@@ -3175,6 +3178,10 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         'Magento2\\Tests\\Templates\\ThisInTemplateUnitTest' => __DIR__ . '/..' . '/magento/magento-coding-standard/Magento2/Tests/Templates/ThisInTemplateUnitTest.php',
         'Magento2\\Tests\\Translation\\ConstantUsageUnitTest' => __DIR__ . '/..' . '/magento/magento-coding-standard/Magento2/Tests/Translation/ConstantUsageUnitTest.php',
         'Magento2\\Tests\\Whitespace\\MultipleEmptyLinesUnitTest' => __DIR__ . '/..' . '/magento/magento-coding-standard/Magento2/Tests/Whitespace/MultipleEmptyLinesUnitTest.php',
+        'Magento\\Framework\\Component\\ComponentFile' => __DIR__ . '/../..' . '/apps/src/commerce-emea/vendor/magento/framework/Component/ComponentFile.php',
+        'Magento\\Framework\\Component\\ComponentRegistrar' => __DIR__ . '/../..' . '/apps/src/commerce-emea/vendor/magento/framework/Component/ComponentRegistrar.php',
+        'Magento\\Framework\\Component\\ComponentRegistrarInterface' => __DIR__ . '/../..' . '/apps/src/commerce-emea/vendor/magento/framework/Component/ComponentRegistrarInterface.php',
+        'Magento\\Framework\\Component\\DirSearch' => __DIR__ . '/../..' . '/apps/src/commerce-emea/vendor/magento/framework/Component/DirSearch.php',
         'Magento\\FunctionalTestingFramework\\Allure\\Adapter\\MagentoAllureAdapter' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Allure/Adapter/MagentoAllureAdapter.php',
         'Magento\\FunctionalTestingFramework\\Allure\\AllureHelper' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Allure/AllureHelper.php',
         'Magento\\FunctionalTestingFramework\\Allure\\Event\\AddUniqueAttachmentEvent' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Allure/Event/AddUniqueAttachmentEvent.php',
@@ -3540,6 +3547,7 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         'Monolog\\SignalHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/SignalHandler.php',
         'Monolog\\Test\\TestCase' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Test/TestCase.php',
         'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
+        'Monorepo\\Workers\\ChangeStabilityToStable' => __DIR__ . '/../..' . '/workers/src/ChangeStabilityToStable.php',
         'Mustache_Autoloader' => __DIR__ . '/..' . '/mustache/mustache/src/Mustache/Autoloader.php',
         'Mustache_Cache' => __DIR__ . '/..' . '/mustache/mustache/src/Mustache/Cache.php',
         'Mustache_Cache_AbstractCache' => __DIR__ . '/..' . '/mustache/mustache/src/Mustache/Cache/AbstractCache.php',
@@ -6984,7 +6992,6 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         'Vault\\ResponseModels\\Auth' => __DIR__ . '/..' . '/csharpru/vault-php/src/ResponseModels/Auth.php',
         'Vault\\ResponseModels\\Response' => __DIR__ . '/..' . '/csharpru/vault-php/src/ResponseModels/Response.php',
         'Vault\\ResponseModels\\Traits\\LeaseTrait' => __DIR__ . '/..' . '/csharpru/vault-php/src/ResponseModels/Traits/LeaseTrait.php',
-        'Workers\\MonoRepo\\ChangeStabilityToStable' => __DIR__ . '/../..' . '/ReleaseWorkers/workers/ChangeStabilityToStable.php',
         'Yandex\\Allure\\Adapter\\Annotation\\AllureId' => __DIR__ . '/..' . '/allure-framework/allure-php-commons/src/Legacy/Annotation/AllureId.php',
         'Yandex\\Allure\\Adapter\\Annotation\\Description' => __DIR__ . '/..' . '/allure-framework/allure-php-commons/src/Legacy/Annotation/Description.php',
         'Yandex\\Allure\\Adapter\\Annotation\\Epics' => __DIR__ . '/..' . '/allure-framework/allure-php-commons/src/Legacy/Annotation/Epics.php',

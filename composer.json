@@ -31,6 +31,15 @@
             "apps/src/commerce-rs/**/dev/**",
             "apps/src/commerce-rs/**/update/**"
         ],
+        "files": [
+            "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/registration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/registration.php",
+            "apps/src/commerce-rs/app/etc/NonComposerComponentRegistration.php",
+            "global/src/multi-repo/module-aws-integration/registration.php",
+            "global/src/multi-repo/module-erp-integration/registration.php",
+            "global/src/multi-repo/module-payment-braintree/registration.php"
+        ],
         "psr-0": {
             "": [
                 "apps/src/commerce-emea/app/code/",
@@ -50,10 +59,14 @@
                 "apps/src/commerce-emea/lib/internal/Magento/Framework/",
                 "apps/src/commerce-rs/lib/internal/Magento/Framework/"
             ],
+            "Magento\\Framework\\Component\\": [
+                "apps/src/commerce-emea/vendor/magento/framework/Component/",
+                "apps/src/commerce-rs/vendor/magento/framework/Component/"
+            ],
+            "Monorepo\\Workers\\": "workers/src/",
             "Rs\\AwsIntegration\\": "global/src/multi-repo/module-aws-integration/",
             "Rs\\ErpIntegration\\": "global/src/multi-repo/module-erp-integration/",
-            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/",
-            "Workers\\MonoRepo\\": "ReleaseWorkers/workers/"
+            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/"
         }
     },
     "autoload-dev": {
@@ -92,6 +105,10 @@
         {
             "type": "composer",
             "url": "https://repo.packagist.com/crantron/"
+        },
+        {
+            "type": "path",
+            "url": "packages/regional/*"
         }
     ],
     "extra": {
@@ -116,13 +133,13 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.55.0",
-        "emea/module-erp-integration-config": "8.55.0",
-        "magento/project-enterprise-edition-emea": "8.55.0",
-        "magento/project-enterprise-edition-rs": "8.55.0",
-        "rs/module-aws-integration": "8.55.0",
-        "rs/module-erp-integration": "8.55.0",
-        "rs/module-payment-braintree": "8.55.0"
+        "emea/module-aws-integration-config": "8.56.0",
+        "emea/module-erp-integration-config": "8.56.0",
+        "magento/project-enterprise-edition-emea": "8.56.0",
+        "magento/project-enterprise-edition-rs": "8.56.0",
+        "rs/module-aws-integration": "8.56.0",
+        "rs/module-erp-integration": "8.56.0",
+        "rs/module-payment-braintree": "8.56.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
