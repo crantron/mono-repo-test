@@ -1,24 +1,15 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'my/repo',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'af1542bb98987448ddf41c1624c62755b07a119e',
+        'reference' => '340bdfa944cdf3831693d8de27dd561117d49529',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => 'af1542bb98987448ddf41c1624c62755b07a119e',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'allure-framework/allure-codeception' => array(
             'pretty_version' => 'v2.3.0',
             'version' => '2.3.0.0',
@@ -280,13 +271,13 @@
         'emea/module-aws-integration-config' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.53.0',
+                0 => '8.54.0',
             ),
         ),
         'emea/module-erp-integration-config' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.53.0',
+                0 => '8.54.0',
             ),
         ),
         'facebook/webdriver' => array(
@@ -388,13 +379,13 @@
         'magento/project-enterprise-edition-emea' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.53.0',
+                0 => '8.54.0',
             ),
         ),
         'magento/project-enterprise-edition-rs' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.53.0',
+                0 => '8.54.0',
             ),
         ),
         'monolog/monolog' => array(
@@ -423,6 +414,15 @@
             'install_path' => __DIR__ . '/../mustache/mustache',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'my/repo' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '340bdfa944cdf3831693d8de27dd561117d49529',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
             'pretty_version' => '1.11.1',
@@ -739,19 +739,19 @@
         'rs/module-aws-integration' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.53.0',
+                0 => '8.54.0',
             ),
         ),
         'rs/module-erp-integration' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.53.0',
+                0 => '8.54.0',
             ),
         ),
         'rs/module-payment-braintree' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.53.0',
+                0 => '8.54.0',
             ),
         ),
         'sebastian/cli-parser' => array(

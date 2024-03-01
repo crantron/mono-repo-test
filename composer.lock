@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "061c2fac44785b6aae104a2ccc8d1509",
+    "content-hash": "4d818d99b0d26f284f9769087640f69d",
     "packages": [
         {
             "name": "symplify/monorepo-builder",

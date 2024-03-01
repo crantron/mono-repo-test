@@ -92,10 +92,6 @@
         {
             "type": "composer",
             "url": "https://repo.packagist.com/crantron/"
-        },
-        {
-            "type": "path",
-            "url": "packages/regional/*"
         }
     ],
     "extra": {
@@ -115,18 +111,18 @@
     "scripts": {
         "check-cs": "vendor/bin/ecs check --ansi",
         "fix-cs": "vendor/bin/ecs check --fix --ansi",
-        "phpstan": "vendor/bin/phpstan analyse --ansi  --error-format symplify",
+        "phpstan": "vendor/bin/phpstan analyse --ansi  --error-format table",
         "rector": "vendor/bin/rector process --dry-run --ansi",
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.54.0",
-        "emea/module-erp-integration-config": "8.54.0",
-        "magento/project-enterprise-edition-emea": "8.54.0",
-        "magento/project-enterprise-edition-rs": "8.54.0",
-        "rs/module-aws-integration": "8.54.0",
-        "rs/module-erp-integration": "8.54.0",
-        "rs/module-payment-braintree": "8.54.0"
+        "emea/module-aws-integration-config": "8.55.0",
+        "emea/module-erp-integration-config": "8.55.0",
+        "magento/project-enterprise-edition-emea": "8.55.0",
+        "magento/project-enterprise-edition-rs": "8.55.0",
+        "rs/module-aws-integration": "8.55.0",
+        "rs/module-erp-integration": "8.55.0",
+        "rs/module-payment-braintree": "8.55.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
