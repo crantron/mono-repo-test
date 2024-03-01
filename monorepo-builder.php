@@ -4,7 +4,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/vendor/autoload.php';
 use Symplify\MonorepoBuilder\Config\MBConfig;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\AddTagToChangelogReleaseWorker;
-use ReleaseWorkers\ChangeStabilityToStable;
+use Workers\MonoRepo\ChangeStabilityToStable;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushNextDevReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushTagReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetCurrentMutualDependenciesReleaseWorker;
@@ -25,8 +25,21 @@ return static function (MBConfig $mbConfig): void {
     $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
 
     $mbConfig->dataToRemove([
+        ComposerJsonSection::REQUIRE => [
+            "magento/product-enterprise-edition" => '*',
+            "magento/composer-root-update-plugin" => '*',
+            "magento/composer-dependency-version-audit-plugin" => '*'
+        ],
         ComposerJsonSection::EXTRA => [
             'patches' => '*'
+        ],
+        ComposerJsonSection::AUTOLOAD => [
+            'psr-4' => [
+                'Magento\Setup\\' => 'apps/src/commerce-rs/setup/src/Magento/Setup/'
+            ],
+            'files' => [
+                '*' => 'apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php'
+            ]
         ]
     ]);
     $mbConfig->workers([
@@ -37,6 +50,7 @@ return static function (MBConfig $mbConfig): void {
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
-        PushNextDevReleaseWorker::class
+        PushNextDevReleaseWorker::class,
+        ChangeStabilityToStable::class
     ]);
 };
