@@ -34,7 +34,8 @@ return static function (MBConfig $mbConfig): void {
     $mbConfig->dataToAppend([
         ComposerJsonSection::AUTOLOAD => [
             'psr-4' => [
-                'Monorepo\Workers\\' => 'workers/src/'
+                'Monorepo\Workers\\' => 'workers/src/',
+                'Magento\Framework\Component\\' => 'apps/src/commerce-emea/vendor/magento/framework/Component'
             ],
         ]
     ]);

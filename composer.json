@@ -28,6 +28,14 @@
             "apps/src/commerce-emea/**/dev/**",
             "apps/src/commerce-emea/**/update/**"
         ],
+        "files": [
+            "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/registration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/registration.php",
+            "global/src/multi-repo/module-aws-integration/registration.php",
+            "global/src/multi-repo/module-erp-integration/registration.php",
+            "global/src/multi-repo/module-payment-braintree/registration.php"
+        ],
         "psr-0": {
             "": [
                 "apps/src/commerce-emea/app/code/",
@@ -39,21 +47,13 @@
             "Emea\\ErpIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/",
             "Magento\\": "apps/src/commerce-emea/app/code/Magento/",
             "Magento\\Framework\\": "apps/src/commerce-emea/lib/internal/Magento/Framework/",
+            "Magento\\Framework\\Component\\": "apps/src/commerce-emea/vendor/magento/framework/Component",
             "Magento\\Setup\\": "apps/src/commerce-emea/setup/src/Magento/Setup/",
             "Monorepo\\Workers\\": "workers/src/",
             "Rs\\AwsIntegration\\": "global/src/multi-repo/module-aws-integration/",
             "Rs\\ErpIntegration\\": "global/src/multi-repo/module-erp-integration/",
-            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/",
-            "Magento\\Framework\\Component\\": "apps/src/commerce-emea/vendor/magento/framework/Component/"
-        },
-        "files": [
-            "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
-            "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/registration.php",
-            "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/registration.php",
-            "global/src/multi-repo/module-aws-integration/registration.php",
-            "global/src/multi-repo/module-erp-integration/registration.php",
-            "global/src/multi-repo/module-payment-braintree/registration.php"
-        ]
+            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -73,6 +73,10 @@
         {
             "type": "composer",
             "url": "https://repo.packagist.com/crantron/"
+        },
+        {
+            "type": "path",
+            "url": "packages/regional/*"
         }
     ],
     "extra": {
@@ -97,12 +101,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.60.0",
-        "emea/module-erp-integration-config": "8.60.0",
-        "magento/project-enterprise-edition-emea": "8.60.0",
-        "rs/module-aws-integration": "8.60.0",
-        "rs/module-erp-integration": "8.60.0",
-        "rs/module-payment-braintree": "8.60.0"
+        "emea/module-aws-integration-config": "8.61.0",
+        "emea/module-erp-integration-config": "8.61.0",
+        "magento/project-enterprise-edition-emea": "8.61.0",
+        "rs/module-aws-integration": "8.61.0",
+        "rs/module-erp-integration": "8.61.0",
+        "rs/module-payment-braintree": "8.61.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
