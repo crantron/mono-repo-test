@@ -50,14 +50,14 @@ return static function (MBConfig $mbConfig): void {
         ComposerJsonSection::EXTRA => [
             'patches' => '*'
         ],
-        ComposerJsonSection::AUTOLOAD => [
-            'psr-4' => [
-                'Magento\Setup\\' => 'apps/src/commerce-rs/setup/src/Magento/Setup/'
-            ],
-            'files' => [
-                '*' => 'apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php'
-            ]
-        ]
+//        ComposerJsonSection::AUTOLOAD => [
+//            'psr-4' => [
+//                'Magento\Setup\\' => 'apps/src/commerce-rs/setup/src/Magento/Setup/'
+//            ],
+//            'files' => [
+//                '*' => 'apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php'
+//            ]
+//        ]
     ]);
 
     //default release workers, provided by monorepo library

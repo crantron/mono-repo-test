@@ -26,66 +26,44 @@
         "exclude-from-classmap": [
             "apps/src/commerce-emea/**/Test/**",
             "apps/src/commerce-emea/**/dev/**",
-            "apps/src/commerce-emea/**/update/**",
-            "apps/src/commerce-rs/**/Test/**",
-            "apps/src/commerce-rs/**/dev/**",
-            "apps/src/commerce-rs/**/update/**"
+            "apps/src/commerce-emea/**/update/**"
         ],
         "psr-0": {
             "": [
                 "apps/src/commerce-emea/app/code/",
-                "apps/src/commerce-emea/generated/code/",
-                "apps/src/commerce-rs/app/code/",
-                "apps/src/commerce-rs/generated/code/"
+                "apps/src/commerce-emea/generated/code/"
             ]
         },
         "psr-4": {
             "Emea\\AwsIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/",
             "Emea\\ErpIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/",
-            "Magento\\": [
-                "apps/src/commerce-emea/app/code/Magento/",
-                "apps/src/commerce-rs/app/code/Magento/"
-            ],
-            "Magento\\Framework\\": [
-                "apps/src/commerce-emea/lib/internal/Magento/Framework/",
-                "apps/src/commerce-rs/lib/internal/Magento/Framework/"
-            ],
-            "Magento\\Framework\\Component\\": [
-                "apps/src/commerce-emea/vendor/magento/framework/Component/",
-                "apps/src/commerce-rs/vendor/magento/framework/Component/"
-            ],
+            "Magento\\": "apps/src/commerce-emea/app/code/Magento/",
+            "Magento\\Framework\\": "apps/src/commerce-emea/lib/internal/Magento/Framework/",
+            "Magento\\Setup\\": "apps/src/commerce-emea/setup/src/Magento/Setup/",
             "Monorepo\\Workers\\": "workers/src/",
             "Rs\\AwsIntegration\\": "global/src/multi-repo/module-aws-integration/",
             "Rs\\ErpIntegration\\": "global/src/multi-repo/module-erp-integration/",
-            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/"
-        }
+            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/",
+            "Magento\\Framework\\Component\\": ""
+        },
+        "files": [
+            "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/registration.php",
+            "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/registration.php",
+            "global/src/multi-repo/module-aws-integration/registration.php",
+            "global/src/multi-repo/module-erp-integration/registration.php",
+            "global/src/multi-repo/module-payment-braintree/registration.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Magento\\PhpStan\\": [
-                "apps/src/commerce-emea/dev/tests/static/framework/Magento/PhpStan/",
-                "apps/src/commerce-rs/dev/tests/static/framework/Magento/PhpStan/"
-            ],
-            "Magento\\Sniffs\\": [
-                "apps/src/commerce-emea/dev/tests/static/framework/Magento/Sniffs/",
-                "apps/src/commerce-rs/dev/tests/static/framework/Magento/Sniffs/"
-            ],
-            "Magento\\TestFramework\\Inspection\\": [
-                "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Inspection/",
-                "apps/src/commerce-rs/dev/tests/static/framework/Magento/TestFramework/Inspection/"
-            ],
-            "Magento\\TestFramework\\Utility\\": [
-                "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Utility/",
-                "apps/src/commerce-rs/dev/tests/static/framework/Magento/TestFramework/Utility/"
-            ],
-            "Magento\\Tools\\": [
-                "apps/src/commerce-emea/dev/tools/Magento/Tools/",
-                "apps/src/commerce-rs/dev/tools/Magento/Tools/"
-            ],
-            "Magento\\Tools\\Sanity\\": [
-                "apps/src/commerce-emea/dev/build/publication/sanity/Magento/Tools/Sanity/",
-                "apps/src/commerce-rs/dev/build/publication/sanity/Magento/Tools/Sanity/"
-            ]
+            "Magento\\PhpStan\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/PhpStan/",
+            "Magento\\Sniffs\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/Sniffs/",
+            "Magento\\TestFramework\\Inspection\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Inspection/",
+            "Magento\\TestFramework\\Utility\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Utility/",
+            "Magento\\Tools\\": "apps/src/commerce-emea/dev/tools/Magento/Tools/",
+            "Magento\\Tools\\Sanity\\": "apps/src/commerce-emea/dev/build/publication/sanity/Magento/Tools/Sanity/",
+            "Magento\\Framework\\Component\\": "apps/src/commerce-emea/vendor/magento/framework/Component/"
         }
     },
     "repositories": [
@@ -96,10 +74,6 @@
         {
             "type": "composer",
             "url": "https://repo.packagist.com/crantron/"
-        },
-        {
-            "type": "path",
-            "url": "packages/regional/*"
         }
     ],
     "extra": {
@@ -124,13 +98,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.57.0",
-        "emea/module-erp-integration-config": "8.57.0",
-        "magento/project-enterprise-edition-emea": "8.57.0",
-        "magento/project-enterprise-edition-rs": "8.57.0",
-        "rs/module-aws-integration": "8.57.0",
-        "rs/module-erp-integration": "8.57.0",
-        "rs/module-payment-braintree": "8.57.0"
+        "emea/module-aws-integration-config": "8.58.0",
+        "emea/module-erp-integration-config": "8.58.0",
+        "magento/project-enterprise-edition-emea": "8.58.0",
+        "rs/module-aws-integration": "8.58.0",
+        "rs/module-erp-integration": "8.58.0",
+        "rs/module-payment-braintree": "8.58.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

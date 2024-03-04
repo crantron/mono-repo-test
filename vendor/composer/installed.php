@@ -3,7 +3,7 @@
         'name' => 'my/repo',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'e0e332e61350ab41eba3544fbd4a376fe8e1cba9',
+        'reference' => 'dd1f5f8a4124f4ae472846b86560169e286fbc29',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -271,13 +271,13 @@
         'emea/module-aws-integration-config' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.55.0',
+                0 => '8.57.0',
             ),
         ),
         'emea/module-erp-integration-config' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.55.0',
+                0 => '8.57.0',
             ),
         ),
         'facebook/webdriver' => array(
@@ -379,13 +379,7 @@
         'magento/project-enterprise-edition-emea' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.55.0',
-            ),
-        ),
-        'magento/project-enterprise-edition-rs' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '8.55.0',
+                0 => '8.57.0',
             ),
         ),
         'monolog/monolog' => array(
@@ -418,7 +412,7 @@
         'my/repo' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e0e332e61350ab41eba3544fbd4a376fe8e1cba9',
+            'reference' => 'dd1f5f8a4124f4ae472846b86560169e286fbc29',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -672,8 +666,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => true,
             'provided' => array(
-                0 => '1.0.0 || 2.0.0 || 3.0.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '1.0.0 || 2.0.0 || 3.0.0',
             ),
         ),
         'psy/psysh' => array(
@@ -739,19 +733,19 @@
         'rs/module-aws-integration' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.55.0',
+                0 => '8.57.0',
             ),
         ),
         'rs/module-erp-integration' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.55.0',
+                0 => '8.57.0',
             ),
         ),
         'rs/module-payment-braintree' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '8.55.0',
+                0 => '8.57.0',
             ),
         ),
         'sebastian/cli-parser' => array(

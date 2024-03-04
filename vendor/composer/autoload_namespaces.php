@@ -11,5 +11,5 @@ return array(
     'OAuth' => array($vendorDir . '/lusitanian/oauth/src'),
     'Mustache' => array($vendorDir . '/mustache/mustache/src'),
     'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),
-    '' => array($baseDir . '/apps/src/commerce-emea/app/code', $baseDir . '/apps/src/commerce-emea/generated/code', $baseDir . '/apps/src/commerce-rs/app/code', $baseDir . '/apps/src/commerce-rs/generated/code'),
+    '' => array($baseDir . '/apps/src/commerce-emea/app/code', $baseDir . '/apps/src/commerce-emea/generated/code'),
 );

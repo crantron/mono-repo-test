@@ -43,4 +43,10 @@ return array(
     '940abd8fb01ee76a36b44f35dcf9783b' => $vendorDir . '/weew/helpers-array/src/array.php',
     'eda65932675b68b5aee4503e0762d64d' => $vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
     '441a24351a446467a4ac901a587bc153' => $vendorDir . '/symplify/monorepo-builder/bootstrap.php',
+    '0867e1e001d7e18d16b695c10e6dac41' => $baseDir . '/apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php',
+    'e9362a36fcfb8c40130c7b3c7ae372a9' => $baseDir . '/apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/registration.php',
+    '3c87bdff81f569f079b64c11a2380401' => $baseDir . '/apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/registration.php',
+    'cf79f2f0a418a07f14b062a26b430e3d' => $baseDir . '/global/src/multi-repo/module-aws-integration/registration.php',
+    '110dcfd3976c456cc6b068bd227489e8' => $baseDir . '/global/src/multi-repo/module-erp-integration/registration.php',
+    'd0f4dcc091d27462fcc98bb371e747b7' => $baseDir . '/global/src/multi-repo/module-payment-braintree/registration.php',
 );
