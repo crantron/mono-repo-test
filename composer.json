@@ -44,7 +44,7 @@
             "Rs\\AwsIntegration\\": "global/src/multi-repo/module-aws-integration/",
             "Rs\\ErpIntegration\\": "global/src/multi-repo/module-erp-integration/",
             "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/",
-            "Magento\\Framework\\Component\\": ""
+            "Magento\\Framework\\Component\\": "apps/src/commerce-emea/vendor/magento/framework/Component/"
         },
         "files": [
             "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
@@ -62,8 +62,7 @@
             "Magento\\TestFramework\\Inspection\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Inspection/",
             "Magento\\TestFramework\\Utility\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Utility/",
             "Magento\\Tools\\": "apps/src/commerce-emea/dev/tools/Magento/Tools/",
-            "Magento\\Tools\\Sanity\\": "apps/src/commerce-emea/dev/build/publication/sanity/Magento/Tools/Sanity/",
-            "Magento\\Framework\\Component\\": "apps/src/commerce-emea/vendor/magento/framework/Component/"
+            "Magento\\Tools\\Sanity\\": "apps/src/commerce-emea/dev/build/publication/sanity/Magento/Tools/Sanity/"
         }
     },
     "repositories": [
@@ -98,12 +97,12 @@
         "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.58.0",
-        "emea/module-erp-integration-config": "8.58.0",
-        "magento/project-enterprise-edition-emea": "8.58.0",
-        "rs/module-aws-integration": "8.58.0",
-        "rs/module-erp-integration": "8.58.0",
-        "rs/module-payment-braintree": "8.58.0"
+        "emea/module-aws-integration-config": "8.59.0",
+        "emea/module-erp-integration-config": "8.59.0",
+        "magento/project-enterprise-edition-emea": "8.59.0",
+        "rs/module-aws-integration": "8.59.0",
+        "rs/module-erp-integration": "8.59.0",
+        "rs/module-payment-braintree": "8.59.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

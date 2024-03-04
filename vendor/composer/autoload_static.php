@@ -468,8 +468,7 @@ class ComposerStaticInitab98d6031ae47e90d63762e8e026bae1
         ),
         'Magento\\Framework\\Component\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/',
-            1 => __DIR__ . '/../..' . '/apps/src/commerce-emea/vendor/magento/framework/Component',
+            0 => __DIR__ . '/../..' . '/apps/src/commerce-emea/vendor/magento/framework/Component',
         ),
         'Magento\\Framework\\' => 
         array (

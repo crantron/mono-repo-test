@@ -71,7 +71,7 @@ return array(
     'Magento\\Setup\\' => array($baseDir . '/apps/src/commerce-emea/setup/src/Magento/Setup'),
     'Magento\\PhpStan\\' => array($baseDir . '/apps/src/commerce-emea/dev/tests/static/framework/Magento/PhpStan'),
     'Magento\\FunctionalTestingFramework\\' => array($vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework'),
-    'Magento\\Framework\\Component\\' => array($baseDir . '/', $baseDir . '/apps/src/commerce-emea/vendor/magento/framework/Component'),
+    'Magento\\Framework\\Component\\' => array($baseDir . '/apps/src/commerce-emea/vendor/magento/framework/Component'),
     'Magento\\Framework\\' => array($baseDir . '/apps/src/commerce-emea/lib/internal/Magento/Framework'),
     'Magento\\' => array($baseDir . '/apps/src/commerce-emea/app/code/Magento'),
     'Magento2\\' => array($vendorDir . '/magento/magento-coding-standard/Magento2'),

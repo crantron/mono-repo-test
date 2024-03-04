@@ -20,8 +20,7 @@
       <sourceFolder url="file://$MODULE_DIR$/global/src/multi-repo/module-payment-braintree" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/" isTestSource="false" packagePrefix="Magento\Framework\Component\" />
-      <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-emea/vendor/magento/framework/Component" isTestSource="true" packagePrefix="Magento\Framework\Component\" />
+      <sourceFolder url="file://$MODULE_DIR$/apps/src/commerce-emea/vendor/magento/framework/Component" isTestSource="false" packagePrefix="Magento\Framework\Component\" />
       <sourceFolder url="file://$MODULE_DIR$/workers/src" isTestSource="false" packagePrefix="Monorepo\Workers\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/stopwatch" />
