@@ -17,13 +17,20 @@ use Monorepo\Workers\ChangeStabilityToStable;
 
 return static function (MBConfig $mbConfig): void {
 
+    //set location of packages / apps
     $mbConfig->packageDirectories([
         __DIR__ . '/apps/src',
         __DIR__ . '/global/src',
     ]);
+
+    //set the git default branch. Defaults to master - which is outdated.
     $mbConfig->defaultBranch('main');;
+
+    //set dev alias for dev-main, so composers update/install/require will pull dev-main when
+    //minimum stability is set to dev in root composer.jsons
     $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
 
+    //add psr-4 autoload for custom release workers
     $mbConfig->dataToAppend([
         ComposerJsonSection::AUTOLOAD => [
             'psr-4' => [
@@ -31,6 +38,9 @@ return static function (MBConfig $mbConfig): void {
             ],
         ]
     ]);
+
+    //remove adobe commerce packages, these need to be removed as when running composer install
+    //in the monorepo root installs commerce.
     $mbConfig->dataToRemove([
         ComposerJsonSection::REQUIRE => [
             "magento/product-enterprise-edition" => '*',
@@ -49,7 +59,10 @@ return static function (MBConfig $mbConfig): void {
             ]
         ]
     ]);
-    $mbConfig->workers([
+
+    //default release workers, provided by monorepo library
+    //see: vendor/symplify/monorepo-builder/packages/Release/ReleaseWorker/*
+    $originalWorkers = [
         UpdateReplaceReleaseWorker::class,
         SetCurrentMutualDependenciesReleaseWorker::class,
         AddTagToChangelogReleaseWorker::class,
@@ -57,7 +70,16 @@ return static function (MBConfig $mbConfig): void {
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
-        PushNextDevReleaseWorker::class,
+        PushNextDevReleaseWorker::class
+    ];
+
+    //configured custom workers
+    //see workers/src/*
+    $customWorkers = [
         ChangeStabilityToStable::Class
-    ]);
+    ];
+
+    $workers = array_merge($originalWorkers, $customWorkers);
+
+    $mbConfig->workers($workers);
 };
