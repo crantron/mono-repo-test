@@ -18,8 +18,8 @@
         ]
     },
     "replace": {
-        "rs/module-aws-integration": "self.version",
-        "rs/module-erp-integration": "self.version",
-        "rs/module-payment-braintree": "self.version"
+        "rs/module-aws-integration": "8.68.0",
+        "rs/module-erp-integration": "8.68.0",
+        "rs/module-payment-braintree": "8.68.0"
     }
 }
