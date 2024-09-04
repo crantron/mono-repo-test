@@ -43,14 +43,6 @@ return static function (MBConfig $mbConfig): void {
     //remove adobe commerce packages, these need to be removed as when running composer install
     //in the monorepo root installs commerce.
     $mbConfig->dataToRemove([
-        ComposerJsonSection::REQUIRE => [
-            "magento/product-enterprise-edition" => '*',
-            "magento/composer-root-update-plugin" => '*',
-            "magento/composer-dependency-version-audit-plugin" => '*'
-        ],
-        ComposerJsonSection::EXTRA => [
-            'patches' => '*'
-        ],
 //        ComposerJsonSection::AUTOLOAD => [
 //            'psr-4' => [
 //                'Magento\Setup\\' => 'apps/src/commerce-rs/setup/src/Magento/Setup/'
