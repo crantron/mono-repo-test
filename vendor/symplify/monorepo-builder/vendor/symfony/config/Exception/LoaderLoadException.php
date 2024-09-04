@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Exception;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Exception;
 
 /**
  * Exception class for when a resource cannot be loaded or imported.
@@ -69,7 +69,6 @@ class LoaderLoadException extends \Exception
         parent::__construct($message, $code, $previous);
     }
     /**
-     * @return string
      * @param mixed $var
      */
     protected function varToString($var)

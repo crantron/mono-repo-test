@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Extension;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Extension;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ConfigurableInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerBuilder;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ConfigurableInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerBuilder;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 /**
  * @author Yonel Ceruto <yonelceruto@gmail.com>
  */

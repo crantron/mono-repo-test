@@ -8,18 +8,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\DependencyInjection;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\DependencyInjection;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\LazyCommand;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Compiler\ServiceLocatorTagPass;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerBuilder;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Reference;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\TypedReference;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\LazyCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Compiler\ServiceLocatorTagPass;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerBuilder;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Reference;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\TypedReference;
 /**
  * Registers console commands.
  *

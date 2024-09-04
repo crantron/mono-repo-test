@@ -1,12 +1,12 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\SymplifyKernel\Tests\ContainerBuilderFactory;
+namespace MonorepoBuilderPrefix202408\Symplify\SymplifyKernel\Tests\ContainerBuilderFactory;
 
-use MonorepoBuilderPrefix202311\PHPUnit\Framework\TestCase;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileSystem;
-use MonorepoBuilderPrefix202311\Symplify\SymplifyKernel\Config\Loader\ParameterMergingLoaderFactory;
-use MonorepoBuilderPrefix202311\Symplify\SymplifyKernel\ContainerBuilderFactory;
+use MonorepoBuilderPrefix202408\PHPUnit\Framework\TestCase;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileSystem;
+use MonorepoBuilderPrefix202408\Symplify\SymplifyKernel\Config\Loader\ParameterMergingLoaderFactory;
+use MonorepoBuilderPrefix202408\Symplify\SymplifyKernel\ContainerBuilderFactory;
 final class ContainerBuilderFactoryTest extends TestCase
 {
     public function test() : void

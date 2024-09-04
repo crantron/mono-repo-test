@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputOption;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputOption;
 /**
  * Stores all completion suggestions for the current input.
  *
@@ -18,7 +18,13 @@ use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputOption;
  */
 final class CompletionSuggestions
 {
+    /**
+     * @var mixed[]
+     */
     private $valueSuggestions = [];
+    /**
+     * @var mixed[]
+     */
     private $optionSuggestions = [];
     /**
      * Add a suggested value for an input option or argument.

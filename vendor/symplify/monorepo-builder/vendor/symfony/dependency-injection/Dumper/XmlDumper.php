@@ -8,20 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Dumper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Dumper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Alias;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Definition;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Parameter;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Reference;
-use MonorepoBuilderPrefix202311\Symfony\Component\ExpressionLanguage\Expression;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Alias;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Definition;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Parameter;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Reference;
+use MonorepoBuilderPrefix202408\Symfony\Component\ExpressionLanguage\Expression;
 /**
  * XmlDumper dumps a service container as an XML string.
  *

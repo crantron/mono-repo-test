@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader;
 
 /**
  * LoaderResolver selects a loader for a given resource.
@@ -46,9 +46,6 @@ class LoaderResolver implements LoaderResolverInterface
         }
         return \false;
     }
-    /**
-     * @return void
-     */
     public function addLoader(LoaderInterface $loader)
     {
         $this->loaders[] = $loader;

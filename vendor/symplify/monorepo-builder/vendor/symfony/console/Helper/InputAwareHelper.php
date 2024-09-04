@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputAwareInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputAwareInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputInterface;
 /**
  * An implementation of InputAwareInterface for Helpers.
  *

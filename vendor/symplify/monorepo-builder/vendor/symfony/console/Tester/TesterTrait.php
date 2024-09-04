@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Tester;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Tester;
 
-use MonorepoBuilderPrefix202311\PHPUnit\Framework\Assert;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\ConsoleOutput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\StreamOutput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Tester\Constraint\CommandIsSuccessful;
+use MonorepoBuilderPrefix202408\PHPUnit\Framework\Assert;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\ConsoleOutput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\StreamOutput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Tester\Constraint\CommandIsSuccessful;
 /**
  * @author Amrouche Hamza <hamza.simperfit@gmail.com>
  */
@@ -129,7 +129,7 @@ trait TesterTrait
      */
     private function initOutput(array $options) : void
     {
-        $this->captureStreamsIndependently = \array_key_exists('capture_stderr_separately', $options) && $options['capture_stderr_separately'];
+        $this->captureStreamsIndependently = $options['capture_stderr_separately'] ?? \false;
         if (!$this->captureStreamsIndependently) {
             $this->output = new StreamOutput(\fopen('php://memory', 'w', \false));
             if (isset($options['decorated'])) {

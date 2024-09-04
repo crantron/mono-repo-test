@@ -1,19 +1,19 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311;
+namespace MonorepoBuilderPrefix202408;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Style\SymfonyStyle;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Parameter\ParameterProvider;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\FileSystemFilter;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\FileSystemGuard;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Finder\SmartFinder;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileSystem;
-use function MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\Configurator\service;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Style\SymfonyStyle;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Parameter\ParameterProvider;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\FileSystemFilter;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\FileSystemGuard;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Finder\FinderSanitizer;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Finder\SmartFinder;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileSystem;
+use function MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\Configurator\service;
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
     $services->defaults()->public()->autowire();

@@ -1,12 +1,12 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\EasyTesting\PHPUnit\Behavior;
+namespace MonorepoBuilderPrefix202408\Symplify\EasyTesting\PHPUnit\Behavior;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Finder\Finder;
-use MonorepoBuilderPrefix202311\Symplify\EasyTesting\ValueObject\ExpectedAndOutputFileInfoPair;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Symfony\Component\Finder\Finder;
+use MonorepoBuilderPrefix202408\Symplify\EasyTesting\ValueObject\ExpectedAndOutputFileInfoPair;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Finder\FinderSanitizer;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * Use only in "\PHPUnit\Framework\TestCase"
  *

@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Process\Pipes;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Process\Pipes;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Process\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Process\Exception\InvalidArgumentException;
 /**
  * @author Romain Neutron <imprec@gmail.com>
  *
@@ -22,19 +22,27 @@ abstract class AbstractPipes implements PipesInterface
      * @var mixed[]
      */
     public $pipes = [];
+    /**
+     * @var string
+     */
     private $inputBuffer = '';
+    /** @var resource|string|\Iterator */
     private $input;
+    /**
+     * @var bool
+     */
     private $blocked = \true;
+    /**
+     * @var string|null
+     */
     private $lastError;
     /**
-     * @param mixed $input
+     * @param resource|string|\Iterator $input
      */
     public function __construct($input)
     {
         if (\is_resource($input) || $input instanceof \Iterator) {
             $this->input = $input;
-        } elseif (\is_string($input)) {
-            $this->inputBuffer = $input;
         } else {
             $this->inputBuffer = (string) $input;
         }

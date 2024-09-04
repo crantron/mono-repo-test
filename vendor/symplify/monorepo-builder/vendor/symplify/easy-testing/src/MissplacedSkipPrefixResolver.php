@@ -1,13 +1,13 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\EasyTesting;
+namespace MonorepoBuilderPrefix202408\Symplify\EasyTesting;
 
-use MonorepoBuilderPrefix202311\Nette\Utils\Strings;
-use MonorepoBuilderPrefix202311\Symplify\EasyTesting\ValueObject\IncorrectAndMissingSkips;
-use MonorepoBuilderPrefix202311\Symplify\EasyTesting\ValueObject\Prefix;
-use MonorepoBuilderPrefix202311\Symplify\EasyTesting\ValueObject\SplitLine;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Nette\Utils\Strings;
+use MonorepoBuilderPrefix202408\Symplify\EasyTesting\ValueObject\IncorrectAndMissingSkips;
+use MonorepoBuilderPrefix202408\Symplify\EasyTesting\ValueObject\Prefix;
+use MonorepoBuilderPrefix202408\Symplify\EasyTesting\ValueObject\SplitLine;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @see \Symplify\EasyTesting\Tests\MissingSkipPrefixResolver\MissingSkipPrefixResolverTest
  */

@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Tester\Constraint;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Tester\Constraint;
 
-use MonorepoBuilderPrefix202311\PHPUnit\Framework\Constraint\Constraint;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\PHPUnit\Framework\Constraint\Constraint;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
 final class CommandIsSuccessful extends Constraint
 {
     public function toString() : string

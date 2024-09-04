@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\LogicException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\LogicException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Kevin Bond <kevinbond@gmail.com>
  */
@@ -63,7 +63,7 @@ class ProgressIndicator
      * @param int        $indicatorChangeInterval Change interval in milliseconds
      * @param array|null $indicatorValues         Animated indicator characters
      */
-    public function __construct(OutputInterface $output, string $format = null, int $indicatorChangeInterval = 100, array $indicatorValues = null)
+    public function __construct(OutputInterface $output, ?string $format = null, int $indicatorChangeInterval = 100, ?array $indicatorValues = null)
     {
         $this->output = $output;
         $format = $format ?? $this->determineBestFormat();
@@ -217,7 +217,7 @@ class ProgressIndicator
         }, 'message' => function (self $indicator) {
             return $indicator->message;
         }, 'elapsed' => function (self $indicator) {
-            return Helper::formatTime(\time() - $indicator->startTime);
+            return Helper::formatTime(\time() - $indicator->startTime, 2);
         }, 'memory' => function () {
             return Helper::formatMemory(\memory_get_usage(\true));
         }];

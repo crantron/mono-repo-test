@@ -8,16 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor\DescriptorInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor\JsonDescriptor;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor\MarkdownDescriptor;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor\ReStructuredTextDescriptor;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor\TextDescriptor;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor\XmlDescriptor;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor\DescriptorInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor\JsonDescriptor;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor\MarkdownDescriptor;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor\ReStructuredTextDescriptor;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor\TextDescriptor;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor\XmlDescriptor;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
 /**
  * This class adds helper method to describe objects in various formats.
  *

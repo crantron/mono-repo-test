@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Question;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Question;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\LogicException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\LogicException;
 /**
  * Represents a Question.
  *
@@ -61,7 +61,7 @@ class Question
     private $multiline = \false;
     /**
      * @param string                     $question The question to ask to the user
-     * @param string|bool|int|float $default The default answer to return if the user enters nothing
+     * @param string|bool|int|float|null $default  The default answer to return if the user enters nothing
      */
     public function __construct(string $question, $default = null)
     {
@@ -185,7 +185,7 @@ class Question
      *
      * @return $this
      */
-    public function setAutocompleterCallback(callable $callback = null)
+    public function setAutocompleterCallback(?callable $callback = null)
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
@@ -201,7 +201,7 @@ class Question
      *
      * @return $this
      */
-    public function setValidator(callable $validator = null)
+    public function setValidator(?callable $validator = null)
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);

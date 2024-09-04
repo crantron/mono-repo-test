@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Pierre du Plessis <pdples@gmail.com>
  */
@@ -20,6 +20,7 @@ final class Cursor
      * @var \Symfony\Component\Console\Output\OutputInterface
      */
     private $output;
+    /** @var resource */
     private $input;
     /**
      * @param resource|null $input

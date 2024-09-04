@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Application;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputDefinition;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputOption;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Application;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputDefinition;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputOption;
 /**
  * XML descriptor.
  *
@@ -64,7 +64,7 @@ class XmlDescriptor extends Descriptor
         }
         return $dom;
     }
-    public function getApplicationDocument(Application $application, string $namespace = null, bool $short = \false) : \DOMDocument
+    public function getApplicationDocument(Application $application, ?string $namespace = null, bool $short = \false) : \DOMDocument
     {
         $dom = new \DOMDocument('1.0', 'UTF-8');
         $dom->appendChild($rootXml = $dom->createElement('symfony'));

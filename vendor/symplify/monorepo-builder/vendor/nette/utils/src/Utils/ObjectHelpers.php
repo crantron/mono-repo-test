@@ -5,10 +5,10 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Nette\Utils;
+namespace MonorepoBuilderPrefix202408\Nette\Utils;
 
-use MonorepoBuilderPrefix202311\Nette;
-use MonorepoBuilderPrefix202311\Nette\MemberAccessException;
+use MonorepoBuilderPrefix202408\Nette;
+use MonorepoBuilderPrefix202408\Nette\MemberAccessException;
 /**
  * Nette\SmartObject helpers.
  * @internal

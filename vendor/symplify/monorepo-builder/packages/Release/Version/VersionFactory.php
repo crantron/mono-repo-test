@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Symplify\MonorepoBuilder\Release\Version;
 
-use MonorepoBuilderPrefix202311\Nette\Utils\Strings;
+use MonorepoBuilderPrefix202408\Nette\Utils\Strings;
 use PharIo\Version\Version;
 use Symplify\MonorepoBuilder\Contract\Git\TagResolverInterface;
 use Symplify\MonorepoBuilder\Release\Guard\ReleaseGuard;

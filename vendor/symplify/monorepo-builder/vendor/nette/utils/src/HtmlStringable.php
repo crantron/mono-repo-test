@@ -5,7 +5,7 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Nette;
+namespace MonorepoBuilderPrefix202408\Nette;
 
 interface HtmlStringable
 {

@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Tester;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Tester;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\CompletionInput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\CompletionSuggestions;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\CompletionInput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\CompletionSuggestions;
 /**
  * Eases the testing of command completion.
  *
@@ -20,6 +20,9 @@ use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\CompletionS
  */
 class CommandCompletionTester
 {
+    /**
+     * @var \Symfony\Component\Console\Command\Command
+     */
     private $command;
     public function __construct(Command $command)
     {

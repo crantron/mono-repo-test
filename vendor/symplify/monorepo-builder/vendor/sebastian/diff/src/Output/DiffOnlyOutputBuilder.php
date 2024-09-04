@@ -9,7 +9,7 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\SebastianBergmann\Diff\Output;
+namespace MonorepoBuilderPrefix202408\SebastianBergmann\Diff\Output;
 
 use function fclose;
 use function fopen;
@@ -17,7 +17,7 @@ use function fwrite;
 use function str_ends_with;
 use function stream_get_contents;
 use function substr;
-use MonorepoBuilderPrefix202311\SebastianBergmann\Diff\Differ;
+use MonorepoBuilderPrefix202408\SebastianBergmann\Diff\Differ;
 /**
  * Builds a diff string representation in a loose unified diff format
  * listing only changes lines. Does not include line numbers.

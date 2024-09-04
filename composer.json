@@ -1,113 +1,35 @@
 {
-    "name": "my/repo",
     "require": {
         "php": ">=8.1.0",
-        "symplify/monorepo-builder": "^11.2"
-    },
-    "require-dev": {
-        "allure-framework/allure-phpunit": "^2",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-        "dg/bypass-finals": "^1.4",
-        "friendsofphp/php-cs-fixer": "^3.8",
-        "lusitanian/oauth": "^0.8",
-        "magento/magento-coding-standard": "*",
-        "magento/magento2-functional-testing-framework": "^4.3.1",
-        "pdepend/pdepend": "^2.12",
-        "phpmd/phpmd": "^2.13",
-        "phpstan/phpstan": "^1.9",
-        "phpunit/phpunit": "^9.5",
-        "sebastian/comparator": "<=4.0.6",
-        "sebastian/phpcpd": "^6.0",
-        "squizlabs/php_codesniffer": "^3.6",
-        "symfony/finder": "^5.4",
-        "symfony/process": "<=v5.4.23"
+        "symfony/dependency-injection": "^5.0",
+        "symfony/http-kernel": "^5.0"
     },
     "autoload": {
-        "exclude-from-classmap": [
-            "apps/src/commerce-emea/**/Test/**",
-            "apps/src/commerce-emea/**/dev/**",
-            "apps/src/commerce-emea/**/update/**"
-        ],
+        "psr-4": {
+            "Rs\\AwsIntegration\\": "src/global/module-aws-integration/",
+            "Rs\\ErpIntegration\\": "src/global/module-erp-integration/",
+            "Rs\\PaymentBraintree\\": "src/global/module-payment-braintree/"
+        },
         "files": [
-            "apps/src/commerce-emea/app/etc/NonComposerComponentRegistration.php",
-            "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/registration.php",
-            "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/registration.php",
-            "global/src/multi-repo/module-aws-integration/registration.php",
-            "global/src/multi-repo/module-erp-integration/registration.php",
-            "global/src/multi-repo/module-payment-braintree/registration.php"
-        ],
-        "psr-0": {
-            "": [
-                "apps/src/commerce-emea/app/code/",
-                "apps/src/commerce-emea/generated/code/"
-            ]
-        },
-        "psr-4": {
-            "Emea\\AwsIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_AwsIntegrationConfig/",
-            "Emea\\ErpIntegrationConfig\\": "apps/src/commerce-emea/packages/regional/Emea_ErpIntegrationConfig/",
-            "Magento\\": "apps/src/commerce-emea/app/code/Magento/",
-            "Magento\\Framework\\": "apps/src/commerce-emea/lib/internal/Magento/Framework/",
-            "Magento\\Framework\\Component\\": "apps/src/commerce-emea/vendor/magento/framework/Component",
-            "Magento\\Setup\\": "apps/src/commerce-emea/setup/src/Magento/Setup/",
-            "Monorepo\\Workers\\": "workers/src/",
-            "Rs\\AwsIntegration\\": "global/src/multi-repo/module-aws-integration/",
-            "Rs\\ErpIntegration\\": "global/src/multi-repo/module-erp-integration/",
-            "Rs\\PaymentBraintree\\": "global/src/multi-repo/module-payment-braintree/"
-        }
+            "src/global/module-aws-integration/registration.php",
+            "src/global/module-erp-integration/registration.php",
+            "src/global/module-payment-braintree/registration.php"
+        ]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Magento\\PhpStan\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/PhpStan/",
-            "Magento\\Sniffs\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/Sniffs/",
-            "Magento\\TestFramework\\Inspection\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Inspection/",
-            "Magento\\TestFramework\\Utility\\": "apps/src/commerce-emea/dev/tests/static/framework/Magento/TestFramework/Utility/",
-            "Magento\\Tools\\": "apps/src/commerce-emea/dev/tools/Magento/Tools/",
-            "Magento\\Tools\\Sanity\\": "apps/src/commerce-emea/dev/build/publication/sanity/Magento/Tools/Sanity/"
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://repo.magento.com/"
-        },
-        {
+    "repositories": {
+        "packagist.org": false,
+        "private-packagist": {
             "type": "composer",
             "url": "https://repo.packagist.com/crantron/"
         },
-        {
-            "type": "path",
-            "url": "packages/regional/*"
+        "0": {
+            "type": "composer",
+            "url": "https://repo.packagist.com/crantron/"
         }
-    ],
-    "extra": {
-        "enable-patching": true,
-        "magento-force": "override"
-    },
-    "config": {
-        "platform-check": false,
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "magento/composer-dependency-version-audit-plugin": true,
-            "magento/magento-composer-installer": true,
-            "magento/composer-root-update-plugin": true,
-            "magento/inventory-composer-installer": true
-        }
-    },
-    "scripts": {
-        "check-cs": "vendor/bin/ecs check --ansi",
-        "fix-cs": "vendor/bin/ecs check --fix --ansi",
-        "phpstan": "vendor/bin/phpstan analyse --ansi  --error-format table",
-        "rector": "vendor/bin/rector process --dry-run --ansi",
-        "release": "bin/monorepo-builder release patch --ansi"
     },
     "replace": {
-        "emea/module-aws-integration-config": "8.61.0",
-        "emea/module-erp-integration-config": "8.61.0",
-        "magento/project-enterprise-edition-emea": "8.61.0",
-        "rs/module-aws-integration": "8.61.0",
-        "rs/module-erp-integration": "8.61.0",
-        "rs/module-payment-braintree": "8.61.0"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+        "rs/module-aws-integration": "self.version",
+        "rs/module-erp-integration": "self.version",
+        "rs/module-payment-braintree": "self.version"
+    }
 }

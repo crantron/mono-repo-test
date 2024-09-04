@@ -5,10 +5,10 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Nette\Utils;
+namespace MonorepoBuilderPrefix202408\Nette\Utils;
 
-use MonorepoBuilderPrefix202311\Nette;
-use MonorepoBuilderPrefix202311\Nette\HtmlStringable;
+use MonorepoBuilderPrefix202408\Nette;
+use MonorepoBuilderPrefix202408\Nette\HtmlStringable;
 use function is_array, is_float, is_object, is_string;
 /**
  * HTML helper.

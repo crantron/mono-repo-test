@@ -8,20 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Exception\FileLocatorFileNotFoundException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Exception\LoaderLoadException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\FileLocatorInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader\FileLoader as BaseFileLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader\Loader;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource\GlobResource;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Attribute\When;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ChildDefinition;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Compiler\RegisterAutoconfigureAttributesPass;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerBuilder;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Definition;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Exception\FileLocatorFileNotFoundException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Exception\LoaderLoadException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\FileLocatorInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader\FileLoader as BaseFileLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader\Loader;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource\GlobResource;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Attribute\When;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ChildDefinition;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Compiler\RegisterAutoconfigureAttributesPass;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerBuilder;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Definition;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 /**
  * FileLoader is the abstract class used by all built-in loaders that are file based.
  *

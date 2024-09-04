@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Dumper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Dumper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ArrayNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\BaseNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ConfigurationInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\EnumNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\NodeInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\PrototypedArrayNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ScalarNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\VariableNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Yaml\Inline;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ArrayNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\BaseNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ConfigurationInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\EnumNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\NodeInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\PrototypedArrayNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ScalarNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\VariableNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Yaml\Inline;
 /**
  * Dumps a Yaml reference configuration for the given configuration/node instance.
  *
@@ -30,16 +30,10 @@ class YamlReferenceDumper
      * @var string|null
      */
     private $reference;
-    /**
-     * @return string
-     */
     public function dump(ConfigurationInterface $configuration)
     {
         return $this->dumpNode($configuration->getConfigTreeBuilder()->buildTree());
     }
-    /**
-     * @return string
-     */
     public function dumpAtPath(ConfigurationInterface $configuration, string $path)
     {
         $rootNode = $node = $configuration->getConfigTreeBuilder()->buildTree();
@@ -59,9 +53,6 @@ class YamlReferenceDumper
         }
         return $this->dumpNode($node);
     }
-    /**
-     * @return string
-     */
     public function dumpNode(NodeInterface $node)
     {
         $this->reference = '';
@@ -70,7 +61,7 @@ class YamlReferenceDumper
         $this->reference = null;
         return $ref;
     }
-    private function writeNode(NodeInterface $node, NodeInterface $parentNode = null, int $depth = 0, bool $prototypedArray = \false) : void
+    private function writeNode(NodeInterface $node, NodeInterface $parentNode = null, int $depth = 0, bool $prototypedArray = \false)
     {
         $comments = [];
         $default = '';
@@ -94,7 +85,7 @@ class YamlReferenceDumper
                 }
             }
         } elseif ($node instanceof EnumNode) {
-            $comments[] = 'One of ' . $node->getPermissibleValues('; ');
+            $comments[] = 'One of ' . \implode('; ', \array_map('json_encode', $node->getValues()));
             $default = $node->hasDefaultValue() ? Inline::dump($node->getDefaultValue()) : '~';
         } elseif (VariableNode::class === \get_class($node) && \is_array($example)) {
             // If there is an array example, we are sure we dont need to print a default value
@@ -160,13 +151,13 @@ class YamlReferenceDumper
     /**
      * Outputs a single config reference line.
      */
-    private function writeLine(string $text, int $indent = 0) : void
+    private function writeLine(string $text, int $indent = 0)
     {
         $indent = \strlen($text) + $indent;
         $format = '%' . $indent . 's';
         $this->reference .= \sprintf($format, $text) . "\n";
     }
-    private function writeArray(array $array, int $depth) : void
+    private function writeArray(array $array, int $depth)
     {
         $arrayIsListFunction = function (array $array) : bool {
             if (\function_exists('array_is_list')) {

@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Messenger\Handler\MessageSubscriberInterface;
-use MonorepoBuilderPrefix202311\Symfony\Contracts\Service\ServiceSubscriberInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Messenger\Handler\MessageSubscriberInterface;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\Service\ServiceSubscriberInterface;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  *
@@ -77,7 +77,7 @@ class ReflectionClassResource implements SelfCheckingResourceInterface
         }
         return ['files', 'className', 'hash'];
     }
-    private function loadFiles(\ReflectionClass $class) : void
+    private function loadFiles(\ReflectionClass $class)
     {
         foreach ($class->getInterfaces() as $v) {
             $this->loadFiles($v);
@@ -108,7 +108,7 @@ class ReflectionClassResource implements SelfCheckingResourceInterface
             // the class does not exist anymore
             return \false;
         }
-        $hash = \hash_init('xxh128');
+        $hash = \hash_init('md5');
         foreach ($this->generateSignature($this->classReflector) as $info) {
             \hash_update($hash, $info);
         }
@@ -148,6 +148,9 @@ class ReflectionClassResource implements SelfCheckingResourceInterface
                 (yield \print_r(isset($defaults[$p->name]) && !\is_object($defaults[$p->name]) ? $defaults[$p->name] : null, \true));
             }
         }
+        $defined = \Closure::bind(static function ($c) {
+            return \defined($c);
+        }, null, $class->name);
         foreach ($class->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED) as $m) {
             foreach (\method_exists($m, 'getAttributes') ? $m->getAttributes() : [] as $a) {
                 $attributes[] = [$a->getName(), (string) $a];

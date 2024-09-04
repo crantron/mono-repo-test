@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Output;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Output;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Formatter\OutputFormatterInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Formatter\OutputFormatterInterface;
 /**
  * OutputInterface is the interface implemented by all Output classes.
  *
@@ -50,11 +50,15 @@ interface OutputInterface
     /**
      * Sets the verbosity of the output.
      *
+     * @param self::VERBOSITY_* $level
+     *
      * @return void
      */
     public function setVerbosity(int $level);
     /**
      * Gets the current verbosity of the output.
+     *
+     * @return self::VERBOSITY_*
      */
     public function getVerbosity() : int;
     /**

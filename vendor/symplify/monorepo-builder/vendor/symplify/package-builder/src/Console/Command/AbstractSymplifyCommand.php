@@ -1,16 +1,16 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Console\Command;
+namespace MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Console\Command;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputOption;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Style\SymfonyStyle;
-use MonorepoBuilderPrefix202311\Symfony\Contracts\Service\Attribute\Required;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\ValueObject\Option;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\FileSystemGuard;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Finder\SmartFinder;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileSystem;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputOption;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Style\SymfonyStyle;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\Service\Attribute\Required;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\ValueObject\Option;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\FileSystemGuard;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Finder\SmartFinder;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileSystem;
 abstract class AbstractSymplifyCommand extends Command
 {
     /**

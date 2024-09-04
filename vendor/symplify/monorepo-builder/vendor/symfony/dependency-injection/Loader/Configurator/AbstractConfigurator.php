@@ -8,18 +8,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\Configurator;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader\ParamConfigurator;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Alias;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Definition;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Parameter;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Reference;
-use MonorepoBuilderPrefix202311\Symfony\Component\ExpressionLanguage\Expression;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader\ParamConfigurator;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Alias;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Definition;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Parameter;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Reference;
+use MonorepoBuilderPrefix202408\Symfony\Component\ExpressionLanguage\Expression;
 abstract class AbstractConfigurator
 {
     public const FACTORY = 'unknown';

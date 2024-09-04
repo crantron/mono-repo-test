@@ -3,7 +3,8 @@
 declare (strict_types=1);
 namespace Symplify\MonorepoBuilder\Merge\Arrays;
 
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Yaml\ParametersMerger;
+use Symplify\MonorepoBuilder\Merge\JsonSchema;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Yaml\ParametersMerger;
 final class SortedParameterMerger
 {
     /**
@@ -24,19 +25,31 @@ final class SortedParameterMerger
      * @param mixed[] $secondArray
      * @return mixed[]
      */
-    public function mergeRecursiveAndSort(array $firstArray, array $secondArray) : array
+    public function mergeRecursiveAndSort(string $composerPropertyName, array $firstArray, array $secondArray) : array
     {
         $mergedArray = $this->parametersMerger->mergeWithCombine($firstArray, $secondArray);
-        return $this->arraySorter->recursiveSort($mergedArray);
+        return $this->recursiveSortBySchema($composerPropertyName, $mergedArray);
+    }
+    /**
+     * @param mixed[]  $mergedArray
+     * @return mixed[]
+     */
+    private function recursiveSortBySchema(string $composerPropertyName, array $mergedArray) : array
+    {
+        $propertyDefinitions = JsonSchema::getPropertyDefinitions($composerPropertyName);
+        if ($propertyDefinitions === []) {
+            return $this->arraySorter->recursiveSort($mergedArray);
+        }
+        return $this->arraySorter->recursiveSortBySchema($propertyDefinitions, $mergedArray);
     }
     /**
      * @param mixed[] $firstArray
      * @param mixed[] $secondArray
      * @return mixed[]
      */
-    public function mergeAndSort(array $firstArray, array $secondArray) : array
+    public function mergeAndSort(string $composerPropertyName, array $firstArray, array $secondArray) : array
     {
         $mergedArray = $this->parametersMerger->merge($firstArray, $secondArray);
-        return $this->arraySorter->recursiveSort($mergedArray);
+        return $this->recursiveSortBySchema($composerPropertyName, $mergedArray);
     }
 }

@@ -3,9 +3,9 @@
 declare (strict_types=1);
 namespace Symplify\MonorepoBuilder\ComposerJsonManipulator\Json;
 
-use MonorepoBuilderPrefix202311\Nette\Utils\Strings;
+use MonorepoBuilderPrefix202408\Nette\Utils\Strings;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\Option;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Parameter\ParameterProvider;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Parameter\ParameterProvider;
 final class JsonInliner
 {
     /**

@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\VarDumper\Cloner\ClonerInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\VarDumper\Cloner\VarCloner;
-use MonorepoBuilderPrefix202311\Symfony\Component\VarDumper\Dumper\CliDumper;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\VarDumper\Cloner\ClonerInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\VarDumper\Cloner\VarCloner;
+use MonorepoBuilderPrefix202408\Symfony\Component\VarDumper\Dumper\CliDumper;
 /**
  * @author Roland Franssen <franssen.roland@gmail.com>
  */
@@ -35,7 +35,7 @@ final class Dumper
      * @var \Closure
      */
     private $handler;
-    public function __construct(OutputInterface $output, CliDumper $dumper = null, ClonerInterface $cloner = null)
+    public function __construct(OutputInterface $output, ?CliDumper $dumper = null, ?ClonerInterface $cloner = null)
     {
         $this->output = $output;
         $this->dumper = $dumper;

@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Contracts\Service;
+namespace MonorepoBuilderPrefix202408\Symfony\Contracts\Service;
 
-use MonorepoBuilderPrefix202311\Psr\Container\ContainerExceptionInterface;
-use MonorepoBuilderPrefix202311\Psr\Container\NotFoundExceptionInterface;
+use MonorepoBuilderPrefix202408\Psr\Container\ContainerExceptionInterface;
+use MonorepoBuilderPrefix202408\Psr\Container\NotFoundExceptionInterface;
 // Help opcache.preload discover always-needed symbols
 \class_exists(ContainerExceptionInterface::class);
 \class_exists(NotFoundExceptionInterface::class);

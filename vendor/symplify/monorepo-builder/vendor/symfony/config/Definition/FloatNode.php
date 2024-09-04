@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
 /**
  * This node represents a float value in the config tree.
  *
@@ -19,7 +19,6 @@ use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Exception\In
 class FloatNode extends NumericNode
 {
     /**
-     * @return void
      * @param mixed $value
      */
     protected function validateType($value)

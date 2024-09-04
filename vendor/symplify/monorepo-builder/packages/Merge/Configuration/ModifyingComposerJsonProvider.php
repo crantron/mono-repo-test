@@ -6,7 +6,7 @@ namespace Symplify\MonorepoBuilder\Merge\Configuration;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ComposerJsonFactory;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJson;
 use Symplify\MonorepoBuilder\ValueObject\Option;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Parameter\ParameterProvider;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Parameter\ParameterProvider;
 final class ModifyingComposerJsonProvider
 {
     /**

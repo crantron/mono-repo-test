@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Compiler;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Compiler;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerBuilder;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Definition;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Reference;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\TypedReference;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerBuilder;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Definition;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Reference;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\TypedReference;
 /**
  * Emulates the invalid behavior if the reference is not found within the
  * container.

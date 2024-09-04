@@ -8,51 +8,51 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\CompleteCommand;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\DumpCompletionCommand;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\HelpCommand;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\LazyCommand;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\ListCommand;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\SignalableCommandInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\CommandLoader\CommandLoaderInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\CompletionInput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\CompletionSuggestions;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\Suggestion;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleCommandEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleErrorEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleSignalEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleTerminateEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\CommandNotFoundException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\ExceptionInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\LogicException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\NamespaceNotFoundException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\RuntimeException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Formatter\OutputFormatter;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\DebugFormatterHelper;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\DescriptorHelper;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\FormatterHelper;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\Helper;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\HelperSet;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\ProcessHelper;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\QuestionHelper;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\ArgvInput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\ArrayInput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputAwareInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputDefinition;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputOption;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\ConsoleOutput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\SignalRegistry\SignalRegistry;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Style\SymfonyStyle;
-use MonorepoBuilderPrefix202311\Symfony\Component\ErrorHandler\ErrorHandler;
-use MonorepoBuilderPrefix202311\Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
-use MonorepoBuilderPrefix202311\Symfony\Contracts\Service\ResetInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\CompleteCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\DumpCompletionCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\HelpCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\LazyCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\ListCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\SignalableCommandInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\CommandLoader\CommandLoaderInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\CompletionInput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\CompletionSuggestions;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\Suggestion;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleCommandEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleErrorEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleSignalEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleTerminateEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\CommandNotFoundException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\ExceptionInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\LogicException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\NamespaceNotFoundException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\RuntimeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Formatter\OutputFormatter;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\DebugFormatterHelper;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\DescriptorHelper;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\FormatterHelper;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\Helper;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\HelperSet;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\ProcessHelper;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\QuestionHelper;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\ArgvInput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\ArrayInput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputAwareInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputDefinition;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputOption;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\ConsoleOutput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\SignalRegistry\SignalRegistry;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Style\SymfonyStyle;
+use MonorepoBuilderPrefix202408\Symfony\Component\ErrorHandler\ErrorHandler;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\Service\ResetInterface;
 /**
  * An Application is the container for a collection of commands.
  *
@@ -98,6 +98,10 @@ class Application implements ResetInterface
      * @var bool
      */
     private $catchExceptions = \true;
+    /**
+     * @var bool
+     */
+    private $catchErrors = \false;
     /**
      * @var bool
      */
@@ -184,7 +188,7 @@ class Application implements ResetInterface
      *
      * @throws \Exception When running fails. Bypass this when {@link setCatchExceptions()}.
      */
-    public function run(InputInterface $input = null, OutputInterface $output = null) : int
+    public function run(?InputInterface $input = null, ?OutputInterface $output = null) : int
     {
         if (\function_exists('putenv')) {
             @\putenv('LINES=' . $this->terminal->getHeight());
@@ -210,8 +214,11 @@ class Application implements ResetInterface
         $this->configureIO($input, $output);
         try {
             $exitCode = $this->doRun($input, $output);
-        } catch (\Exception $e) {
-            if (!$this->catchExceptions) {
+        } catch (\Throwable $e) {
+            if ($e instanceof \Exception && !$this->catchExceptions) {
+                throw $e;
+            }
+            if (!$e instanceof \Exception && !$this->catchErrors) {
                 throw $e;
             }
             $renderException($e);
@@ -412,6 +419,13 @@ class Application implements ResetInterface
     public function setCatchExceptions(bool $boolean)
     {
         $this->catchExceptions = $boolean;
+    }
+    /**
+     * Sets whether to catch errors or not during commands execution.
+     */
+    public function setCatchErrors(bool $catchErrors = \true) : void
+    {
+        $this->catchErrors = $catchErrors;
     }
     /**
      * Gets whether to automatically exit after a command execution or not.
@@ -706,7 +720,7 @@ class Application implements ResetInterface
      *
      * @return Command[]
      */
-    public function all(string $namespace = null)
+    public function all(?string $namespace = null)
     {
         $this->init();
         if (null === $namespace) {
@@ -919,7 +933,9 @@ class Application implements ResetInterface
                             }
                         }
                         if (\false !== $exitCode) {
-                            exit($exitCode);
+                            $event = new ConsoleTerminateEvent($command, $event->getInput(), $event->getOutput(), $exitCode, $signal);
+                            $this->dispatcher->dispatch($event, ConsoleEvents::TERMINATE);
+                            exit($event->getExitCode());
                         }
                     });
                 }
@@ -1016,7 +1032,7 @@ class Application implements ResetInterface
      *
      * This method is not part of public API and should not be used directly.
      */
-    public function extractNamespace(string $name, int $limit = null) : string
+    public function extractNamespace(string $name, ?int $limit = null) : string
     {
         $parts = \explode(':', $name, -1);
         return \implode(':', null === $limit ? $parts : \array_slice($parts, 0, $limit));

@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\EventListener;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\EventListener;
 
-use MonorepoBuilderPrefix202311\Psr\Log\LoggerInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\ConsoleEvents;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleErrorEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleTerminateEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use MonorepoBuilderPrefix202408\Psr\Log\LoggerInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\ConsoleEvents;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleErrorEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleTerminateEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\EventDispatcher\EventSubscriberInterface;
 /**
  * @author James Halsall <james.t.halsall@googlemail.com>
  * @author Robin Chalas <robin.chalas@gmail.com>
@@ -26,7 +26,7 @@ class ErrorListener implements EventSubscriberInterface
      * @var \Psr\Log\LoggerInterface|null
      */
     private $logger;
-    public function __construct(LoggerInterface $logger = null)
+    public function __construct(?LoggerInterface $logger = null)
     {
         $this->logger = $logger;
     }

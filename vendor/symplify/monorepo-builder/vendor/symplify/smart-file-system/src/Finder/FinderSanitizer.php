@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Finder;
+namespace MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Finder;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Finder\Finder;
-use MonorepoBuilderPrefix202311\Symfony\Component\Finder\SplFileInfo;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Symfony\Component\Finder\Finder;
+use MonorepoBuilderPrefix202408\Symfony\Component\Finder\SplFileInfo;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
 final class FinderSanitizer
 {
     /**

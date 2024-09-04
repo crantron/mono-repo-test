@@ -6,10 +6,4 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'PHPMD\\' => array($vendorDir . '/phpmd/phpmd/src/main/php'),
-    'OAuth\\Unit' => array($vendorDir . '/lusitanian/oauth/tests'),
-    'OAuth' => array($vendorDir . '/lusitanian/oauth/src'),
-    'Mustache' => array($vendorDir . '/mustache/mustache/src'),
-    'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),
-    '' => array($baseDir . '/apps/src/commerce-emea/app/code', $baseDir . '/apps/src/commerce-emea/generated/code'),
 );

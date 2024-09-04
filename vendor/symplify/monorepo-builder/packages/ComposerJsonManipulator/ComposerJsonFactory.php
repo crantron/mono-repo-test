@@ -3,11 +3,11 @@
 declare (strict_types=1);
 namespace Symplify\MonorepoBuilder\ComposerJsonManipulator;
 
-use MonorepoBuilderPrefix202311\Nette\Utils\Json;
+use MonorepoBuilderPrefix202408\Nette\Utils\Json;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\FileSystem\JsonFileManager;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJson;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @api
  * @see \Symplify\MonorepoBuilder\Tests\ComposerJsonManipulator\ComposerJsonFactory\ComposerJsonFactoryTest
@@ -130,8 +130,7 @@ final class ComposerJsonFactory
         if (isset($jsonArray[ComposerJsonSection::SUPPORT])) {
             $composerJson->setSupport($jsonArray[ComposerJsonSection::SUPPORT]);
         }
-        $orderedKeys = \array_keys($jsonArray);
-        $composerJson->setOrderedKeys($orderedKeys);
+        $composerJson->setJsonKeys(\array_keys($jsonArray));
         return $composerJson;
     }
 }

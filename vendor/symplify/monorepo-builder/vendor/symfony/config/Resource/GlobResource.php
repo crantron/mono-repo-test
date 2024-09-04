@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Finder\Finder;
-use MonorepoBuilderPrefix202311\Symfony\Component\Finder\Glob;
+use MonorepoBuilderPrefix202408\Symfony\Component\Finder\Finder;
+use MonorepoBuilderPrefix202408\Symfony\Component\Finder\Glob;
 /**
  * GlobResource represents a set of resources stored on the filesystem.
  *
@@ -105,43 +105,26 @@ class GlobResource implements \IteratorAggregate, SelfCheckingResourceInterface
     }
     public function getIterator() : \Traversable
     {
-        if (!$this->recursive && '' === $this->pattern || !\file_exists($this->prefix)) {
+        if (!\file_exists($this->prefix) || !$this->recursive && '' === $this->pattern) {
             return;
         }
-        if (\is_file($prefix = \str_replace('\\', '/', $this->prefix))) {
-            $prefix = \dirname($prefix);
-            $pattern = \basename($prefix) . $this->pattern;
-        } else {
-            $pattern = $this->pattern;
-        }
-        if (\class_exists(Finder::class)) {
-            $regex = Glob::toRegex($pattern);
-            if ($this->recursive) {
-                $regex = \substr_replace($regex, '(/|$)', -2, 1);
-            }
-        } else {
-            $regex = null;
-        }
-        $prefixLen = \strlen($prefix);
+        $prefix = \str_replace('\\', '/', $this->prefix);
         $paths = null;
-        if ('' === $this->pattern && \is_file($this->prefix)) {
-            $paths = [$this->prefix => null];
-        } elseif (\strncmp($this->prefix, 'phar://', \strlen('phar://')) !== 0 && (null !== $regex || \strpos($this->pattern, '/**/') === \false)) {
-            if (\strpos($this->pattern, '/**/') === \false && ($this->globBrace || \strpos($this->pattern, '{') === \false)) {
-                $paths = \array_fill_keys(\glob($this->prefix . $this->pattern, \GLOB_NOSORT | $this->globBrace), null);
+        if ('' === $this->pattern && \is_file($prefix)) {
+            $paths = [$this->prefix];
+        } elseif (\strncmp($this->prefix, 'phar://', \strlen('phar://')) !== 0 && \strpos($this->pattern, '/**/') === \false) {
+            if ($this->globBrace || \strpos($this->pattern, '{') === \false) {
+                $paths = \glob($this->prefix . $this->pattern, \GLOB_NOSORT | $this->globBrace);
             } elseif (\strpos($this->pattern, '\\') === \false || !\preg_match('/\\\\[,{}]/', $this->pattern)) {
-                $paths = [];
                 foreach ($this->expandGlob($this->pattern) as $p) {
-                    if (\false !== ($i = \strpos($p, '/**/'))) {
-                        $p = \substr_replace($p, '/*', $i);
-                    }
-                    $paths += \array_fill_keys(\glob($this->prefix . $p, \GLOB_NOSORT), \false !== $i ? $regex : null);
+                    $paths[] = \glob($this->prefix . $p, \GLOB_NOSORT);
                 }
+                $paths = \array_merge(...$paths);
             }
         }
         if (null !== $paths) {
-            \uksort($paths, 'strnatcmp');
-            foreach ($paths as $path => $regex) {
+            \natsort($paths);
+            foreach ($paths as $path) {
                 if ($this->excludedPrefixes) {
                     $normalizedPath = \str_replace('\\', '/', $path);
                     do {
@@ -150,21 +133,21 @@ class GlobResource implements \IteratorAggregate, SelfCheckingResourceInterface
                         }
                     } while ($prefix !== $dirPath && $dirPath !== ($normalizedPath = \dirname($dirPath)));
                 }
-                if ((null === $regex || \preg_match($regex, \substr(\str_replace('\\', '/', $path), $prefixLen))) && \is_file($path)) {
+                if (\is_file($path)) {
                     (yield $path => new \SplFileInfo($path));
                 }
                 if (!\is_dir($path)) {
                     continue;
                 }
-                if ($this->forExclusion && (null === $regex || \preg_match($regex, \substr(\str_replace('\\', '/', $path), $prefixLen)))) {
+                if ($this->forExclusion) {
                     (yield $path => new \SplFileInfo($path));
                     continue;
                 }
-                if (!($this->recursive || null !== $regex) || isset($this->excludedPrefixes[\str_replace('\\', '/', $path)])) {
+                if (!$this->recursive || isset($this->excludedPrefixes[\str_replace('\\', '/', $path)])) {
                     continue;
                 }
-                $files = \iterator_to_array(new \RecursiveIteratorIterator(new \RecursiveCallbackFilterIterator(new \RecursiveDirectoryIterator($path, \FilesystemIterator::SKIP_DOTS | \FilesystemIterator::FOLLOW_SYMLINKS), function (\SplFileInfo $file, $path) use($regex, $prefixLen) {
-                    return !isset($this->excludedPrefixes[$path = \str_replace('\\', '/', $path)]) && (null === $regex || \preg_match($regex, \substr($path, $prefixLen)) || $file->isDir()) && '.' !== $file->getBasename()[0];
+                $files = \iterator_to_array(new \RecursiveIteratorIterator(new \RecursiveCallbackFilterIterator(new \RecursiveDirectoryIterator($path, \FilesystemIterator::SKIP_DOTS | \FilesystemIterator::FOLLOW_SYMLINKS), function (\SplFileInfo $file, $path) {
+                    return !isset($this->excludedPrefixes[\str_replace('\\', '/', $path)]) && '.' !== $file->getBasename()[0];
                 }), \RecursiveIteratorIterator::LEAVES_ONLY));
                 \uksort($files, 'strnatcmp');
                 foreach ($files as $path => $info) {
@@ -176,8 +159,19 @@ class GlobResource implements \IteratorAggregate, SelfCheckingResourceInterface
             return;
         }
         if (!\class_exists(Finder::class)) {
-            throw new \LogicException('Extended glob patterns cannot be used as the Finder component is not installed. Try running "composer require symfony/finder".');
+            throw new \LogicException(\sprintf('Extended glob pattern "%s" cannot be used as the Finder component is not installed.', $this->pattern));
         }
+        if (\is_file($prefix = $this->prefix)) {
+            $prefix = \dirname($prefix);
+            $pattern = \basename($prefix) . $this->pattern;
+        } else {
+            $pattern = $this->pattern;
+        }
+        $regex = Glob::toRegex($pattern);
+        if ($this->recursive) {
+            $regex = \substr_replace($regex, '(/|$)', -2, 1);
+        }
+        $prefixLen = \strlen($prefix);
         yield from (new Finder())->followLinks()->filter(function (\SplFileInfo $info) use($regex, $prefixLen, $prefix) {
             $normalizedPath = \str_replace('\\', '/', $info->getPathname());
             if (!\preg_match($regex, \substr($normalizedPath, $prefixLen)) || !$info->isFile()) {
@@ -194,7 +188,7 @@ class GlobResource implements \IteratorAggregate, SelfCheckingResourceInterface
     }
     private function computeHash() : string
     {
-        $hash = \hash_init('xxh128');
+        $hash = \hash_init('md5');
         foreach ($this->getIterator() as $path => $info) {
             \hash_update($hash, $path . "\n");
         }

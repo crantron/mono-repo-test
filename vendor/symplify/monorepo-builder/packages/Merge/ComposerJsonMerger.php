@@ -8,7 +8,7 @@ use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJson;
 use Symplify\MonorepoBuilder\Merge\Configuration\MergedPackagesCollector;
 use Symplify\MonorepoBuilder\Merge\Contract\ComposerPathNormalizerInterface;
 use Symplify\MonorepoBuilder\Merge\Contract\ComposerKeyMergerInterface;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
 final class ComposerJsonMerger
 {
     /**
@@ -41,9 +41,8 @@ final class ComposerJsonMerger
     /**
      * @param SmartFileInfo[] $composerPackagesFileInfos
      */
-    public function mergeFileInfos(array $composerPackagesFileInfos) : ComposerJson
+    public function mergeFileInfos(ComposerJson $mainComposerJson, array $composerPackagesFileInfos) : ComposerJson
     {
-        $mainComposerJson = $this->composerJsonFactory->createFromArray([]);
         foreach ($composerPackagesFileInfos as $composerPackageFileInfo) {
             $packageComposerJson = $this->composerJsonFactory->createFromFileInfo($composerPackageFileInfo);
             $this->mergeJsonToRootWithPackageFileInfo($mainComposerJson, $packageComposerJson, $composerPackageFileInfo);

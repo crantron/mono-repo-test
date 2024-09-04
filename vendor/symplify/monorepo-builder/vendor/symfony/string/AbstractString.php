@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\String;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\String;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\String\Exception\ExceptionInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\String\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\String\Exception\RuntimeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\String\Exception\ExceptionInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\String\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\String\Exception\RuntimeException;
 /**
  * Represents a string of abstract characters.
  *
@@ -334,7 +334,7 @@ abstract class AbstractString implements \JsonSerializable
     /**
      * @return static
      */
-    public abstract function join(array $strings, string $lastGlue = null);
+    public abstract function join(array $strings, ?string $lastGlue = null);
     public function jsonSerialize() : string
     {
         return $this->string;
@@ -396,7 +396,7 @@ abstract class AbstractString implements \JsonSerializable
     /**
      * @return static
      */
-    public abstract function slice(int $start = 0, int $length = null);
+    public abstract function slice(int $start = 0, ?int $length = null);
     /**
      * @return static
      */
@@ -404,11 +404,11 @@ abstract class AbstractString implements \JsonSerializable
     /**
      * @return static
      */
-    public abstract function splice(string $replacement, int $start = 0, int $length = null);
+    public abstract function splice(string $replacement, int $start = 0, ?int $length = null);
     /**
      * @return static[]
      */
-    public function split(string $delimiter, int $limit = null, int $flags = null) : array
+    public function split(string $delimiter, ?int $limit = null, ?int $flags = null) : array
     {
         if (null === $flags) {
             throw new \TypeError('Split behavior when $flags is null must be implemented by child classes.');
@@ -459,7 +459,7 @@ abstract class AbstractString implements \JsonSerializable
      * @return static
      */
     public abstract function title(bool $allWords = \false);
-    public function toByteString(string $toEncoding = null) : ByteString
+    public function toByteString(?string $toEncoding = null) : ByteString
     {
         $b = new ByteString();
         $toEncoding = \in_array($toEncoding, ['utf8', 'utf-8', 'UTF8'], \true) ? 'UTF-8' : $toEncoding;
@@ -467,23 +467,13 @@ abstract class AbstractString implements \JsonSerializable
             $b->string = $this->string;
             return $b;
         }
-        \set_error_handler(static function ($t, $m) {
-            throw new InvalidArgumentException($m);
-        });
         try {
-            try {
-                $b->string = \mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
-            } catch (InvalidArgumentException|\ValueError $e) {
-                if (!\function_exists('iconv')) {
-                    if ($e instanceof \ValueError) {
-                        throw new InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
-                    }
-                    throw $e;
-                }
-                $b->string = \iconv('UTF-8', $toEncoding, $this->string);
+            $b->string = \mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
+        } catch (\ValueError $e) {
+            if (!\function_exists('iconv')) {
+                throw new InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
             }
-        } finally {
-            \restore_error_handler();
+            $b->string = \iconv('UTF-8', $toEncoding, $this->string);
         }
         return $b;
     }

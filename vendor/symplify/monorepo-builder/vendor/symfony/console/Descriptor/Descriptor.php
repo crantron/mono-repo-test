@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Application;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputDefinition;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputOption;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Application;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputDefinition;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputOption;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Jean-François Simon <jeanfrancois.simon@sensiolabs.com>
  *

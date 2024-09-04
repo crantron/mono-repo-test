@@ -8,20 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Command;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Command;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Attribute\AsCommand;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\CompletionInput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\CompletionSuggestions;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\Output\BashCompletionOutput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\Output\CompletionOutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\Output\FishCompletionOutput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Completion\Output\ZshCompletionOutput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\CommandNotFoundException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\ExceptionInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputOption;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Attribute\AsCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\CompletionInput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\CompletionSuggestions;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\Output\BashCompletionOutput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\Output\CompletionOutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\Output\FishCompletionOutput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Completion\Output\ZshCompletionOutput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\CommandNotFoundException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\ExceptionInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputOption;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
 /**
  * Responsible for providing the values to the shell completion.
  *
@@ -38,7 +38,13 @@ final class CompleteCommand extends Command
      * @deprecated since Symfony 6.1
      */
     protected static $defaultDescription = 'Internal command to provide shell completion suggestions';
+    /**
+     * @var mixed[]
+     */
     private $completionOutputs;
+    /**
+     * @var bool
+     */
     private $isDebug = \false;
     /**
      * @param array<string, class-string<CompletionOutputInterface>> $completionOutputs A list of additional completion outputs, with shell name as key and FQCN as value

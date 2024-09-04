@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ServiceLocator as BaseServiceLocator;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ServiceLocator as BaseServiceLocator;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  *

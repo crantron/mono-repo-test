@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleCommandEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleErrorEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleSignalEvent;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Event\ConsoleTerminateEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleCommandEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleErrorEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleSignalEvent;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Event\ConsoleTerminateEvent;
 /**
  * Contains all events dispatched by an Application.
  *

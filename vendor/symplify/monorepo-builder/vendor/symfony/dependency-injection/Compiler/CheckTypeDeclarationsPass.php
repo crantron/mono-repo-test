@@ -8,23 +8,23 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Compiler;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Compiler;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Container;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Definition;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\InvalidParameterTypeException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ExpressionLanguage;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Parameter;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Reference;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ServiceLocator;
-use MonorepoBuilderPrefix202311\Symfony\Component\ExpressionLanguage\Expression;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Container;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Definition;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\InvalidParameterTypeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ExpressionLanguage;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Parameter;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Reference;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ServiceLocator;
+use MonorepoBuilderPrefix202408\Symfony\Component\ExpressionLanguage\Expression;
 /**
  * Checks whether injected parameters are compatible with type declarations.
  *

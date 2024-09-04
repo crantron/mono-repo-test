@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\EasyTesting\Finder;
+namespace MonorepoBuilderPrefix202408\Symplify\EasyTesting\Finder;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Finder\Finder;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Symfony\Component\Finder\Finder;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Finder\FinderSanitizer;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
 final class FixtureFinder
 {
     /**

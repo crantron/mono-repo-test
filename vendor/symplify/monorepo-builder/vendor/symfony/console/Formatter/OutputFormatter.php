@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Formatter;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Formatter;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\InvalidArgumentException;
-use function MonorepoBuilderPrefix202311\Symfony\Component\String\b;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\InvalidArgumentException;
+use function MonorepoBuilderPrefix202408\Symfony\Component\String\b;
 /**
  * Formatter class for console output.
  *

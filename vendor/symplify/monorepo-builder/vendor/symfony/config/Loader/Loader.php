@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Exception\LoaderLoadException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Exception\LoaderLoadException;
 /**
  * Loader is the abstract class used by all built-in loaders.
  *
@@ -28,9 +28,6 @@ abstract class Loader implements LoaderInterface
     {
         return $this->resolver;
     }
-    /**
-     * @return void
-     */
     public function setResolver(LoaderResolverInterface $resolver)
     {
         $this->resolver = $resolver;

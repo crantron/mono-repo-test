@@ -1,12 +1,12 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311;
+namespace MonorepoBuilderPrefix202408;
 
-use MonorepoBuilderPrefix202311\Rector\Config\RectorConfig;
-use MonorepoBuilderPrefix202311\Rector\PHPUnit\Set\PHPUnitSetList;
-use MonorepoBuilderPrefix202311\Rector\Set\ValueObject\LevelSetList;
-use MonorepoBuilderPrefix202311\Rector\Set\ValueObject\SetList;
+use MonorepoBuilderPrefix202408\Rector\Config\RectorConfig;
+use MonorepoBuilderPrefix202408\Rector\PHPUnit\Set\PHPUnitSetList;
+use MonorepoBuilderPrefix202408\Rector\Set\ValueObject\LevelSetList;
+use MonorepoBuilderPrefix202408\Rector\Set\ValueObject\SetList;
 return static function (RectorConfig $rectorConfig) : void {
     $rectorConfig->sets([
         SetList::CODE_QUALITY,

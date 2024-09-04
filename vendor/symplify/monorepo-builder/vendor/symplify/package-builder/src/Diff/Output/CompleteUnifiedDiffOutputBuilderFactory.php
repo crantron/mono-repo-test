@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Diff\Output;
+namespace MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Diff\Output;
 
-use MonorepoBuilderPrefix202311\SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
+use MonorepoBuilderPrefix202408\SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 /**
  * @api
  * Creates @see UnifiedDiffOutputBuilder with "$contextLines = 1000;"

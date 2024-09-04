@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Symplify\MonorepoBuilder\Validator;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Style\SymfonyStyle;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\MonorepoBuilder\Utils\RelativeFilePathHelper;
 final class ConflictingPackageVersionsReporter
 {

@@ -1,15 +1,15 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\SymplifyKernel\ValueObject;
+namespace MonorepoBuilderPrefix202408\Symplify\SymplifyKernel\ValueObject;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Application;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\HttpKernel\KernelInterface;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Console\Input\StaticInputDetector;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
-use MonorepoBuilderPrefix202311\Symplify\SymplifyKernel\Contract\LightKernelInterface;
-use MonorepoBuilderPrefix202311\Symplify\SymplifyKernel\Exception\BootException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Application;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\HttpKernel\KernelInterface;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Console\Input\StaticInputDetector;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use MonorepoBuilderPrefix202408\Symplify\SymplifyKernel\Contract\LightKernelInterface;
+use MonorepoBuilderPrefix202408\Symplify\SymplifyKernel\Exception\BootException;
 use Throwable;
 /**
  * @api

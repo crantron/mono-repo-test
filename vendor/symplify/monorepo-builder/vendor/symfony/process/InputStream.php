@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Process;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Process;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Process\Exception\RuntimeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Process\Exception\RuntimeException;
 /**
  * Provides a way to continuously write to the input of a Process until the InputStream is closed.
  *
@@ -20,18 +20,26 @@ use MonorepoBuilderPrefix202311\Symfony\Component\Process\Exception\RuntimeExcep
  */
 class InputStream implements \IteratorAggregate
 {
-    /** @var callable|null */
+    /**
+     * @var \Closure|null
+     */
     private $onEmpty;
+    /**
+     * @var mixed[]
+     */
     private $input = [];
+    /**
+     * @var bool
+     */
     private $open = \true;
     /**
      * Sets a callback that is called when the write buffer becomes empty.
      *
      * @return void
      */
-    public function onEmpty(callable $onEmpty = null)
+    public function onEmpty(?callable $onEmpty = null)
     {
-        $this->onEmpty = $onEmpty;
+        $this->onEmpty = null !== $onEmpty ? \Closure::fromCallable($onEmpty) : null;
     }
     /**
     * Appends an input to the write buffer.

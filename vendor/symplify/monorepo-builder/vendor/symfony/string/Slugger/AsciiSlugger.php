@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\String\Slugger;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\String\Slugger;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Intl\Transliterator\EmojiTransliterator;
-use MonorepoBuilderPrefix202311\Symfony\Component\String\AbstractUnicodeString;
-use MonorepoBuilderPrefix202311\Symfony\Component\String\UnicodeString;
-use MonorepoBuilderPrefix202311\Symfony\Contracts\Translation\LocaleAwareInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Intl\Transliterator\EmojiTransliterator;
+use MonorepoBuilderPrefix202408\Symfony\Component\String\AbstractUnicodeString;
+use MonorepoBuilderPrefix202408\Symfony\Component\String\UnicodeString;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\Translation\LocaleAwareInterface;
 if (!\interface_exists(LocaleAwareInterface::class)) {
     throw new \LogicException('You cannot use the "Symfony\\Component\\String\\Slugger\\AsciiSlugger" as the "symfony/translation-contracts" package is not installed. Try running "composer require symfony/translation-contracts".');
 }
@@ -42,9 +42,9 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
      */
     private $transliterators = [];
     /**
-     * @param mixed[]|\Closure $symbolsMap
+     * @param mixed[]|\Closure|null $symbolsMap
      */
-    public function __construct(string $defaultLocale = null, $symbolsMap = null)
+    public function __construct(?string $defaultLocale = null, $symbolsMap = null)
     {
         $this->defaultLocale = $defaultLocale;
         $this->symbolsMap = $symbolsMap ?? $this->symbolsMap;
@@ -75,7 +75,7 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
         $new->emoji = $emoji;
         return $new;
     }
-    public function slug(string $string, string $separator = '-', string $locale = null) : AbstractUnicodeString
+    public function slug(string $string, string $separator = '-', ?string $locale = null) : AbstractUnicodeString
     {
         $locale = $locale ?? $this->defaultLocale;
         $transliterator = [];

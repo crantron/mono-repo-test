@@ -1,21 +1,21 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311;
+namespace MonorepoBuilderPrefix202408;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Application;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Style\SymfonyStyle;
-use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Application;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\MonorepoBuilder\Config\MBConfig;
 use Symplify\MonorepoBuilder\Console\MonorepoBuilderApplication;
+use Symplify\MonorepoBuilder\Merge\JsonSchema;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushTagReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 use Symplify\MonorepoBuilder\ValueObject\Option;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Parameter\ParameterProvider;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Reflection\PrivatesCaller;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Yaml\ParametersMerger;
-use function MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\Configurator\service;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Parameter\ParameterProvider;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Reflection\PrivatesCaller;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Yaml\ParametersMerger;
+use function MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\Configurator\service;
 return static function (MBConfig $mbConfig) : void {
     $parameters = $mbConfig->parameters();
     $parameters->set('env(GITHUB_TOKEN)', null);
@@ -30,7 +30,7 @@ return static function (MBConfig $mbConfig) : void {
     // for back compatibility, better switch to "main"
     $mbConfig->defaultBranch('master');
     $mbConfig->packageAliasFormat('<major>.<minor>-dev');
-    $mbConfig->composerSectionOrder([ComposerJsonSection::NAME, ComposerJsonSection::TYPE, ComposerJsonSection::DESCRIPTION, ComposerJsonSection::KEYWORDS, ComposerJsonSection::HOMEPAGE, ComposerJsonSection::LICENSE, ComposerJsonSection::AUTHORS, ComposerJsonSection::SUPPORT, ComposerJsonSection::FUNDING, ComposerJsonSection::BIN, ComposerJsonSection::REQUIRE, ComposerJsonSection::REQUIRE_DEV, ComposerJsonSection::AUTOLOAD, ComposerJsonSection::AUTOLOAD_DEV, ComposerJsonSection::REPOSITORIES, ComposerJsonSection::PROVIDE, ComposerJsonSection::CONFLICT, ComposerJsonSection::REPLACE, ComposerJsonSection::SCRIPTS, ComposerJsonSection::SCRIPTS_DESCRIPTIONS, ComposerJsonSection::SUGGEST, ComposerJsonSection::CONFIG, ComposerJsonSection::MINIMUM_STABILITY, ComposerJsonSection::PREFER_STABLE, ComposerJsonSection::EXTRA]);
+    $mbConfig->composerSectionOrder(JsonSchema::getProperties());
     $services = $mbConfig->services();
     $services->defaults()->public()->autowire();
     $services->load('Symplify\MonorepoBuilder\\', __DIR__ . '/../packages')->exclude([

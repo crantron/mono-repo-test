@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Config;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Config;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource\ResourceInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\ResourceCheckerInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource\ResourceInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\ResourceCheckerInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * @author Maxime Steinhausser <maxime.steinhausser@gmail.com>
  */

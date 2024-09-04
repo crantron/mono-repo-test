@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Exception\FileLoaderImportCircularReferenceException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Exception\FileLocatorFileNotFoundException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Exception\LoaderLoadException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\FileLocatorInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource\FileExistenceResource;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource\GlobResource;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Exception\FileLoaderImportCircularReferenceException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Exception\FileLocatorFileNotFoundException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Exception\LoaderLoadException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\FileLocatorInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource\FileExistenceResource;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource\GlobResource;
 /**
  * FileLoader is the abstract class used by all built-in loaders that are file based.
  *
@@ -36,8 +36,6 @@ abstract class FileLoader extends Loader
     }
     /**
      * Sets the current directory.
-     *
-     * @return void
      */
     public function setCurrentDir(string $dir)
     {
@@ -58,8 +56,6 @@ abstract class FileLoader extends Loader
      * @param bool                 $ignoreErrors   Whether to ignore import errors or not
      * @param string|null          $sourceResource The original resource importing the new resource
      * @param string|mixed[] $exclude Glob patterns to exclude from the import
-     *
-     * @return mixed
      *
      * @throws LoaderLoadException
      * @throws FileLoaderImportCircularReferenceException
@@ -93,7 +89,7 @@ abstract class FileLoader extends Loader
      * @internal
      * @param mixed[]|\Symfony\Component\Config\Resource\GlobResource $resource
      */
-    protected function glob(string $pattern, bool $recursive, &$resource = null, bool $ignoreErrors = \false, bool $forExclusion = \false, array $excluded = []) : iterable
+    protected function glob(string $pattern, bool $recursive, &$resource = null, bool $ignoreErrors = \false, bool $forExclusion = \false, array $excluded = [])
     {
         if (\strlen($pattern) === ($i = \strcspn($pattern, '*?{['))) {
             $prefix = $pattern;
@@ -122,7 +118,6 @@ abstract class FileLoader extends Loader
     }
     /**
      * @param mixed $resource
-     * @return mixed
      */
     private function doImport($resource, string $type = null, bool $ignoreErrors = \false, string $sourceResource = null)
     {

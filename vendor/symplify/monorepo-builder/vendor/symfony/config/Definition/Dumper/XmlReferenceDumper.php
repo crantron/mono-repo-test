@@ -8,18 +8,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Dumper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Dumper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ArrayNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\BaseNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\BooleanNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ConfigurationInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\EnumNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\FloatNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\IntegerNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\NodeInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\PrototypedArrayNode;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ScalarNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ArrayNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\BaseNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\BooleanNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ConfigurationInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\EnumNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\FloatNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\IntegerNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\NodeInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\PrototypedArrayNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ScalarNode;
 /**
  * Dumps an XML reference configuration for the given configuration/node instance.
  *
@@ -31,16 +31,10 @@ class XmlReferenceDumper
      * @var string|null
      */
     private $reference;
-    /**
-     * @return string
-     */
     public function dump(ConfigurationInterface $configuration, string $namespace = null)
     {
         return $this->dumpNode($configuration->getConfigTreeBuilder()->buildTree(), $namespace);
     }
-    /**
-     * @return string
-     */
     public function dumpNode(NodeInterface $node, string $namespace = null)
     {
         $this->reference = '';
@@ -49,7 +43,7 @@ class XmlReferenceDumper
         $this->reference = null;
         return $ref;
     }
-    private function writeNode(NodeInterface $node, int $depth = 0, bool $root = \false, string $namespace = null) : void
+    private function writeNode(NodeInterface $node, int $depth = 0, bool $root = \false, string $namespace = null)
     {
         $rootName = $root ? 'config' : $node->getName();
         $rootNamespace = $namespace ?: ($root ? 'http://example.org/schema/dic/' . $node->getName() : null);
@@ -109,7 +103,7 @@ class XmlReferenceDumper
                                 $prototypeValue = 'true|false';
                                 break;
                             case EnumNode::class:
-                                $prototypeValue = $prototype->getPermissibleValues('|');
+                                $prototypeValue = \implode('|', \array_map('json_encode', $prototype->getValues()));
                                 break;
                             default:
                                 $prototypeValue = 'value';
@@ -146,7 +140,7 @@ class XmlReferenceDumper
                     $comments[] = \sprintf('Deprecated (%s)', ($deprecation['package'] || $deprecation['version'] ? "Since {$deprecation['package']} {$deprecation['version']}: " : '') . $deprecation['message']);
                 }
                 if ($child instanceof EnumNode) {
-                    $comments[] = 'One of ' . $child->getPermissibleValues('; ');
+                    $comments[] = 'One of ' . \implode('; ', \array_map('json_encode', $child->getValues()));
                 }
                 if (\count($comments)) {
                     $rootAttributeComments[$name] = \implode(";\n", $comments);
@@ -224,7 +218,7 @@ class XmlReferenceDumper
     /**
      * Outputs a single config reference line.
      */
-    private function writeLine(string $text, int $indent = 0) : void
+    private function writeLine(string $text, int $indent = 0)
     {
         $indent = \strlen($text) + $indent;
         $format = '%' . $indent . 's';

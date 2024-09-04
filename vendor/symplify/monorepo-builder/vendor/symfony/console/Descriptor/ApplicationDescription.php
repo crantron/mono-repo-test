@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Descriptor;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Descriptor;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Application;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Command\Command;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\CommandNotFoundException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Application;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Command\Command;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\CommandNotFoundException;
 /**
  * @author Jean-François Simon <jeanfrancois.simon@sensiolabs.com>
  *
@@ -45,7 +45,7 @@ class ApplicationDescription
      * @var array<string, Command>
      */
     private $aliases = [];
-    public function __construct(Application $application, string $namespace = null, bool $showHidden = \false)
+    public function __construct(Application $application, ?string $namespace = null, bool $showHidden = \false)
     {
         $this->application = $application;
         $this->namespace = $namespace;

@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Builder;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Builder;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\NodeInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\NodeInterface;
 /**
  * This is the entry class for building a config tree.
  *
@@ -44,9 +44,6 @@ class TreeBuilder implements NodeParentInterface
         }
         return $this->tree = $this->root->getNode(\true);
     }
-    /**
-     * @return void
-     */
     public function setPathSeparator(string $separator)
     {
         // unset last built as changing path separator changes all nodes

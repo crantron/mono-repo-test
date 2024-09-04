@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Style;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Style;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Formatter\OutputFormatterInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper\ProgressBar;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Formatter\OutputFormatterInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper\ProgressBar;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
 /**
  * Decorates output to add console style guide helpers.
  *

@@ -8,22 +8,22 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Console\Helper;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Console\Helper;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Cursor;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\MissingInputException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Exception\RuntimeException;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Formatter\OutputFormatter;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Formatter\OutputFormatterStyle;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\StreamableInputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\ConsoleSectionOutput;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Question\ChoiceQuestion;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Question\Question;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Terminal;
-use function MonorepoBuilderPrefix202311\Symfony\Component\String\s;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Cursor;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\MissingInputException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Exception\RuntimeException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Formatter\OutputFormatter;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Formatter\OutputFormatterStyle;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\StreamableInputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\ConsoleSectionOutput;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Question\ChoiceQuestion;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Question\Question;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Terminal;
+use function MonorepoBuilderPrefix202408\Symfony\Component\String\s;
 /**
  * The QuestionHelper class provides helpers to interact with the user.
  *
@@ -422,16 +422,7 @@ class QuestionHelper extends Helper
         if (isset(self::$stdinIsInteractive)) {
             return self::$stdinIsInteractive;
         }
-        if (\function_exists('stream_isatty')) {
-            return self::$stdinIsInteractive = @\stream_isatty(\fopen('php://stdin', 'r'));
-        }
-        if (\function_exists('posix_isatty')) {
-            return self::$stdinIsInteractive = @\posix_isatty(\fopen('php://stdin', 'r'));
-        }
-        if (!\function_exists('shell_exec')) {
-            return self::$stdinIsInteractive = \true;
-        }
-        return self::$stdinIsInteractive = (bool) \shell_exec('stty 2> ' . ('\\' === \DIRECTORY_SEPARATOR ? 'NUL' : '/dev/null'));
+        return self::$stdinIsInteractive = @\stream_isatty(\fopen('php://stdin', 'r'));
     }
     /**
      * Reads one or more lines of input and returns what is read.

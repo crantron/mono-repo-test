@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\String;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\String;
 
 /**
  * A string whose value is computed lazily by a callback.
@@ -40,7 +40,7 @@ class LazyString implements \JsonSerializable
                     $callback[1] = $callback[1] ?? '__invoke';
                 }
                 $value = $callback(...$arguments);
-                $callback = self::getPrettyName($callback);
+                $callback = !\is_scalar($value) && !$value instanceof \Stringable ? self::getPrettyName($callback) : 'callable';
                 $arguments = null;
             }
             return $value ?? '';
@@ -118,7 +118,7 @@ class LazyString implements \JsonSerializable
             $method = $callback[1];
         } elseif ($callback instanceof \Closure) {
             $r = new \ReflectionFunction($callback);
-            if (\strpos($r->name, '{closure}') !== \false || !($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass())) {
+            if (\strpos($r->name, '{closure') !== \false || !($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass())) {
                 return $r->name;
             }
             $class = $class->name;

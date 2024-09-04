@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Process\Pipes;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Process\Pipes;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Process\Process;
+use MonorepoBuilderPrefix202408\Symfony\Component\Process\Process;
 /**
  * UnixPipes implementation uses unix pipes as handles.
  *
@@ -20,8 +20,17 @@ use MonorepoBuilderPrefix202311\Symfony\Component\Process\Process;
  */
 class UnixPipes extends AbstractPipes
 {
+    /**
+     * @var bool|null
+     */
     private $ttyMode;
+    /**
+     * @var bool
+     */
     private $ptyMode;
+    /**
+     * @var bool
+     */
     private $haveReadSupport;
     /**
      * @param mixed $input
@@ -37,7 +46,7 @@ class UnixPipes extends AbstractPipes
     {
         throw new \BadMethodCallException('Cannot serialize ' . __CLASS__);
     }
-    public function __wakeup()
+    public function __wakeup() : void
     {
         throw new \BadMethodCallException('Cannot unserialize ' . __CLASS__);
     }

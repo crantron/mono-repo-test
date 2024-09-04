@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Builder;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Builder;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\NodeInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\VariableNode;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\NodeInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\VariableNode;
 /**
  * This class provides a fluent interface for defining a node.
  *

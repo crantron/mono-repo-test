@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource\ResourceInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource\ResourceInterface;
 /**
  * Interface for ConfigCache.
  *
@@ -34,8 +34,6 @@ interface ConfigCacheInterface
      *
      * @param string                   $content  The content to write into the cache
      * @param ResourceInterface[]|null $metadata An array of ResourceInterface instances
-     *
-     * @return void
      *
      * @throws \RuntimeException When the cache file cannot be written
      */

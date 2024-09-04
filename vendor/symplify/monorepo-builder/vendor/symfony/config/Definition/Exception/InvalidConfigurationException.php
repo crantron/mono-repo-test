@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Exception;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Exception;
 
 /**
  * A very general exception which can be thrown whenever non of the more specific
@@ -26,9 +26,6 @@ class InvalidConfigurationException extends Exception
      * @var bool
      */
     private $containsHints = \false;
-    /**
-     * @return void
-     */
     public function setPath(string $path)
     {
         $this->path = $path;
@@ -39,8 +36,6 @@ class InvalidConfigurationException extends Exception
     }
     /**
      * Adds extra information that is suffixed to the original exception message.
-     *
-     * @return void
      */
     public function addHint(string $hint)
     {

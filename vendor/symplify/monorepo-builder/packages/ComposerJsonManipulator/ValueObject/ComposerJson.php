@@ -3,11 +3,11 @@
 declare (strict_types=1);
 namespace Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject;
 
-use MonorepoBuilderPrefix202311\Nette\Utils\Arrays;
-use MonorepoBuilderPrefix202311\Nette\Utils\Strings;
+use MonorepoBuilderPrefix202408\Nette\Utils\Arrays;
+use MonorepoBuilderPrefix202408\Nette\Utils\Strings;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\Sorter\ComposerPackageSorter;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
-use MonorepoBuilderPrefix202311\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 /**
  * @api
  * @see \Symplify\MonorepoBuilder\Tests\ComposerJsonManipulator\ValueObject\ComposerJsonTest
@@ -138,9 +138,24 @@ final class ComposerJson
      * @var array<string, string>
      */
     private $provide = [];
+    /**
+     * @var list<string>
+     */
+    private $jsonKeys = [];
     public function __construct()
     {
         $this->composerPackageSorter = new ComposerPackageSorter();
+    }
+    public function setJsonKeys(array $jsonKeys) : void
+    {
+        $this->jsonKeys = $jsonKeys;
+    }
+    /**
+     * @return list<string>
+     */
+    public function getJsonKeys() : array
+    {
+        return $this->jsonKeys;
     }
     public function setOriginalFileInfo(SmartFileInfo $fileInfo) : void
     {
@@ -385,11 +400,9 @@ final class ComposerJson
         $array = \array_filter([\Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::NAME => $this->name, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::DESCRIPTION => $this->description, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::KEYWORDS => $this->keywords, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::HOMEPAGE => $this->homepage, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::LICENSE => $this->license, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::AUTHORS => $this->authors, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::TYPE => $this->type, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::REQUIRE => $this->require, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::REQUIRE_DEV => $this->requireDev, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::AUTOLOAD => $this->autoload, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::AUTOLOAD_DEV => $this->autoloadDev, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::REPOSITORIES => $this->repositories, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::EXTRA => $this->extra, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::BIN => $this->bin, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::SCRIPTS => $this->scripts, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::SCRIPTS_DESCRIPTIONS => $this->scriptsDescriptions, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::SUGGEST => $this->suggest, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::CONFIG => $this->config, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::REPLACE => $this->replace, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::CONFLICT => $this->conflicts, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::PROVIDE => $this->provide, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::VERSION => $this->version, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::FUNDING => $this->funding, \Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::SUPPORT => $this->support]);
         if ($this->minimumStability !== null) {
             $array[\Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::MINIMUM_STABILITY] = $this->minimumStability;
-            $this->moveValueToBack(\Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::MINIMUM_STABILITY);
         }
         if ($this->preferStable !== null) {
             $array[\Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::PREFER_STABLE] = $this->preferStable;
-            $this->moveValueToBack(\Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection::PREFER_STABLE);
         }
         return $this->sortItemsByOrderedListOfKeys($array, $this->orderedKeys);
     }
@@ -509,15 +522,6 @@ final class ComposerJson
         if ($this->hasRequiredDevPackage($packageName)) {
             $this->requireDev[$packageName] = $version;
         }
-    }
-    public function movePackageToRequire(string $packageName) : void
-    {
-        if (!$this->hasRequiredDevPackage($packageName)) {
-            return;
-        }
-        $version = $this->requireDev[$packageName];
-        $this->removePackage($packageName);
-        $this->addRequiredPackage($packageName, $version);
     }
     public function movePackageToRequireDev(string $packageName) : void
     {
@@ -690,17 +694,6 @@ final class ComposerJson
     public function setProvidePackage(string $packageName, string $version) : void
     {
         $this->provide[$packageName] = $version;
-    }
-    /**
-     * @param ComposerJsonSection::* $valueName
-     */
-    private function moveValueToBack(string $valueName) : void
-    {
-        $key = \array_search($valueName, $this->orderedKeys, \true);
-        if ($key !== \false) {
-            unset($this->orderedKeys[$key]);
-        }
-        $this->orderedKeys[] = $valueName;
     }
     /**
      * 2. sort item by prescribed key order

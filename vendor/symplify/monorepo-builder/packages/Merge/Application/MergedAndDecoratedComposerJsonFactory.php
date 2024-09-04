@@ -6,7 +6,7 @@ namespace Symplify\MonorepoBuilder\Merge\Application;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJson;
 use Symplify\MonorepoBuilder\Merge\ComposerJsonMerger;
 use Symplify\MonorepoBuilder\Merge\Contract\ComposerJsonDecoratorInterface;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\SmartFileInfo;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\SmartFileInfo;
 final class MergedAndDecoratedComposerJsonFactory
 {
     /**
@@ -30,15 +30,15 @@ final class MergedAndDecoratedComposerJsonFactory
      */
     public function createFromRootConfigAndPackageFileInfos(ComposerJson $mainComposerJson, array $packageFileInfos) : void
     {
-        $mergedAndDecoratedComposerJson = $this->mergePackageFileInfosAndDecorate($packageFileInfos);
+        $mergedAndDecoratedComposerJson = $this->mergePackageFileInfosAndDecorate($mainComposerJson, $packageFileInfos);
         $this->composerJsonMerger->mergeJsonToRoot($mainComposerJson, $mergedAndDecoratedComposerJson);
     }
     /**
      * @param SmartFileInfo[] $packageFileInfos
      */
-    private function mergePackageFileInfosAndDecorate(array $packageFileInfos) : ComposerJson
+    private function mergePackageFileInfosAndDecorate(ComposerJson $mainComposerJson, array $packageFileInfos) : ComposerJson
     {
-        $mergedComposerJson = $this->composerJsonMerger->mergeFileInfos($packageFileInfos);
+        $mergedComposerJson = $this->composerJsonMerger->mergeFileInfos($mainComposerJson, $packageFileInfos);
         foreach ($this->composerJsonDecorators as $composerJsonDecorator) {
             $composerJsonDecorator->decorate($mergedComposerJson);
         }

@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Configurator;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Configurator;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Builder\NodeDefinition;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Loader\DefinitionFileLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Builder\NodeDefinition;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Loader\DefinitionFileLoader;
 /**
  * @author Yonel Ceruto <yonelceruto@gmail.com>
  */

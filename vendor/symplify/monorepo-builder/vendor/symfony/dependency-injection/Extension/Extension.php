@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Extension;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Extension;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\ConfigurationInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Processor;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Container;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerBuilder;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Exception\LogicException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\ConfigurationInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Processor;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Container;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerBuilder;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Exception\LogicException;
 /**
  * Provides useful features shared by many extensions.
  *

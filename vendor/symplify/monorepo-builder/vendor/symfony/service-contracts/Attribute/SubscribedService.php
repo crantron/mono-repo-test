@@ -8,16 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Contracts\Service\Attribute;
+namespace MonorepoBuilderPrefix202408\Symfony\Contracts\Service\Attribute;
 
-use MonorepoBuilderPrefix202311\Symfony\Contracts\Service\ServiceSubscriberInterface;
-use MonorepoBuilderPrefix202311\Symfony\Contracts\Service\ServiceSubscriberTrait;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\Service\ServiceMethodsSubscriberTrait;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\Service\ServiceSubscriberInterface;
 /**
  * For use as the return value for {@see ServiceSubscriberInterface}.
  *
  * @example new SubscribedService('http_client', HttpClientInterface::class, false, new Target('githubApi'))
  *
- * Use with {@see ServiceSubscriberTrait} to mark a method's return type
+ * Use with {@see ServiceMethodsSubscriberTrait} to mark a method's return type
  * as a subscribed service.
  *
  * @author Kevin Bond <kevinbond@gmail.com>

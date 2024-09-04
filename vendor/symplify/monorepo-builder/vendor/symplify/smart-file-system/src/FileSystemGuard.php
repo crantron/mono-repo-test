@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\SmartFileSystem;
+namespace MonorepoBuilderPrefix202408\Symplify\SmartFileSystem;
 
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Exception\DirectoryNotFoundException;
-use MonorepoBuilderPrefix202311\Symplify\SmartFileSystem\Exception\FileNotFoundException;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Exception\DirectoryNotFoundException;
+use MonorepoBuilderPrefix202408\Symplify\SmartFileSystem\Exception\FileNotFoundException;
 final class FileSystemGuard
 {
     public function ensureFileExists(string $file, string $location) : void

@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Diff;
+namespace MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Diff;
 
-use MonorepoBuilderPrefix202311\SebastianBergmann\Diff\Differ;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Diff\Output\CompleteUnifiedDiffOutputBuilderFactory;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
+use MonorepoBuilderPrefix202408\SebastianBergmann\Diff\Differ;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Diff\Output\CompleteUnifiedDiffOutputBuilderFactory;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 final class DifferFactory
 {
     /**

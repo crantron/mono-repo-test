@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Definition\Builder;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Definition\Builder;
 
 /**
  * An interface that can be implemented by nodes which build other nodes.
@@ -19,8 +19,6 @@ interface BuilderAwareInterface
 {
     /**
      * Sets a custom children builder.
-     *
-     * @return void
      */
     public function setBuilder(NodeBuilder $builder);
 }

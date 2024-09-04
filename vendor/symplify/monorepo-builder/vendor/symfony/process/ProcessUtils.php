@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Process;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Process;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Process\Exception\InvalidArgumentException;
+use MonorepoBuilderPrefix202408\Symfony\Component\Process\Exception\InvalidArgumentException;
 /**
  * ProcessUtils is a bunch of utility methods.
  *
@@ -39,9 +39,6 @@ class ProcessUtils
     {
         if (null !== $input) {
             if (\is_resource($input)) {
-                return $input;
-            }
-            if (\is_string($input)) {
                 return $input;
             }
             if (\is_scalar($input)) {

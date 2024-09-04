@@ -4,6 +4,7 @@ declare (strict_types=1);
 namespace Symplify\MonorepoBuilder\Merge\ComposerKeyMerger;
 
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJson;
+use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
 use Symplify\MonorepoBuilder\Merge\Arrays\SortedParameterMerger;
 use Symplify\MonorepoBuilder\Merge\Contract\ComposerKeyMergerInterface;
 final class ProvideComposerKeyMerger implements ComposerKeyMergerInterface
@@ -21,7 +22,7 @@ final class ProvideComposerKeyMerger implements ComposerKeyMergerInterface
         if ($newComposerJson->getProvide() === []) {
             return;
         }
-        $provide = $this->sortedParameterMerger->mergeRecursiveAndSort($this->explodeVersions($newComposerJson->getProvide()), $this->explodeVersions($mainComposerJson->getProvide()));
+        $provide = $this->sortedParameterMerger->mergeRecursiveAndSort(ComposerJsonSection::PROVIDE, $this->explodeVersions($newComposerJson->getProvide()), $this->explodeVersions($mainComposerJson->getProvide()));
         $mainComposerJson->setProvide($this->mergeVersions($provide));
     }
     /**

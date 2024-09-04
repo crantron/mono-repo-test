@@ -6,7 +6,7 @@ namespace Symplify\MonorepoBuilder\Merge\ComposerJsonDecorator;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJson;
 use Symplify\MonorepoBuilder\Merge\Contract\ComposerJsonDecoratorInterface;
 use Symplify\MonorepoBuilder\ValueObject\Option;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Parameter\ParameterProvider;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Parameter\ParameterProvider;
 /**
  * @see \Symplify\MonorepoBuilder\Tests\Merge\ComposerJsonDecorator\SortComposerJsonDecorator\SortComposerJsonDecoratorTest
  */
@@ -22,7 +22,7 @@ final class SortComposerJsonDecorator implements ComposerJsonDecoratorInterface
     }
     public function decorate(ComposerJson $composerJson) : void
     {
-        $orderedKeys = $composerJson->getOrderedKeys();
+        $orderedKeys = $composerJson->getJsonKeys();
         \usort($orderedKeys, function (string $key1, string $key2) : int {
             return $this->findKeyPosition($key1) <=> $this->findKeyPosition($key2);
         });

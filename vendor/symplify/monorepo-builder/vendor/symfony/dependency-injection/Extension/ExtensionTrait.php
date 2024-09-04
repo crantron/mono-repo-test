@@ -8,21 +8,21 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Extension;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Extension;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Builder\ConfigBuilderGenerator;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\FileLocator;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader\DelegatingLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\Config\Loader\LoaderResolver;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\ContainerBuilder;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\ClosureLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\DirectoryLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\GlobFileLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\IniFileLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
-use MonorepoBuilderPrefix202311\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Builder\ConfigBuilderGenerator;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\FileLocator;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader\DelegatingLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\Config\Loader\LoaderResolver;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\ContainerBuilder;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\ClosureLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\DirectoryLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\GlobFileLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\IniFileLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use MonorepoBuilderPrefix202408\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 /**
  * @author Yonel Ceruto <yonelceruto@gmail.com>
  */

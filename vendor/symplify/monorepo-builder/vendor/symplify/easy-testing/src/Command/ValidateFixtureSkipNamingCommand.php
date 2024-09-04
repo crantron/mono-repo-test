@@ -1,15 +1,15 @@
 <?php
 
 declare (strict_types=1);
-namespace MonorepoBuilderPrefix202311\Symplify\EasyTesting\Command;
+namespace MonorepoBuilderPrefix202408\Symplify\EasyTesting\Command;
 
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputArgument;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Input\InputInterface;
-use MonorepoBuilderPrefix202311\Symfony\Component\Console\Output\OutputInterface;
-use MonorepoBuilderPrefix202311\Symplify\EasyTesting\Finder\FixtureFinder;
-use MonorepoBuilderPrefix202311\Symplify\EasyTesting\MissplacedSkipPrefixResolver;
-use MonorepoBuilderPrefix202311\Symplify\EasyTesting\ValueObject\Option;
-use MonorepoBuilderPrefix202311\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputArgument;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Input\InputInterface;
+use MonorepoBuilderPrefix202408\Symfony\Component\Console\Output\OutputInterface;
+use MonorepoBuilderPrefix202408\Symplify\EasyTesting\Finder\FixtureFinder;
+use MonorepoBuilderPrefix202408\Symplify\EasyTesting\MissplacedSkipPrefixResolver;
+use MonorepoBuilderPrefix202408\Symplify\EasyTesting\ValueObject\Option;
+use MonorepoBuilderPrefix202408\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
 final class ValidateFixtureSkipNamingCommand extends AbstractSymplifyCommand
 {
     /**

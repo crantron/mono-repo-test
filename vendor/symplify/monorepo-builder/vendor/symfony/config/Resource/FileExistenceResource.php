@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Component\Config\Resource;
+namespace MonorepoBuilderPrefix202408\Symfony\Component\Config\Resource;
 
 /**
  * FileExistenceResource represents a resource stored on the filesystem.
@@ -40,7 +40,7 @@ class FileExistenceResource implements SelfCheckingResourceInterface
     }
     public function __toString() : string
     {
-        return 'existence.' . $this->resource;
+        return $this->resource;
     }
     public function getResource() : string
     {

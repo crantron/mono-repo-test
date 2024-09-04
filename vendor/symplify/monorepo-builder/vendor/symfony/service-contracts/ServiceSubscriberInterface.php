@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace MonorepoBuilderPrefix202311\Symfony\Contracts\Service;
+namespace MonorepoBuilderPrefix202408\Symfony\Contracts\Service;
 
-use MonorepoBuilderPrefix202311\Symfony\Contracts\Service\Attribute\SubscribedService;
+use MonorepoBuilderPrefix202408\Symfony\Contracts\Service\Attribute\SubscribedService;
 /**
  * A ServiceSubscriber exposes its dependencies via the static {@link getSubscribedServices} method.
  *
