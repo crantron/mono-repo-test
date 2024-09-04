@@ -6,8 +6,6 @@ on:
             - main
         tags:
             - "*"
-env:
-    PAT: ${{ secrets.PAT }}
 jobs: 
     packages_split:
       runs-on: ubuntu-latest
@@ -32,6 +30,7 @@ jobs:
                     repository_name: '${{ matrix.package.split_repository }}'
                     user_name: "crantron"
                     user_email: "crantron@gmail.com"
+                    github_token: ${{ secrets.PAT }}
             #with tag
             -
                 if: "startsWith(github.ref, 'refs/tags/')"
@@ -43,5 +42,6 @@ jobs:
                     repository_name: '${{ matrix.package.split_repository }}'
                     user_name: "crantron"
                     user_email: "crantron@gmail.com"
+                    github_token: ${{ secrets.PAT }}
         
               
