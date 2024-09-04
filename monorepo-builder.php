@@ -6,7 +6,7 @@ use Symplify\MonorepoBuilder\Config\MBConfig;
 use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
 
 return static function (MBConfig $mbConfig): void {
-    $mbConfig->packageDirectories([__DIR__ . '/src']);
+    $mbConfig->packageDirectories([__DIR__ . '/packages']);
 
 //    $mbConfig->dataToAppend([
 //        ComposerJsonSection::REPOSITORIES => [
