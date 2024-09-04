@@ -8,12 +8,12 @@ use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSec
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([__DIR__ . '/src']);
 
-    $mbConfig->dataToAppend([
-        ComposerJsonSection::REPOSITORIES => [
-            'composer' => [
-                'type' => 'composer',
-                'url' => 'https://repo.packagist.com/crantron/'
-            ]
-        ]
-    ]);
+//    $mbConfig->dataToAppend([
+//        ComposerJsonSection::REPOSITORIES => [
+//            'composer' => [
+//                'type' => 'composer',
+//                'url' => 'https://repo.packagist.com/crantron/'
+//            ]
+//        ]
+//    ]);
 };
