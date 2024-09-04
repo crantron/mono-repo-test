@@ -7,7 +7,7 @@ use Symplify\MonorepoBuilder\ComposerJsonManipulator\ValueObject\ComposerJsonSec
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([__DIR__ . '/packages']);
-
+    $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
 //    $mbConfig->dataToAppend([
 //        ComposerJsonSection::REPOSITORIES => [
 //            'composer' => [
