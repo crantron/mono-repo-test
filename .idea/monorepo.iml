@@ -2,6 +2,14 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/packages/first-package/src" isTestSource="false" packagePrefix="YourMonorepo\FirstPackage\" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/second-package/src" isTestSource="false" packagePrefix="YourMonorepo\SecondPackage\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/global/module-aws-integration" isTestSource="false" packagePrefix="Rs\AwsIntegration\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/global/module-aws-integration/" isTestSource="false" packagePrefix="Rs\AwsIntegration\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/global/module-erp-integration" isTestSource="false" packagePrefix="Rs\ErpIntegration\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/global/module-erp-integration/" isTestSource="false" packagePrefix="Rs\ErpIntegration\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/global/module-payment-braintree" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/global/module-payment-braintree/" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/stopwatch" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
