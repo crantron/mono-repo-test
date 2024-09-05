@@ -1,0 +1,19 @@
+{
+    "name": "rs/module-worldpay-integration",
+    "require": {
+        "php": ">=8.1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "8.75-dev"
+        }
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Rs\\WorldPayIntegration\\": ""
+        }
+    }
+}
