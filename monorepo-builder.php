@@ -14,7 +14,7 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([__DIR__ . '/packages']);
-    $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
+    //$mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
     $mbConfig->defaultBranch('main');;
 
     //default release workers, provided by monorepo library
