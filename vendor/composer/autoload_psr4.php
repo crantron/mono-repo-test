@@ -11,4 +11,5 @@ return array(
     'Rs\\PaymentBraintree\\' => array($baseDir . '/src/global/module-payment-braintree'),
     'Rs\\ErpIntegration\\' => array($baseDir . '/src/global/module-erp-integration'),
     'Rs\\AwsIntegration\\' => array($baseDir . '/src/global/module-aws-integration'),
+    'Monorepo\\Workers\\' => array($baseDir . '/workers/src'),
 );

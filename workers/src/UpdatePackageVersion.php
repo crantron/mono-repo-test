@@ -9,8 +9,9 @@ use Symplify\MonorepoBuilder\Utils\VersionUtils;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
+use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\ReleaseWorkerInterface;
 
-final class UpdatePackageVersion implements Symplify\MonorepoBuilder\Release\ReleaseWorker
+final class UpdatePackageVersion implements ReleaseWorkerInterface
 {
     public function __construct(
         private DevMasterAliasUpdater $devMasterAliasUpdater,

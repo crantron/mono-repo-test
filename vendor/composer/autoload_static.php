@@ -19,6 +19,10 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
             'Rs\\ErpIntegration\\' => 18,
             'Rs\\AwsIntegration\\' => 18,
         ),
+        'M' => 
+        array (
+            'Monorepo\\Workers\\' => 17,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -41,6 +45,10 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
         'Rs\\AwsIntegration\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/global/module-aws-integration',
+        ),
+        'Monorepo\\Workers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/workers/src',
         ),
     );
 

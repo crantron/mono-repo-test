@@ -12,14 +12,15 @@
             "Rs\\ErpIntegration\\": "src/global/module-erp-integration/",
             "Rs\\PaymentBraintree\\": "src/global/module-payment-braintree/",
             "Rs\\SapIntegration\\": "packages/module-sap-integration/",
-            "Rs\\WorldPayIntegration\\": "packages/module-worldpay-integration/"
+            "Rs\\WorldPayIntegration\\": "packages/module-worldpay-integration/",
+            "Monorepo\\Workers\\": "workers/src/"
         }
     },
     "replace": {
-        "rs/module-aws-integration": "8.78.0",
-        "rs/module-erp-integration": "8.78.0",
-        "rs/module-payment-braintree": "8.78.0",
-        "rs/module-sap-integration": "8.78.0",
-        "rs/module-worldpay-integration": "8.78.0"
+        "rs/module-aws-integration": "8.79.0",
+        "rs/module-erp-integration": "8.79.0",
+        "rs/module-payment-braintree": "8.79.0",
+        "rs/module-sap-integration": "8.79.0",
+        "rs/module-worldpay-integration": "8.79.0"
     }
 }
