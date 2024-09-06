@@ -34,7 +34,7 @@ return static function (MBConfig $mbConfig): void {
     //configured custom workers
     //see workers/src/*
     $customWorkers = [
-        #UpdatePackageVersion::Class
+        //UpdatePackageVersion::Class
     ];
 
     $workers = array_merge($originalWorkers, $customWorkers);
