@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 use Symplify\MonorepoBuilder\Config\MBConfig;
@@ -11,6 +10,7 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetNextMutualDependenciesRele
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
+use Monorepo\Workers\UpdatePackageVersion;
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([__DIR__ . '/packages']);
@@ -19,7 +19,7 @@ return static function (MBConfig $mbConfig): void {
 
     //default release workers, provided by monorepo library
     //see: vendor/symplify/monorepo-builder/packages/Release/ReleaseWorker/*
-    $workers = [
+    $originalWorkers = [
         UpdateReplaceReleaseWorker::class,
         SetCurrentMutualDependenciesReleaseWorker::class,
         AddTagToChangelogReleaseWorker::class,
@@ -29,5 +29,14 @@ return static function (MBConfig $mbConfig): void {
         UpdateBranchAliasReleaseWorker::class,
         PushNextDevReleaseWorker::class
     ];
+
+    //configured custom workers
+    //see workers/src/*
+    $customWorkers = [
+       // UpdatePackageVersion::Class
+    ];
+
+    $workers = array_merge($originalWorkers, $customWorkers);
+
     $mbConfig->workers($workers);
 };

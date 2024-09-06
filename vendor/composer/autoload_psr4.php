@@ -6,4 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Rs\\WorldPayIntegration\\' => array($baseDir . '/packages/module-worldpay-integration'),
+    'Rs\\SapIntegration\\' => array($baseDir . '/packages/module-sap-integration'),
+    'Rs\\PaymentBraintree\\' => array($baseDir . '/src/global/module-payment-braintree'),
+    'Rs\\ErpIntegration\\' => array($baseDir . '/src/global/module-erp-integration'),
+    'Rs\\AwsIntegration\\' => array($baseDir . '/src/global/module-aws-integration'),
 );
