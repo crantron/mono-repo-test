@@ -17,10 +17,10 @@
         }
     },
     "replace": {
-        "rs/module-aws-integration": "8.81.0",
-        "rs/module-erp-integration": "8.81.0",
-        "rs/module-payment-braintree": "8.81.0",
-        "rs/module-sap-integration": "8.81.0",
-        "rs/module-worldpay-integration": "8.81.0"
+        "rs/module-aws-integration": "9.0.0",
+        "rs/module-erp-integration": "9.0.0",
+        "rs/module-payment-braintree": "9.0.0",
+        "rs/module-sap-integration": "9.0.0",
+        "rs/module-worldpay-integration": "9.0.0"
     }
 }
