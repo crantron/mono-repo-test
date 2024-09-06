@@ -6,7 +6,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "8.77-dev"
+            "dev-main": "8.78-dev"
         }
     },
     "autoload": {
