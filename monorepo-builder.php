@@ -24,11 +24,11 @@ return static function (MBConfig $mbConfig): void {
     //default release workers, provided by monorepo library
     //see: vendor/symplify/monorepo-builder/packages/Release/ReleaseWorker/*
     $workers = [
+        UpdatePackageVersion::Class,
         UpdateReplaceReleaseWorker::class,
         SetCurrentMutualDependenciesReleaseWorker::class,
         AddTagToChangelogReleaseWorker::class,
         TagVersionReleaseWorker::class,
-        UpdatePackageVersion::Class,
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
