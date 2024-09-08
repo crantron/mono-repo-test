@@ -1,12 +1,12 @@
 {
     "name": "rs/module-erp-integration",
-    "version": "12.6.0",
+    "version": "12.7.0",
     "require": {
         "php": ">=8.1.0"
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "12.7-dev"
+            "dev-main": "12.8-dev"
         }
     },
     "autoload": {
