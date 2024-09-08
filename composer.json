@@ -8,11 +8,6 @@
     },
     "autoload": {
         "psr-4": {
-            "Rs\\AwsIntegration\\": "src/global/module-aws-integration/",
-            "Rs\\ErpIntegration\\": "src/global/module-erp-integration/",
-            "Rs\\PaymentBraintree\\": "src/global/module-payment-braintree/",
-            "Rs\\SapIntegration\\": "packages/module-sap-integration/",
-            "Rs\\WorldPayIntegration\\": "packages/module-worldpay-integration/",
             "Monorepo\\Workers\\": "workers/src/"
         }
     },

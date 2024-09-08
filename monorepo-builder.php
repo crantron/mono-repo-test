@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Symplify\MonorepoBuilder\Config\MBConfig;
@@ -34,7 +36,7 @@ return static function (MBConfig $mbConfig): void {
     //configured custom workers
     //see workers/src/*
     $customWorkers = [
-        //UpdatePackageVersion::Class
+        UpdatePackageVersion::Class
     ];
 
     $workers = array_merge($originalWorkers, $customWorkers);

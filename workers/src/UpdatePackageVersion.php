@@ -12,13 +12,18 @@ use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\ReleaseWorkerInterfa
 
 final class UpdatePackageVersion implements ReleaseWorkerInterface
 {
+    private SymfonyStyle $symfonyStyle;
+
     public function __construct(
         private DevMasterAliasUpdater $devMasterAliasUpdater,
         private ComposerJsonProvider $composerJsonProvider,
         private VersionUtils $versionUtils,
-        private Filesystem $filesystem,
-        private SymfonyStyle $symfonyStyle
-    ) { }
+        private Filesystem $filesystem
+    ) {
+        $input = new Symfony\Component\Console\Input\ArgvInput();
+        $output = new Symfony\Component\Console\Output\ConsoleOutput();
+        $this->symfonyStyle = new SymfonyStyle($input, $output);
+    }
 
     public function work(Version $version): void
     {
