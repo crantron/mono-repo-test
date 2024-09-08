@@ -1,6 +1,5 @@
 {
     "name": "rs/module-worldpay-integration",
-    "version": "12.1.0",
     "require": {
         "php": ">=8.1.0"
     },
