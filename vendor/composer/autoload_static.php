@@ -11,14 +11,6 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
     );
 
     public static $prefixLengthsPsr4 = array (
-        'R' => 
-        array (
-            'Rs\\WorldPayIntegration\\' => 23,
-            'Rs\\SapIntegration\\' => 18,
-            'Rs\\PaymentBraintree\\' => 20,
-            'Rs\\ErpIntegration\\' => 18,
-            'Rs\\AwsIntegration\\' => 18,
-        ),
         'M' => 
         array (
             'Monorepo\\Workers\\' => 17,
@@ -26,26 +18,6 @@ class ComposerStaticInit11e119cb221f78827268467d6e69e0ee
     );
 
     public static $prefixDirsPsr4 = array (
-        'Rs\\WorldPayIntegration\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/packages/module-worldpay-integration',
-        ),
-        'Rs\\SapIntegration\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/packages/module-sap-integration',
-        ),
-        'Rs\\PaymentBraintree\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/global/module-payment-braintree',
-        ),
-        'Rs\\ErpIntegration\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/global/module-erp-integration',
-        ),
-        'Rs\\AwsIntegration\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/global/module-aws-integration',
-        ),
         'Monorepo\\Workers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/workers/src',

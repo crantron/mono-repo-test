@@ -1,21 +1,33 @@
 {
-    "name": "RS Monorepo",
+    "name": "RS Mono Repo",
     "require": {
+        "magento/framework": "^103.0",
         "php": ">=8.1.0",
         "symfony/dependency-injection": "^5.0",
-        "symfony/http-kernel": "^5.0",
-        "magento/framework": "^103.0"
+        "symfony/http-kernel": "^5.0"
     },
     "autoload": {
         "psr-4": {
-            "Monorepo\\Workers\\": "workers/src/"
-        }
+            "Monorepo\\Workers\\": "workers/src/",
+            "Rs\\AwsIntegration\\": "packages/module-aws-integration/",
+            "Rs\\ErpIntegration\\": "packages/module-erp-integration/",
+            "Rs\\PaymentBraintree\\": "packages/module-payment-braintree/",
+            "Rs\\SapIntegration\\": "packages/module-sap-integration/",
+            "Rs\\WorldPayIntegration\\": "packages/module-worldpay-integration/"
+        },
+        "files": [
+            "packages/module-aws-integration/registration.php",
+            "packages/module-erp-integration/registration.php",
+            "packages/module-payment-braintree/registration.php",
+            "packages/module-sap-integration/registration.php",
+            "packages/module-worldpay-integration/registration.php"
+        ]
     },
     "replace": {
-        "rs/module-aws-integration": "9.0.0",
-        "rs/module-erp-integration": "9.0.0",
-        "rs/module-payment-braintree": "9.0.0",
-        "rs/module-sap-integration": "9.0.0",
-        "rs/module-worldpay-integration": "9.0.0"
+        "rs/module-aws-integration": "10.0.0",
+        "rs/module-erp-integration": "10.0.0",
+        "rs/module-payment-braintree": "10.0.0",
+        "rs/module-sap-integration": "10.0.0",
+        "rs/module-worldpay-integration": "10.0.0"
     }
 }
