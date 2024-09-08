@@ -27,10 +27,10 @@ return static function (MBConfig $mbConfig): void {
         SetCurrentMutualDependenciesReleaseWorker::class,
         AddTagToChangelogReleaseWorker::class,
         TagVersionReleaseWorker::class,
-        UpdatePackageVersion::Class,
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
+        UpdatePackageVersion::Class,
         PushNextDevReleaseWorker::class
     ];
 
