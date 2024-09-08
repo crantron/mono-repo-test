@@ -5,7 +5,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "12.5-dev"
+            "dev-main": "12.6-dev"
         }
     },
     "autoload": {
