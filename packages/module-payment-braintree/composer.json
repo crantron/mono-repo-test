@@ -1,5 +1,6 @@
 {
     "name": "rs/module-payment-braintree",
+    "version": "12",
     "require": {
         "php": ">=8.1.0"
     },

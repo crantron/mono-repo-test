@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+
+require_once __DIR__ . '/vendor/autoload.php';
+
 use Symplify\MonorepoBuilder\Config\MBConfig;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\AddTagToChangelogReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushNextDevReleaseWorker;
@@ -24,7 +27,7 @@ return static function (MBConfig $mbConfig): void {
         SetCurrentMutualDependenciesReleaseWorker::class,
         AddTagToChangelogReleaseWorker::class,
         TagVersionReleaseWorker::class,
-        #UpdatePackageVersion::Class,
+        UpdatePackageVersion::Class,
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
