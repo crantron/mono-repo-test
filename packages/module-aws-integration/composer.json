@@ -1,12 +1,12 @@
 {
     "name": "rs/module-aws-integration",
-    "version": "12.0.0",
+    "version": "12.1.0",
     "require": {
         "php": ">=8.1.0"
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "12.1-dev"
+            "dev-main": "12.2-dev"
         }
     },
     "autoload": {
