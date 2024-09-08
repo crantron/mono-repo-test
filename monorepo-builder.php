@@ -14,6 +14,7 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 use Monorepo\Workers\UpdatePackageVersion;
+use Monorepo\Workers\UpdatePackageVersion2;
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([__DIR__ . '/packages']);
@@ -31,7 +32,7 @@ return static function (MBConfig $mbConfig): void {
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
-        UpdatePackageVersion::Class,
+        UpdatePackageVersion2::Class,
         PushNextDevReleaseWorker::class
     ];
 
