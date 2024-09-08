@@ -1,6 +1,6 @@
 {
     "name": "rs/module-aws-integration",
-    "version": "8.80.0",
+    "version": "11.0.0",
     "require": {
         "php": ">=8.1.0"
     },

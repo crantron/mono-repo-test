@@ -22,24 +22,17 @@ return static function (MBConfig $mbConfig): void {
 
     //default release workers, provided by monorepo library
     //see: vendor/symplify/monorepo-builder/packages/Release/ReleaseWorker/*
-    $originalWorkers = [
+    $workers = [
         UpdateReplaceReleaseWorker::class,
         SetCurrentMutualDependenciesReleaseWorker::class,
         AddTagToChangelogReleaseWorker::class,
         TagVersionReleaseWorker::class,
+        UpdatePackageVersion::Class,
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
         PushNextDevReleaseWorker::class
     ];
-
-    //configured custom workers
-    //see workers/src/*
-    $customWorkers = [
-        UpdatePackageVersion::Class
-    ];
-
-    $workers = array_merge($originalWorkers, $customWorkers);
 
     $mbConfig->workers($workers);
 };
