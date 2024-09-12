@@ -1,6 +1,6 @@
 {
     "name": "rs/module-sap-integration",
-    "version": "12.14.0",
+    "version": "12.15.0",
     "require": {
         "php": ">=8.1.0"
     },

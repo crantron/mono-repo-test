@@ -13,6 +13,7 @@
             "Rs\\ErpIntegration\\": "packages/module-erp-integration/",
             "Rs\\PaymentBraintree\\": "packages/module-payment-braintree/",
             "Rs\\SapIntegration\\": "packages/module-sap-integration/",
+            "Rs\\StripeIntegration\\": "packages/module-stripe-integration/",
             "Rs\\WorldPayIntegration\\": "packages/module-worldpay-integration/"
         },
         "files": [
@@ -20,14 +21,16 @@
             "packages/module-erp-integration/registration.php",
             "packages/module-payment-braintree/registration.php",
             "packages/module-sap-integration/registration.php",
+            "packages/module-stripe-integration/registration.php",
             "packages/module-worldpay-integration/registration.php"
         ]
     },
     "replace": {
-        "rs/module-aws-integration": "12.14.0",
-        "rs/module-erp-integration": "12.14.0",
-        "rs/module-payment-braintree": "12.14.0",
-        "rs/module-sap-integration": "12.14.0",
-        "rs/module-worldpay-integration": "12.14.0"
+        "rs/module-aws-integration": "12.15.0",
+        "rs/module-erp-integration": "12.15.0",
+        "rs/module-payment-braintree": "12.15.0",
+        "rs/module-sap-integration": "12.15.0",
+        "rs/module-stripe-integration": "12.15.0",
+        "rs/module-worldpay-integration": "12.15.0"
     }
 }
