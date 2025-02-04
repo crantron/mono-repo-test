@@ -10,6 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/global/module-erp-integration/" isTestSource="false" packagePrefix="Rs\ErpIntegration\" />
       <sourceFolder url="file://$MODULE_DIR$/src/global/module-payment-braintree" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
       <sourceFolder url="file://$MODULE_DIR$/src/global/module-payment-braintree/" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/module-aws-integration/" isTestSource="false" packagePrefix="Rs\AwsIntegration\" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/module-erp-integration/" isTestSource="false" packagePrefix="Rs\ErpIntegration\" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/module-payment-braintree/" isTestSource="false" packagePrefix="Rs\PaymentBraintree\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/stopwatch" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
